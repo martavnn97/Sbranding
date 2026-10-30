@@ -1,0 +1,872 @@
+<!doctype html><html lang="it"><head><title>Hub Sbranding</title><meta charset=utf8><meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover"><style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#fff;color:#000}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style></head><body>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400..700;1,9..40,400..700&family=Fraunces:ital,opsz,wght,SOFT@0,9..144,400..700,100;1,9..144,400..700,100&display=swap">
+<style id="hub-style">
+/* Layout: testata con wordmark e tab, colonna unica da 1120px, schede sobrie su base bianca, fucsia usato solo per accenti */
+:root{
+  --bg:#FFFFFF; --surface:#FCF1F7; --surface-2:#F8D3E5; --peach:#FFDFCB;
+  --fg:#0A0A0A; --fg-2:#2B2B2B; --muted:#6E5F67; --line:#E3E3E3;
+  --accent:#A50F5E; --accent-deep:#8D0B50; --accent-ink:#FFFFFF;
+  --ok:#2F7A4F; --warn:#9A5B00; --hyp:#6A4C93;
+  --ch-li:#2D5F9A; --ch-ss:#B5541F;
+  --display:"Fraunces", Georgia, "Times New Roman", serif;
+  --body:"DM Sans", system-ui, -apple-system, "Segoe UI", sans-serif;
+  --r:10px;
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
+  --bg:#140B10; --surface:#1F1219; --surface-2:#3A1D2C; --peach:#3B2620;
+  --fg:#F6EEF2; --fg-2:#E2D3DA; --muted:#B9A6B0; --line:#3A2A33;
+  --accent:#E0559C; --accent-deep:#F27AB6; --accent-ink:#140B10;
+  --ok:#6CC08F; --warn:#E3A84B; --hyp:#B79BE0; --ch-li:#86B4EC; --ch-ss:#F0A070; color-scheme:dark}}
+:root[data-theme="dark"]{
+  --bg:#140B10; --surface:#1F1219; --surface-2:#3A1D2C; --peach:#3B2620;
+  --fg:#F6EEF2; --fg-2:#E2D3DA; --muted:#B9A6B0; --line:#3A2A33;
+  --accent:#E0559C; --accent-deep:#F27AB6; --accent-ink:#140B10;
+  --ok:#6CC08F; --warn:#E3A84B; --hyp:#B79BE0; --ch-li:#86B4EC; --ch-ss:#F0A070; color-scheme:dark}
+*{box-sizing:border-box}
+body{background:var(--bg);color:var(--fg);font-family:var(--body);font-size:15px;line-height:1.5;
+  padding-left:max(16px, env(safe-area-inset-left, 0px));padding-right:max(16px, env(safe-area-inset-right, 0px))}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:10;background:var(--bg)}
+.wrap{max-width:1120px;margin:0 auto;padding-block:20px 80px}
+h1,h2,h3{font-family:var(--display);font-variation-settings:"SOFT" 100;font-weight:500;text-wrap:balance;margin:0;letter-spacing:-.01em}
+h1{font-size:clamp(28px,4vw,40px);line-height:1.1}
+h2{font-size:24px;line-height:1.2}
+h3{font-size:18px;line-height:1.25}
+h1 em,h2 em,h3 em{font-style:italic;color:var(--accent)}
+.eyebrow{font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);font-weight:600}
+.muted{color:var(--muted)}
+.small{font-size:13px}
+a{color:var(--accent)}
+button{font:inherit;cursor:pointer}
+:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+
+/* testata */
+.top{position:sticky;top:env(safe-area-inset-top,0px);z-index:5;background:var(--bg);border-bottom:1px solid var(--line);margin-inline:calc(-1 * max(16px, env(safe-area-inset-left, 0px)));padding-inline:max(16px, env(safe-area-inset-left, 0px))}
+.top-in{max-width:1120px;margin:0 auto;display:flex;flex-wrap:wrap;align-items:center;gap:10px 16px;padding-block:12px 0}
+.mark{font-family:var(--display);font-variation-settings:"SOFT" 100;font-weight:700;letter-spacing:.14em;font-size:15px}
+.mark small{display:block;font-family:var(--body);font-weight:500;letter-spacing:.02em;font-size:11px;color:var(--accent);font-style:italic}
+.savebox{margin-left:auto;display:flex;align-items:center;gap:8px;flex-wrap:wrap}
+.pill{display:inline-flex;align-items:center;gap:6px;border-radius:999px;padding:3px 10px;font-size:12px;font-weight:600;background:var(--surface);color:var(--fg-2);white-space:nowrap}
+.pill.dirty{background:var(--peach)}
+.pill.ok{color:var(--ok)}
+.btn{border:1px solid var(--line);background:var(--bg);color:var(--fg);border-radius:999px;padding:7px 14px;font-size:13px;font-weight:600;display:inline-flex;align-items:center;gap:6px}
+.btn:hover{border-color:var(--accent);color:var(--accent)}
+.btn.primary{background:var(--accent);border-color:var(--accent);color:var(--accent-ink)}
+.btn.primary:hover{background:var(--accent-deep);color:var(--accent-ink)}
+.btn.ghost{border-color:transparent;background:transparent;padding:5px 8px}
+.btn.danger:hover{border-color:#C0392B;color:#C0392B}
+.btn[disabled]{opacity:.5;cursor:not-allowed}
+.tabs{flex-basis:100%;display:flex;gap:4px;overflow-x:auto;scrollbar-width:none}
+.tabs a{padding:10px 12px 12px;font-weight:600;font-size:14px;color:var(--muted);text-decoration:none;border-bottom:2px solid transparent;white-space:nowrap}
+.tabs a[aria-current="page"]{color:var(--fg);border-color:var(--accent)}
+.tabs a span{font-family:var(--display);font-style:italic;color:var(--accent);margin-right:4px;font-weight:500}
+
+/* sezioni */
+.view{display:grid;gap:36px;padding-top:28px}
+.sec{display:grid;gap:14px;min-width:0}
+.sec-head{display:flex;flex-wrap:wrap;align-items:end;justify-content:space-between;gap:10px}
+.sec-head p{margin:4px 0 0;max-width:70ch}
+.lead{font-size:17px;max-width:68ch;margin:8px 0 0;color:var(--fg-2)}
+.grid{display:grid;gap:14px;grid-template-columns:repeat(auto-fill,minmax(min(100%,300px),1fr))}
+.card{border:1px solid var(--line);border-radius:var(--r);padding:16px;display:grid;gap:10px;align-content:start;background:var(--bg);min-width:0}
+.card.soft{background:var(--surface);border-color:transparent}
+.principle{background:var(--surface);border-radius:var(--r);padding:20px;display:grid;gap:6px}
+.principle p{margin:0;font-family:var(--display);font-variation-settings:"SOFT" 100;font-size:20px;line-height:1.35}
+.principle p em{color:var(--accent)}
+
+/* campi modificabili */
+.f{display:grid;gap:3px;min-width:0}
+.f > span{font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);font-weight:600}
+.in, .ta, .sel{font:inherit;color:var(--fg);background:transparent;border:1px solid transparent;border-radius:6px;padding:4px 6px;margin-inline:-6px;width:calc(100% + 12px);min-width:0}
+.in:hover,.ta:hover,.sel:hover{border-color:var(--line)}
+.in:focus,.ta:focus,.sel:focus{border-color:var(--accent);background:var(--bg);outline:none}
+.ta{resize:vertical;min-height:2.2em;field-sizing:content;line-height:1.45}
+.in.big{font-family:var(--display);font-variation-settings:"SOFT" 100;font-size:18px;font-weight:500}
+.why{border-left:2px solid var(--surface-2);padding-left:10px}
+.why .ta{font-size:13.5px;color:var(--fg-2)}
+.why > span::before{content:"perché  ";color:var(--accent);font-style:italic;text-transform:none;letter-spacing:0;font-family:var(--display);font-size:13px}
+.row-actions{display:flex;justify-content:space-between;align-items:center;gap:8px}
+.tag{display:inline-flex;align-items:center;gap:6px;font-size:12px;font-weight:600;border-radius:999px;padding:2px 9px;background:var(--surface);color:var(--fg-2);white-space:nowrap}
+.tag.proposta{background:var(--peach)}
+.tag.ver{color:var(--ok);background:transparent;border:1px solid currentColor}
+.tag.hyp{color:var(--hyp);background:transparent;border:1px dashed currentColor}
+.dot{width:10px;height:10px;border-radius:50%;flex:none;display:inline-block}
+
+/* tabelle */
+.tbl-wrap{overflow-x:auto;border:1px solid var(--line);border-radius:var(--r)}
+table{border-collapse:collapse;width:100%;font-size:14px}
+th{font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);text-align:left;font-weight:600;padding:10px 12px;border-bottom:1px solid var(--line);background:var(--surface);white-space:nowrap}
+td{padding:6px 12px;border-bottom:1px solid var(--line);vertical-align:top}
+tr:last-child td{border-bottom:0}
+td .in,td .ta{margin:0;width:100%}
+.num{font-variant-numeric:tabular-nums;text-align:right}
+
+/* rubriche */
+.rub{border-top:4px solid var(--c, var(--accent))}
+.rub-head{display:flex;align-items:center;gap:10px}
+.rub-head input[type=color]{width:28px;height:28px;border:1px solid var(--line);border-radius:50%;padding:0;background:none;cursor:pointer;flex:none}
+.rub-head input[type=color]::-webkit-color-swatch-wrapper{padding:0}
+.rub-head input[type=color]::-webkit-color-swatch{border:none;border-radius:50%}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.mix{display:flex;height:14px;border-radius:999px;overflow:hidden;background:var(--surface)}
+.mix span{display:block;height:100%}
+.legend{display:flex;flex-wrap:wrap;gap:6px 14px;font-size:13px}
+.legend span{display:inline-flex;align-items:center;gap:6px}
+
+/* calendario */
+.cal-bar{display:flex;flex-wrap:wrap;align-items:center;gap:10px;justify-content:space-between}
+.seg{display:inline-flex;border:1px solid var(--line);border-radius:999px;padding:3px}
+.seg button{border:0;background:transparent;border-radius:999px;padding:5px 12px;font-size:13px;font-weight:600;color:var(--muted)}
+.seg button[aria-pressed="true"]{background:var(--fg);color:var(--bg)}
+.monthnav{display:flex;align-items:center;gap:6px}
+.monthnav h2{min-width:9ch;text-align:center;font-size:22px}
+.monthnav h2 em{font-style:italic}
+.note-month{background:var(--surface);border-radius:var(--r);padding:14px 16px;display:grid;gap:4px}
+.note-month .ta{font-family:var(--display);font-variation-settings:"SOFT" 100;font-size:17px}
+.list{display:grid;gap:8px}
+.item{display:grid;grid-template-columns:64px 1fr auto;gap:14px;align-items:center;border:1px solid var(--line);border-left:4px solid var(--c);border-radius:var(--r);padding:12px 14px;background:var(--bg);text-align:left;color:var(--fg);width:100%}
+.item:hover{border-color:var(--c)}
+.item .d{font-family:var(--display);font-variation-settings:"SOFT" 100;line-height:1}
+.item .d b{display:block;font-size:26px;font-weight:500}
+.item .d i{font-size:12px;color:var(--muted);font-style:normal;text-transform:capitalize}
+.item .t{min-width:0}
+.item .t strong{display:block;font-weight:600;overflow-wrap:anywhere}
+.item .meta{display:flex;flex-wrap:wrap;gap:6px;margin-top:4px;font-size:12px;color:var(--muted)}
+.status{font-size:11px;font-weight:700;letter-spacing:.04em;text-transform:uppercase;border-radius:4px;padding:2px 6px;white-space:nowrap}
+.st-Idea{background:var(--surface);color:var(--muted)}
+.st-Da-preparare{background:var(--peach);color:var(--warn)}
+.st-In-lavorazione{background:var(--surface-2);color:var(--accent)}
+.st-Pronto{background:var(--accent);color:var(--accent-ink)}
+.st-Pubblicato{background:transparent;color:var(--ok);border:1px solid currentColor}
+.calgrid-wrap{overflow-x:auto}
+.calgrid{display:grid;grid-template-columns:repeat(7,minmax(128px,1fr));border-top:1px solid var(--line);border-left:1px solid var(--line);min-width:900px;border-radius:var(--r);overflow:hidden}
+.calgrid .wd{font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);font-weight:600;padding:8px;border-right:1px solid var(--line);border-bottom:1px solid var(--line);background:var(--surface)}
+.day{min-height:120px;border-right:1px solid var(--line);border-bottom:1px solid var(--line);padding:6px;display:flex;flex-direction:column;gap:4px;background:var(--bg);text-align:left;color:var(--fg);font:inherit;border-top:0;border-left:0;cursor:pointer}
+.day:hover{background:var(--surface)}
+.day.out{background:var(--surface);opacity:.45}
+.day.today .n{background:var(--accent);color:var(--accent-ink);border-radius:999px;padding:0 6px}
+.day .n{font-size:12px;font-weight:600;align-self:flex-start;font-variant-numeric:tabular-nums}
+.chip{display:grid;gap:4px;width:100%;text-align:left;border:1px solid var(--line);border-left:4px solid var(--c);background:var(--bg);color:var(--fg);border-radius:6px;padding:6px 7px;font:inherit;font-size:12.5px;line-height:1.3;cursor:pointer}
+.chip .ct{font-weight:600;overflow-wrap:anywhere;text-wrap:pretty}
+.chip .cm{display:flex;flex-wrap:wrap;gap:4px;align-items:center}
+.chip .rb{font-size:10.5px;font-weight:700;letter-spacing:.02em;color:var(--c);text-transform:uppercase}
+.chip .fm{font-size:10.5px;font-weight:700;border-radius:4px;padding:1px 5px;background:var(--surface);color:var(--fg-2)}
+.chip.pub{background:var(--surface)}
+.chip .st{width:7px;height:7px;border-radius:50%;margin-left:auto;flex:none}
+.day.we{background:color-mix(in srgb, var(--surface) 45%, var(--bg))}
+.chip:hover{background:var(--surface-2)}
+
+/* modale */
+.scrim{position:fixed;inset:0;background:rgba(10,10,10,.42);z-index:20;display:flex;justify-content:flex-end}
+.drawer{background:var(--bg);width:min(560px,100%);height:100%;overflow-y:auto;padding:20px max(20px, env(safe-area-inset-right,0px)) calc(28px + env(safe-area-inset-bottom,0px)) 20px;display:grid;gap:14px;align-content:start;border-left:4px solid var(--c, var(--accent))}
+.drawer .in,.drawer .ta,.drawer .sel{border-color:var(--line);margin:0;width:100%}
+.metrics{display:grid;grid-template-columns:repeat(auto-fill,minmax(110px,1fr));gap:10px}
+.metrics .in{text-align:right;font-variant-numeric:tabular-nums}
+.confirm{display:flex;gap:8px;align-items:center;flex-wrap:wrap;background:var(--peach);padding:10px;border-radius:8px}
+
+/* dashboard */
+.banner{border:1px dashed var(--accent);border-radius:var(--r);padding:14px 16px;display:flex;flex-wrap:wrap;gap:10px;align-items:center;justify-content:space-between;background:var(--surface)}
+.banner.example{border-style:solid;background:var(--peach)}
+.tiles{display:grid;gap:12px;grid-template-columns:repeat(auto-fit,minmax(min(100%,190px),1fr))}
+.tile{border:1px solid var(--line);border-radius:var(--r);padding:14px 16px;display:grid;gap:2px}
+.tile b{font-family:var(--display);font-variation-settings:"SOFT" 100;font-size:30px;font-weight:500;font-variant-numeric:tabular-nums;line-height:1.1}
+.tile small{color:var(--muted);font-size:12px}
+.bars{display:grid;gap:10px}
+.bar{display:grid;grid-template-columns:minmax(110px,170px) 1fr 64px;gap:10px;align-items:center;font-size:13px}
+.bar .track{height:12px;border-radius:999px;background:var(--surface);overflow:hidden}
+.bar .fill{height:100%;border-radius:999px}
+.bar .v{text-align:right;font-variant-numeric:tabular-nums;font-weight:600}
+.pv{display:grid;grid-template-columns:minmax(110px,170px) 1fr 70px;gap:10px;align-items:center;font-size:13px}
+.pv .track{position:relative;height:12px;border-radius:999px;background:var(--surface)}
+.pv .fill{position:absolute;inset:0 auto 0 0;border-radius:999px}
+svg text{fill:var(--muted);font-size:11px;font-family:var(--body)}
+
+/* inspo */
+.insight{display:grid;gap:4px}
+.insight b{font-family:var(--display);font-variation-settings:"SOFT" 100;font-size:20px;font-weight:500}
+.hookq{font-family:var(--display);font-style:italic;font-variation-settings:"SOFT" 100;font-size:17px;color:var(--fg)}
+.trend-top{display:flex;justify-content:space-between;align-items:start;gap:10px;flex-wrap:wrap}
+.src{display:flex;flex-wrap:wrap;gap:4px 12px;font-size:12.5px;color:var(--muted)}
+.capture{background:var(--surface);border-radius:var(--r);padding:16px;display:grid;gap:10px}
+.capture textarea{font:inherit;font-family:var(--display);font-variation-settings:"SOFT" 100;font-size:18px;color:var(--fg);background:var(--bg);border:1px solid var(--line);border-radius:8px;padding:10px 12px;width:100%;min-height:3.2em;resize:vertical}
+.capture textarea:focus{border-color:var(--accent);outline:none}
+.filters{display:flex;flex-wrap:wrap;gap:6px}
+.filters button{border:1px solid var(--line);background:var(--bg);color:var(--fg-2);border-radius:999px;padding:4px 12px;font-size:13px;font-weight:600}
+.filters button[aria-pressed="true"]{background:var(--fg);color:var(--bg);border-color:var(--fg)}
+.idea{border-left:4px solid var(--c, var(--line))}
+.ist{font-size:11px;font-weight:700;letter-spacing:.04em;text-transform:uppercase;border-radius:4px;padding:2px 6px;white-space:nowrap}
+.ist-Da-registrare{background:var(--peach);color:var(--warn)}
+.ist-Da-editare{background:var(--surface-2);color:var(--accent)}
+.ist-Editato{background:transparent;color:var(--ok);border:1px solid currentColor}
+.ist-Programmato{background:var(--accent);color:var(--accent-ink)}
+.ott{border-top:1px dashed var(--line);padding-top:10px;display:grid;gap:8px}
+.alts{display:flex;flex-direction:column;gap:6px}
+.alts button{text-align:left;border:1px solid var(--line);background:var(--bg);color:var(--fg);border-radius:8px;padding:6px 10px;font-family:var(--display);font-style:italic;font-variation-settings:"SOFT" 100;font-size:15px}
+.alts button:hover{border-color:var(--accent)}
+.qs{margin:0;padding-left:18px;color:var(--fg-2);font-size:14px}
+.propbox{background:var(--surface);border-radius:8px;padding:14px;display:grid;gap:10px}
+.capprop{white-space:pre-wrap;font-size:14px;line-height:1.5;color:var(--fg-2);background:var(--bg);border:1px solid var(--line);border-radius:8px;padding:10px 12px}
+.chs{display:inline-flex;gap:4px;flex-wrap:wrap}
+.chb{border:1px solid var(--line);border-radius:999px;padding:2px 10px;font-size:12px;font-weight:700;background:var(--bg);color:var(--muted)}
+.chb[aria-pressed="true"]{color:var(--accent-ink);border-color:transparent}
+.chb.ig[aria-pressed="true"]{background:var(--accent)}
+.chb.li[aria-pressed="true"]{background:var(--ch-li)}
+.chb.ss[aria-pressed="true"]{background:var(--ch-ss)}
+.chbadge{font-size:11px;font-weight:700;border-radius:4px;padding:1px 6px;color:var(--accent-ink)}
+.chbadge.ig{background:var(--accent)}.chbadge.li{background:var(--ch-li)}.chbadge.ss{background:var(--ch-ss)}
+.chan{border-top:4px solid var(--cc)}
+.flow{display:grid;grid-template-columns:repeat(3,1fr);gap:0;border-radius:var(--r);overflow:hidden}
+.flow > div{padding:14px 16px;display:grid;gap:4px;color:var(--accent-ink)}
+@media (max-width:640px){.flow{grid-template-columns:1fr}}
+.nota{border-left:3px solid var(--accent);background:var(--surface);border-radius:0 8px 8px 0;padding:12px 16px;display:grid;gap:4px}
+.nota p{margin:0;font-family:var(--display);font-variation-settings:"SOFT" 100;font-size:16.5px;line-height:1.45;max-width:80ch}
+.nota small{font-size:11.5px}
+.empty{border:1px dashed var(--line);border-radius:var(--r);padding:22px;text-align:center;color:var(--muted);display:grid;gap:8px;justify-items:center}
+.toast{position:fixed;left:50%;transform:translateX(-50%);bottom:calc(20px + env(safe-area-inset-bottom,0px));background:var(--fg);color:var(--bg);padding:10px 16px;border-radius:999px;font-size:13px;font-weight:600;z-index:30}
+@media (max-width:640px){
+  .two{grid-template-columns:1fr}
+  .item{grid-template-columns:48px 1fr}
+  .item .status{grid-column:2;justify-self:start}
+  .bar,.pv{grid-template-columns:1fr 54px}
+  .bar .lbl,.pv .lbl{grid-column:1 / -1}
+}
+@media (prefers-reduced-motion:no-preference){.btn,.chip,.day,.item{transition:background-color .15s,border-color .15s,color .15s}}
+</style>
+
+<div id="app"><div class="wrap"><p class="muted">Apro l’hub…</p></div></div>
+
+<script type="application/json" id="hub-state">
+null
+</script>
+
+<script id="hub-app">
+window.__bootHub=function(){
+"use strict";
+var RESET=':root{color-scheme:light;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}body{margin:0;font:14px system-ui,-apple-system,sans-serif}img{max-width:100%}[hidden]{display:none!important}';
+var FONTS='<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400..700;1,9..40,400..700&family=Fraunces:ital,opsz,wght,SOFT@0,9..144,400..700,100;1,9..144,400..700,100&display=swap">';
+var DRAFT_KEY='sbranding-hub-draft';
+var STATUS=['Idea','Da preparare','In lavorazione','Pronto','Pubblicato'];
+var FORMATI=['Reel','Carosello','Post singolo','Stories','Live','Collab'];
+var METRICHE=[['reach','Reach'],['views','Visualizzazioni'],['like','Like'],['commenti','Commenti'],['salvataggi','Salvataggi'],['condivisioni','Condivisioni'],['follow','Nuovi follower']];
+var MESI_COL=[['mese','Mese (AAAA-MM)'],['follower','Follower'],['reach','Reach account'],['visite','Visite al profilo'],['click','Click link in bio'],['dm','DM con domande'],['call','Call richieste'],['iscritti','Iscritti newsletter da IG']];
+var MONTHS=['gennaio','febbraio','marzo','aprile','maggio','giugno','luglio','agosto','settembre','ottobre','novembre','dicembre'];
+var WD=['lun','mar','mer','gio','ven','sab','dom'];
+var TABS=[['strategia','Strategia'],['piano','Piano editoriale'],['calendario','Calendario'],['dashboard','Dashboard'],['inspo','Inspo']];
+
+var baseState=JSON.parse(document.getElementById('hub-state').textContent);
+var state=JSON.parse(JSON.stringify(baseState));
+var dirty=false, saving=false, readOnly=false, artifactApi=null, sampleApi=null;
+var ui={tab:'strategia',calView:'cal',month:null,open:null,confirmDel:false,example:false,dashMonth:'tutto',sampleBusy:false,sampleErr:'',ideaFilter:'tutte',ottBusy:null,ottErr:{},calFilter:'tutti',propBusy:null,propErr:''};
+var CFILTRI=[['tutti','Tutti'],['pubblicati','Pubblicati'],['idee','Idee'],['dapubblicare','Da pubblicare']];
+function inFiltro(p,f){if(f==='pubblicati')return p.status==='Pubblicato';if(f==='idee')return p.status==='Idea';if(f==='dapubblicare')return p.status!=='Pubblicato'&&p.status!=='Idea';return true}
+
+// bozza locale: tiene le modifiche non salvate se chiudi la pagina
+try{var raw=localStorage.getItem(DRAFT_KEY);if(raw){var d=JSON.parse(raw);if(d&&d.base===baseState.meta.savedAt&&d.state){state=d.state;dirty=true;}else{localStorage.removeItem(DRAFT_KEY);}}}catch(e){}
+
+if(!state.inspo.mieIdee)state.inspo.mieIdee=[];
+['canali','repurposing'].forEach(function(k){if(!state.strategia[k]&&baseState.strategia[k])state.strategia[k]=JSON.parse(JSON.stringify(baseState.strategia[k]))});
+if(!state.rubOverride)state.rubOverride={};
+var live={media:[],months:{},prof:null};
+function igRub(m){return state.rubOverride[m.id]||m.rubrica||''}
+function igMedia(id){return live.media.find(function(m){return m.id===id})}
+function igForDate(dt){return live.media.find(function(m){return m.data===dt})}
+function igPseudo(){return live.media.filter(function(m){return !state.calendario.post.some(function(p){return p.data===m.data})}).map(function(m){return {id:'ig_'+m.id,igId:m.id,ig:true,data:m.data,ora:m.ora||'',rubrica:igRub(m),titolo:m.hook||'Post Instagram',hook:m.hook||'',formato:m.formato,status:'Pubblicato'}})}
+function allPosts(){return state.calendario.post.concat(igPseudo())}
+var CH=[['ig','Instagram'],['li','LinkedIn'],['ss','Substack']];
+function chOf(o){return (o&&o.canali)||{}}
+function chSet(o){var c=chOf(o);return !!(c.ig||c.li||c.ss)}
+function chToggles(path){var o=getPath(state,path)||{},c=chOf(o);return '<span class="chs" role="group" aria-label="Canali">'+CH.map(function(x){return '<button class="chb '+x[0]+'" data-act="ch" data-p="'+path+'" data-c="'+x[0]+'" aria-pressed="'+(!!c[x[0]])+'"'+(readOnly?' disabled':'')+'>'+x[1]+'</button>'}).join('')+'</span>'}
+function chBadges(o){var c=chOf(o);return CH.filter(function(x){return c[x[0]]}).map(function(x){return '<span class="chbadge '+x[0]+'">'+(x[0]==='ig'?'IG':x[0]==='li'?'in':'SS')+'</span>'}).join('')}
+function chGuess(text,rubrica){var t=(text||'').toLowerCase();var li=/brand|aziend|ai\b|intelligenza|strateg|client|marketing|lavoro|team|manager|fractional|metodo/.test(t)||['r1','r2','r3','r6','r7'].indexOf(rubrica)>-1;var ss=['r2','r4','r5','r6'].indexOf(rubrica)>-1||/perch|riflession|storia|cultura|tendenza|persone/.test(t);var ig=!/newsletter|substack/.test(t);return {ig:ig,li:li,ss:ss}}
+function safeRender(){var a=document.activeElement;if(a&&/^(INPUT|TEXTAREA|SELECT)$/.test(a.tagName)&&$('#app')&&$('#app').contains(a)){ui.pendingRender=true;return}render()}
+var ISTATUS=['Da registrare','Da editare','Editato','Programmato'];
+function $(s,r){return (r||document).querySelector(s)}
+function esc(s){return String(s==null?'':s).replace(/[&<>"']/g,function(c){return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]})}
+function uid(p){return p+Math.random().toString(36).slice(2,8)}
+function todayISO(){var d=new Date();return d.getFullYear()+'-'+String(d.getMonth()+1).padStart(2,'0')+'-'+String(d.getDate()).padStart(2,'0')}
+function parseD(s){var p=s.split('-');return new Date(+p[0],+p[1]-1,+p[2])}
+function iso(d){return d.getFullYear()+'-'+String(d.getMonth()+1).padStart(2,'0')+'-'+String(d.getDate()).padStart(2,'0')}
+function monthLabel(m){var p=m.split('-');return MONTHS[+p[1]-1]+' '+p[0]}
+function wdName(s){return ['domenica','lunedì','martedì','mercoledì','giovedì','venerdì','sabato'][parseD(s).getDay()]}
+function getPath(o,path){return path.split('.').reduce(function(a,k){return a==null?a:a[k]},o)}
+function setPath(o,path,v){var ks=path.split('.');var last=ks.pop();var t=ks.reduce(function(a,k){if(a[k]==null)a[k]={};return a[k]},o);t[last]=v}
+function rub(id){return state.ped.rubriche.find(function(r){return r.id===id})||{nome:'Senza rubrica',colore:'#888888'}}
+function fmtN(n){return n==null||isNaN(n)?'–':Math.round(n).toLocaleString('it-IT')}
+function fmtP(n){return n==null||isNaN(n)?'–':(n*100).toLocaleString('it-IT',{maximumFractionDigits:1})+'%'}
+
+function markDirty(){dirty=true;try{localStorage.setItem(DRAFT_KEY,JSON.stringify({base:baseState.meta.savedAt,state:state}))}catch(e){}renderSaveBox()}
+
+/* campi */
+function inp(path,ph,cls){return '<input class="in '+(cls||'')+'" data-b="'+path+'" value="'+esc(getPath(state,path))+'" placeholder="'+esc(ph||'')+'"'+(readOnly?' readonly':'')+'>'}
+function ta(path,ph,cls){return '<textarea class="ta '+(cls||'')+'" data-b="'+path+'" rows="2" placeholder="'+esc(ph||'')+'"'+(readOnly?' readonly':'')+'>'+esc(getPath(state,path))+'</textarea>'}
+function sel(path,opts,cls){var v=getPath(state,path);return '<select class="sel '+(cls||'')+'" data-b="'+path+'"'+(readOnly?' disabled':'')+'>'+opts.map(function(o){var val=Array.isArray(o)?o[0]:o,lab=Array.isArray(o)?o[1]:o;return '<option value="'+esc(val)+'"'+(String(v)===String(val)?' selected':'')+'>'+esc(lab)+'</option>'}).join('')+'</select>'}
+function field(label,html,cls){return '<label class="f '+(cls||'')+'"><span>'+label+'</span>'+html+'</label>'}
+function why(path){return '<label class="f why"><span>motivazione</span>'+ta(path,'Perché questa scelta')+'</label>'}
+function delBtn(act,id){return readOnly?'':'<button class="btn ghost small danger" data-act="'+act+'" data-id="'+id+'" aria-label="Elimina">Elimina</button>'}
+function addBtn(act,label){return readOnly?'':'<button class="btn" data-act="'+act+'">+ '+label+'</button>'}
+
+/* ---------- STRATEGIA ---------- */
+function vStrategia(){
+  var s=state.strategia;
+  var h='<section class="sec"><div><p class="eyebrow">Strategia overall · Instagram @sbranding_</p><h1>Si parte dalle <em>persone</em>, poi si sceglie cosa dire</h1><p class="lead">Obiettivi, KPI, posizionamento e tono di voce. Dove trovi l\'etichetta “proposta” è una mia bozza: confermala o riscrivila.</p></div>';
+  h+='<div class="principle"><span class="eyebrow">Principio guida</span>'+ta('strategia.principio','')+'</div></section>';
+
+  h+='<section class="sec"><div class="sec-head"><div><h2>Le persone a cui <em>parliamo</em></h2><p class="muted">Dal target della bozza di PED. Il campo “cosa ci dicono” si riempie con l\'ascolto: DM, commenti, domande in call.</p></div>'+addBtn('add-persona','Persona')+'</div><div class="grid">';
+  s.persone.forEach(function(p,i){var b='strategia.persone.'+i+'.';
+    h+='<article class="card">'+inp(b+'nome','Nome','big')+field('Chi è',ta(b+'chi'))+field('Bisogni',ta(b+'bisogni'))+field('Pain point',ta(b+'pain'))+field('Perché dovrebbe seguirti',ta(b+'perche'))+field('Cosa ci dicono (ascolto)',ta(b+'ascolto','Frasi vere dai DM e dai commenti'))+'<div class="row-actions"><span></span>'+delBtn('del-persona',p.id)+'</div></article>'});
+  h+='</div></section>';
+
+  h+='<section class="sec"><div class="sec-head"><div><h2>Obiettivi <em>e tempi</em></h2></div>'+addBtn('add-obiettivo','Obiettivo')+'</div><div class="grid">';
+  s.obiettivi.forEach(function(o,i){var b='strategia.obiettivi.'+i+'.';
+    h+='<article class="card"><div class="row-actions"><span class="tag '+(o.stato==='proposta'?'proposta':'ver')+'">'+(o.stato==='proposta'?'Proposta':'Confermato')+'</span>'+(readOnly?'':'<button class="btn ghost small" data-act="toggle-ob" data-id="'+o.id+'">'+(o.stato==='proposta'?'Conferma':'Riporta a proposta')+'</button>')+'</div>'+ta(b+'testo','Obiettivo','in big')+field('Entro quando',inp(b+'tempo'))+why(b+'motivazione')+'<div class="row-actions"><span class="muted small">'+esc(o.id.toUpperCase())+'</span>'+delBtn('del-obiettivo',o.id)+'</div></article>'});
+  h+='</div></section>';
+
+  var obOpts=s.obiettivi.map(function(o){return [o.id,o.id.toUpperCase()+' · '+o.testo.slice(0,40)]});
+  h+='<section class="sec"><div class="sec-head"><div><h2>KPI: da dove partiamo, <em>dove vogliamo arrivare</em></h2><p class="muted">I valori di partenza “da rilevare” vanno presi dagli Insights: senza quelli il target è solo un\'intenzione.</p></div>'+addBtn('add-kpi','KPI')+'</div><div class="tbl-wrap"><table style="min-width:980px"><thead><tr><th style="width:20%">KPI</th><th style="width:14%">Partenza</th><th style="width:14%">Target</th><th style="width:11%">Entro</th><th style="width:12%">Obiettivo</th><th>Motivazione</th><th></th></tr></thead><tbody>';
+  s.kpi.forEach(function(k,i){var b='strategia.kpi.'+i+'.';
+    h+='<tr><td>'+ta(b+'nome')+'</td><td>'+ta(b+'partenza')+'</td><td>'+ta(b+'target')+'</td><td>'+ta(b+'scadenza')+'</td><td>'+sel(b+'obiettivo',obOpts)+'</td><td>'+ta(b+'motivazione')+'</td><td>'+delBtn('del-kpi',k.id)+'</td></tr>'});
+  h+='</tbody></table></div></section>';
+
+  if(s.canali){
+    var CC={ig:'var(--accent)',li:'var(--ch-li)',ss:'var(--ch-ss)'};
+    h+='<section class="sec"><div><h2>Canali e content <em>repurposing</em></h2><p class="muted">Ogni canale ha un ruolo diverso. Le idee della tab Inspo si smistano con questi criteri.</p></div>';
+    h+='<div class="card soft"><span class="eyebrow">Il flusso</span>'+ta('strategia.repurposing.flusso','','in')+why('strategia.repurposing.motivazione')+'</div><div class="grid">';
+    s.canali.forEach(function(c,i){var b='strategia.canali.'+i+'.';var cr=(s.repurposing.criteri||[]).findIndex(function(x){return x.canale===c.id});
+      h+='<article class="card chan" style="--cc:'+(CC[c.id]||'var(--accent)')+'">'+inp(b+'nome','','big')+field('Ruolo',ta(b+'ruolo'))+field('Pubblico',ta(b+'pubblico'))+field('Formato',ta(b+'formato'))+'<div class="two">'+field('Frequenza',ta(b+'frequenza'))+field('Obiettivi',inp(b+'obiettivo'))+'</div>'+(cr>-1?field('Ci va quando…',ta('strategia.repurposing.criteri.'+cr+'.si'))+field('Non ci va quando…',ta('strategia.repurposing.criteri.'+cr+'.no')):'')+why(b+'motivazione')+'</article>'});
+    h+='</div></section>';
+  }
+  h+='<section class="sec"><h2>Posizionamento</h2><div class="card soft">'+ta('strategia.posizionamento.testo','','in big')+why('strategia.posizionamento.motivazione')+'</div></section>';
+
+  h+='<section class="sec"><div class="sec-head"><div><h2>Tono di <em>voce</em></h2><p class="muted">Proposta costruita dai tuoi contenuti e dalla metafora della torta del sito. Era tra le cose “da completare”.</p></div>'+addBtn('add-tono','Tratto')+'</div><div class="grid">';
+  s.tono.forEach(function(t,i){var b='strategia.tono.'+i+'.';
+    h+='<article class="card">'+inp(b+'tratto','Tratto','big')+field('Cosa vuol dire',ta(b+'descrizione'))+field('Suona così',ta(b+'esempio','','hookq'))+field('Da evitare',ta(b+'evita'))+why(b+'motivazione')+'<div class="row-actions"><span></span>'+delBtn('del-tono',t.id)+'</div></article>'});
+  h+='</div></section>';
+  return h;
+}
+
+/* ---------- PIANO ---------- */
+function vPiano(){
+  var p=state.ped;
+  var macroOpts=p.macro.map(function(m){return [m.id,m.nome]});
+  var att=p.rubriche.filter(function(r){return r.stato==='attiva'});
+  var tot=att.reduce(function(a,r){return a+(+r.alMese||0)},0);
+  var h='<section class="sec"><div><p class="eyebrow">Piano editoriale · solo Instagram</p><h1>Cosa raccontiamo, <em>come</em> e ogni quanto</h1></div>';
+  h+='<div class="card soft"><div class="row-actions"><strong>Mix mensile delle rubriche attive</strong><span class="muted small">'+tot+' uscite al mese</span></div><div class="mix">'+att.map(function(r){return '<span style="width:'+(tot?(r.alMese/tot*100):0)+'%;background:'+esc(r.colore)+'" title="'+esc(r.nome)+'"></span>'}).join('')+'</div><div class="legend">'+att.map(function(r){return '<span><i class="dot" style="background:'+esc(r.colore)+'"></i>'+esc(r.nome)+' · '+(r.alMese||0)+'</span>'}).join('')+'</div></div></section>';
+
+  h+='<section class="sec"><div class="sec-head"><div><h2>Macro-topic <em>e obiettivi</em></h2></div>'+addBtn('add-macro','Macro-topic')+'</div><div class="grid">';
+  p.macro.forEach(function(m,i){var b='ped.macro.'+i+'.';
+    var rs=p.rubriche.filter(function(r){return r.macro===m.id});
+    h+='<article class="card">'+inp(b+'nome','','big')+field('Obiettivo',ta(b+'obiettivo'))+why(b+'motivazione')+'<div class="legend">'+(rs.length?rs.map(function(r){return '<span><i class="dot" style="background:'+esc(r.colore)+'"></i>'+esc(r.nome)+'</span>'}).join(''):'<span class="muted">Nessuna rubrica collegata</span>')+'</div><div class="row-actions"><span></span>'+delBtn('del-macro',m.id)+'</div></article>'});
+  h+='</div></section>';
+
+  h+='<section class="sec"><div class="sec-head"><div><h2>Rubriche</h2><p class="muted">Clicca il cerchio per cambiare colore: si aggiorna ovunque, calendario e dashboard compresi.</p></div>'+addBtn('add-rubrica','Rubrica')+'</div><div class="grid">';
+  p.rubriche.forEach(function(r,i){var b='ped.rubriche.'+i+'.';
+    h+='<article class="card rub" style="--c:'+esc(r.colore)+'"><div class="rub-head"><input type="color" data-b="'+b+'colore" value="'+esc(r.colore)+'" aria-label="Colore rubrica"'+(readOnly?' disabled':'')+'>'+inp(b+'nome','Nome rubrica','big')+'</div><div class="row-actions"><span class="tag '+(r.stato==='proposta'?'proposta':'')+'">'+(r.stato==='proposta'?'Proposta da validare':'Attiva')+'</span>'+(readOnly?'':'<button class="btn ghost small" data-act="toggle-rub" data-id="'+r.id+'">'+(r.stato==='proposta'?'Attiva':'Metti in pausa')+'</button>')+'</div>'+field('Descrizione',ta(b+'descrizione'))+'<div class="two">'+field('Formato',ta(b+'formato'))+field('Uscite al mese',inp(b+'alMese','0'))+'</div><div class="two">'+field('Macro-topic',sel(b+'macro',macroOpts))+field('Obiettivo',ta(b+'obiettivo'))+'</div>'+why(b+'motivazione')+'<div class="row-actions"><span></span>'+delBtn('del-rubrica',r.id)+'</div></article>'});
+  h+='</div></section>';
+
+  var rubOpts=p.rubriche.map(function(r){return [r.id,r.nome]});
+  h+='<section class="sec"><div class="sec-head"><div><h2>Idee <em>in cantiere</em></h2><p class="muted">Dalla bozza di PED. Quando un\'idea entra in calendario la trovi segnata.</p></div>'+addBtn('add-idea','Idea')+'</div><div class="tbl-wrap"><table style="min-width:620px"><thead><tr><th>Idea</th><th style="width:26%">Rubrica</th><th style="width:16%">In calendario</th><th></th></tr></thead><tbody>';
+  p.idee.forEach(function(d,i){var inCal=ideaInCal(d.testo);
+    h+='<tr><td>'+ta('ped.idee.'+i+'.testo')+'</td><td>'+sel('ped.idee.'+i+'.rubrica',rubOpts)+'</td><td>'+(inCal?'<span class="tag ver">'+esc(inCal)+'</span>':(readOnly?'':'<button class="btn small" data-act="idea-cal" data-i="'+i+'">Porta in calendario</button>'))+'</td><td>'+(readOnly?'':'<button class="btn ghost small danger" data-act="del-idea" data-i="'+i+'">Elimina</button>')+'</td></tr>'});
+  h+='</tbody></table></div></section>';
+  return h;
+}
+function ideaInCal(t){var key=t.toLowerCase().split(/\W+/).filter(function(w){return w.length>5}).slice(0,3);if(!key.length)return '';var p=state.calendario.post.find(function(x){var tt=(x.titolo||'').toLowerCase();return key.filter(function(k){return tt.indexOf(k)>-1}).length>=Math.min(2,key.length)});return p?parseD(p.data).getDate()+' '+MONTHS[parseD(p.data).getMonth()].slice(0,3):''}
+
+/* ---------- CALENDARIO ---------- */
+function defaultMonth(){var t=todayISO().slice(0,7);var ms=state.calendario.post.map(function(p){return p.data.slice(0,7)}).filter(function(m){return m>=t}).sort();if(state.calendario.post.some(function(p){return p.data.slice(0,7)===t}))return t;return ms[0]||t}
+function shiftMonth(m,n){var p=m.split('-');var d=new Date(+p[0],+p[1]-1+n,1);return d.getFullYear()+'-'+String(d.getMonth()+1).padStart(2,'0')}
+function postsOf(m){return allPosts().filter(function(p){return p.data.slice(0,7)===m}).sort(function(a,b){return (a.data+a.ora).localeCompare(b.data+b.ora)})}
+var STCOL={'Idea':'var(--line)','Da preparare':'var(--warn)','In lavorazione':'var(--accent)','Pronto':'var(--accent-deep)','Pubblicato':'var(--ok)'};
+var FMSHORT={'Reel':'Reel','Carosello':'Carosello','Post singolo':'Post','Stories':'Stories','Live':'Live','Collab':'Collab'};
+function chipHtml(p){var r=rub(p.rubrica);return '<button class="chip'+(p.status==='Pubblicato'?' pub':'')+'" style="--c:'+esc(r.colore)+'" data-act="open" data-id="'+p.id+'" title="'+esc(p.status)+'"><span class="cm"><span class="rb">'+esc(r.nome)+'</span><span class="st" style="background:'+(STCOL[p.status]||'var(--line)')+'" aria-label="'+esc(p.status)+'"></span></span><span class="ct">'+esc(p.titolo||'Senza titolo')+'</span><span class="cm"><span class="fm">'+esc(FMSHORT[p.formato]||p.formato||'Formato?')+'</span>'+(p.ora?'<span class="muted" style="font-size:11px">'+esc(p.ora)+'</span>':'')+'</span></button>'}
+function vCalendario(){
+  if(!ui.month)ui.month=defaultMonth();
+  var m=ui.month, ps=postsOf(m);
+  if(state.calendario.commenti[m]==null)state.calendario.commenti[m]='';
+  var lab=monthLabel(m).split(' ');
+  var h='<section class="sec"><div class="cal-bar"><div class="monthnav"><button class="btn ghost" data-act="mprev" aria-label="Mese precedente">‹</button><h2><em>'+lab[0]+'</em> '+lab[1]+'</h2><button class="btn ghost" data-act="mnext" aria-label="Mese successivo">›</button></div><div style="display:flex;gap:8px;flex-wrap:wrap"><div class="seg" role="group" aria-label="Vista"><button data-act="view" data-v="lista" aria-pressed="'+(ui.calView==='lista')+'">Lista</button><button data-act="view" data-v="cal" aria-pressed="'+(ui.calView==='cal')+'">Calendario</button></div>'+addBtn('add-post','Contenuto')+'</div></div>';
+  h+='<div class="note-month"><span class="eyebrow">Il mese in breve</span>'+ta('calendario.commenti.'+m,'Un commento che anticipa il mese: tema, perché, cosa aspettarsi')+'</div>';
+  var leg=state.ped.rubriche.filter(function(r){return r.stato==='attiva'||ps.some(function(p){return p.rubrica===r.id})});
+  h+='<div class="legend">'+leg.map(function(r){var n=ps.filter(function(p){return p.rubrica===r.id}).length;return '<span><i class="dot" style="background:'+esc(r.colore)+'"></i>'+esc(r.nome)+' <span class="muted">'+n+'/'+(r.alMese||0)+'</span></span>'}).join('')+'</div>';
+  var cf=ui.calFilter,chf=ui.chFilter||'tutti',inCh=function(p){return chf==='tutti'||(p.ig&&chf==='ig')||!!chOf(p)[chf]},psF=ps.filter(function(p){return inFiltro(p,cf)&&inCh(p)});
+  h+='<div class="filters" role="group" aria-label="Filtra per canale"><span class="eyebrow" style="align-self:center;margin-right:4px">Canale</span>'+[['tutti','Tutti'],['ig','Instagram'],['li','LinkedIn'],['ss','Substack']].map(function(c){return '<button data-act="chfilter" data-v="'+c[0]+'" aria-pressed="'+(chf===c[0])+'">'+c[1]+'</button>'}).join('')+'</div>';
+  h+='<div class="filters" role="group" aria-label="Filtra i contenuti">'+CFILTRI.map(function(c){return '<button data-act="cfilter" data-v="'+c[0]+'" aria-pressed="'+(cf===c[0])+'">'+c[1]+' · '+ps.filter(function(p){return inFiltro(p,c[0])}).length+'</button>'}).join('')+'</div></section>';
+  if(ui.calView==='lista'){
+    h+='<section class="sec">'+(!psF.length&&ps.length?'<div class="empty"><strong>Nessun contenuto con questo filtro a '+monthLabel(m)+'</strong><span>Prova un altro filtro o torna a Tutti.</span></div>':'')+(psF.length?'<div class="list">'+psF.map(function(p){var r=rub(p.rubrica),d=parseD(p.data);return '<button class="item" style="--c:'+esc(r.colore)+'" data-act="open" data-id="'+p.id+'"><span class="d"><b>'+d.getDate()+'</b><i>'+wdName(p.data)+'</i></span><span class="t"><strong>'+esc(p.titolo||'Senza titolo')+'</strong><span class="meta"><span><i class="dot" style="background:'+esc(r.colore)+'"></i> '+esc(r.nome)+'</span><span>'+esc(p.formato)+'</span><span>'+esc(p.ora||'')+'</span>'+(p.ig?'<span class="tag" style="padding:0 7px">da Instagram</span>':chBadges(p))+(p.hook?'<span>“'+esc(p.hook)+'”</span>':'')+'</span></span><span class="status st-'+p.status.replace(/ /g,'-')+'">'+esc(p.status)+'</span></button>'}).join('')+'</div>':ps.length?'':'<div class="empty"><strong>Nessun contenuto a '+monthLabel(m)+'</strong><span>Aggiungi il primo oppure clicca un giorno nella vista calendario.</span></div>')+'</section>';
+  }else{
+    var p0=m.split('-'),first=new Date(+p0[0],+p0[1]-1,1),start=new Date(first);start.setDate(1-((first.getDay()+6)%7));
+    var t=todayISO();
+    h+='<section class="sec"><div class="calgrid-wrap"><div class="calgrid">'+WD.map(function(w){return '<div class="wd">'+w+'</div>'}).join('');
+    for(var i=0;i<42;i++){var d=new Date(start);d.setDate(start.getDate()+i);var di=iso(d);var out=di.slice(0,7)!==m;
+      if(i===35&&out)break;
+      var dp=allPosts().filter(function(p){return p.data===di&&inFiltro(p,cf)&&inCh(p)});
+      h+='<div class="day'+(out?' out':'')+(di===t?' today':'')+(d.getDay()===0||d.getDay()===6?' we':'')+'" data-act="dayadd" data-d="'+di+'" role="button" tabindex="0" aria-label="'+d.getDate()+' '+MONTHS[d.getMonth()]+'"><span class="n">'+d.getDate()+'</span>'+dp.map(chipHtml).join('')+'</div>'}
+    h+='</div></div><div class="legend small" style="color:var(--muted)"><span>Il pallino è lo status:</span>'+STATUS.map(function(x){return '<span><i class="dot" style="width:8px;height:8px;background:'+(STCOL[x]||'var(--line)')+'"></i>'+x+'</span>'}).join('')+'<span>· Clicca un giorno vuoto per aggiungere un contenuto, una card per aprire la scheda.</span></div></section>';
+  }
+  return h;
+}
+function igMetricsBlock(m){if(!m)return '';
+  var it=[['Reach',m.reach],['Visualizzazioni',m.views],['Like',m.likes],['Commenti',m.comments],['Salvataggi',m.saved],['Condivisioni',m.shares]];
+  var r=+m.reach||0,v=r?((+m.saved||0)+(+m.shares||0))/r:null,e=r?((+m.likes||0)+(+m.comments||0)+(+m.saved||0)+(+m.shares||0))/r:null;
+  return '<div class="propbox"><div class="row-actions"><span class="eyebrow">Risultati live da Instagram</span>'+(m.permalink?'<a class="small" href="'+esc(m.permalink)+'" target="_blank" rel="noopener">Apri il post ↗</a>':'')+'</div><div class="tiles" style="grid-template-columns:repeat(auto-fit,minmax(110px,1fr))">'+it.map(function(x){return '<div class="tile" style="padding:10px 12px"><small>'+x[0]+'</small><b style="font-size:22px">'+fmtN(x[1])+'</b></div>'}).join('')+'</div><span class="muted small">Interazione '+fmtP(e)+' · salvataggi + condivisioni '+fmtP(v)+' · aggiornato '+esc(fmtAgg(m.aggiornato))+'</span></div>'}
+function fmtAgg(s){if(!s)return '–';var d=new Date(s);return isNaN(d)?s:d.toLocaleString('it-IT',{day:'numeric',month:'short',hour:'2-digit',minute:'2-digit'})}
+function vIgDrawer(){var m=igMedia(ui.open.slice(3));if(!m)return '';var r=rub(igRub(m));
+  var opts=state.ped.rubriche.map(function(x){return '<option value="'+x.id+'"'+(x.id===igRub(m)?' selected':'')+'>'+esc(x.nome)+'</option>'}).join('');
+  return '<div class="scrim" data-act="close-scrim"><aside class="drawer" role="dialog" aria-modal="true" aria-label="Post Instagram" style="--c:'+esc(r.colore)+'"><div class="row-actions"><span class="eyebrow"><i class="dot" style="background:'+esc(r.colore)+'"></i> Pubblicato · '+wdName(m.data)+' '+parseD(m.data).getDate()+' '+MONTHS[parseD(m.data).getMonth()]+'</span><button class="btn ghost" data-act="close" aria-label="Chiudi">Chiudi</button></div><h3 class="hookq" style="font-size:20px">“'+esc(m.hook||'')+'”</h3><div class="two"><label class="f"><span>Rubrica (correggi se l\'ho classificato male)</span><select class="sel" data-b="rubOverride.'+m.id+'"'+(readOnly?' disabled':'')+'>'+opts+'</select></label><label class="f"><span>Formato</span><span style="text-transform:none;letter-spacing:0;font-size:15px;color:var(--fg);font-weight:400">'+esc(m.formato)+(m.ai?' · tema AI':'')+'</span></label></div>'+igMetricsBlock(m)+'<p class="muted small" style="margin:0">Questo post non è nel calendario: arriva direttamente da Instagram. Se vuoi lavorarci, crea un contenuto nello stesso giorno e i dati si collegano da soli.</p></aside></div>'}
+function vDrawer(){
+  if(ui.open&&ui.open.indexOf('ig_')===0)return vIgDrawer();
+  var i=state.calendario.post.findIndex(function(p){return p.id===ui.open});if(i<0)return '';
+  var p=state.calendario.post[i],r=rub(p.rubrica),b='calendario.post.'+i+'.';
+  var rubOpts=state.ped.rubriche.map(function(x){return [x.id,x.nome+(x.stato==='proposta'?' (proposta)':'')]});
+  var fOpts=FORMATI.indexOf(p.formato)<0&&p.formato?FORMATI.concat([p.formato]):FORMATI;
+  var h='<div class="scrim" data-act="close-scrim"><aside class="drawer" role="dialog" aria-modal="true" aria-label="Scheda contenuto" style="--c:'+esc(r.colore)+'"><div class="row-actions"><span class="eyebrow"><i class="dot" style="background:'+esc(r.colore)+'"></i> '+esc(r.nome)+' · '+wdName(p.data)+'</span><button class="btn ghost" data-act="close" aria-label="Chiudi">Chiudi</button></div>';
+  h+=field('Titolo / key message',ta(b+'titolo','','in big'));
+  h+='<div class="two">'+field('Data','<input type="date" class="in" data-b="'+b+'data" value="'+esc(p.data)+'"'+(readOnly?' readonly':'')+'>')+field('Ora',inp(b+'ora','09:30'))+'</div>';
+  h+='<div class="two">'+field('Rubrica',sel(b+'rubrica',rubOpts))+field('Status',sel(b+'status',STATUS))+'</div>';
+  h+='<div class="two">'+field('Formato',sel(b+'formato',fOpts))+field('Tipologia ripresa',inp(b+'ripresa','Greenscreen, schermo, parlato…'))+'</div>';
+  h+=field('Hook',ta(b+'hook','La prima frase che ferma lo scroll','hookq'));
+  h+=field('Caption',ta(b+'caption','Testo del post'));
+  h+=propBlock(p);
+  h+=repBlock(p,i);
+  h+=field('Link creatività',inp(b+'link','Canva, Drive…'));
+  h+=field('Note',ta(b+'note'));
+  var igm=igForDate(p.data);
+  if(igm)h+=igMetricsBlock(igm);
+  else h+='<div class="f"><span>Risultati dagli Insights</span><div class="metrics">'+METRICHE.map(function(mm){return field(mm[1],'<input class="in" inputmode="numeric" data-b="'+b+'m.'+mm[0]+'" data-num="1" value="'+esc(p.m&&p.m[mm[0]]!=null?p.m[mm[0]]:'')+'" placeholder="–"'+(readOnly?' readonly':'')+'>')}).join('')+'</div><span class="muted small" style="text-transform:none;letter-spacing:0;font-weight:400">Leggili dopo 7 giorni dalla pubblicazione, così i post sono confrontabili.</span></div>';
+  if(!readOnly){h+=ui.confirmDel?'<div class="confirm"><span>Elimino questo contenuto?</span><button class="btn danger" data-act="del-post-yes" data-id="'+p.id+'">Sì, elimina</button><button class="btn" data-act="del-post-no">Annulla</button></div>':'<div class="row-actions"><button class="btn danger" data-act="del-post">Elimina contenuto</button><button class="btn primary" data-act="close">Fatto</button></div>'}
+  return h+'</aside></div>';
+}
+
+function propBlock(p){var pr=p.prop;
+  var h='<div class="propbox"><div class="row-actions"><span class="eyebrow">Proposte di caption e hook</span>'+(pr&&pr.origine?'<span class="muted small">'+esc(pr.origine)+'</span>':'')+'</div>';
+  if(pr){
+    if(pr.hooks&&pr.hooks.length)h+='<div class="f"><span>Hook · clicca per usarlo, quello attuale resta qui</span><div class="alts">'+pr.hooks.map(function(k,j){return '<button data-act="post-hook" data-id="'+p.id+'" data-j="'+j+'"'+(readOnly?' disabled':'')+'>“'+esc(k)+'”</button>'}).join('')+'</div></div>';
+    if(pr.caption)h+='<div class="f"><span>Caption proposta</span><div class="capprop">'+esc(pr.caption)+'</div></div>'+(readOnly?'':'<div><button class="btn small" data-act="post-cap" data-id="'+p.id+'">'+(p.caption?'Scambia con la caption attuale':'Usa questa caption')+'</button></div>');
+  }else h+='<p class="muted small" style="margin:0">Ancora nessuna proposta per questo contenuto.</p>';
+  if(ui.propErr)h+='<p class="small" style="margin:0;color:var(--warn)">'+esc(ui.propErr)+'</p>';
+  if(!readOnly)h+=sampleApi?'<div><button class="btn'+(pr?'':' primary')+'" data-act="post-gen" data-id="'+p.id+'"'+(ui.propBusy?' disabled':'')+'>'+(ui.propBusy===p.id?'Sto scrivendo…':(pr?'Nuove proposte con Claude':'Proponi caption e hook'))+'</button></div>':'<span class="muted small">Le proposte con Claude sono disponibili nella versione su Claude.</span>';
+  return h+'</div>'}
+function repBlock(p,i){var b='calendario.post.'+i+'.',c=chOf(p);
+  var h='<div class="propbox"><span class="eyebrow">Repurposing</span><div class="f"><span>Dove esce questa idea</span>'+chToggles('calendario.post.'+i)+'</div>';
+  if(p.canaliPerche||chSet(p))h+=field('Perché',ta(b+'canaliPerche'));
+  if(c.li)h+=field('Versione LinkedIn',ta(b+'versioneLi','Il post LinkedIn: stesso pensiero, angolo \"cosa significa per un\'azienda\"'));
+  if(c.ss)h+=field('Spunto per la newsletter',ta(b+'spuntoSs','Titolo del numero, tesi, sezioni, domanda alla community'))+field('Numero della newsletter',inp(b+'numeroSs','Es. 14 novembre'));
+  if(ui.repErr)h+='<p class="small" style="margin:0;color:var(--warn)">'+esc(ui.repErr)+'</p>';
+  if(!readOnly&&(c.li||c.ss))h+=sampleApi?'<div><button class="btn" data-act="rep-gen" data-id="'+p.id+'"'+(ui.repBusy?' disabled':'')+'>'+(ui.repBusy===p.id?'Sto scrivendo…':'Scrivi le versioni con Claude')+'</button></div>':'<span class="muted small">Le versioni LinkedIn e Substack con Claude sono disponibili nella versione su Claude.</span>';
+  return h+'</div>'}
+function genRepurpose(id){var p=state.calendario.post.find(function(x){return x.id===id});if(!sampleApi||!p||ui.repBusy)return;var c=chOf(p);ui.repBusy=id;ui.repErr='';render();
+  var ctx={posizionamento:state.strategia.posizionamento.testo,tono:state.strategia.tono.map(function(t){return t.tratto+': '+t.descrizione+' Evita: '+t.evita}),canali:(state.strategia.canali||[]).filter(function(x){return c[x.id]}).map(function(x){return {id:x.id,ruolo:x.ruolo,pubblico:x.pubblico,formato:x.formato}})};
+  var prompt='Sei una social media strategist senior italiana e scrivi per Marta Vannelli (Sbranding). Contesto (JSON):\n'+JSON.stringify(ctx)+'\n\nContenuto Instagram di partenza: "'+(p.titolo||'')+'". Hook: "'+(p.hook||'')+'". Caption: "'+(p.caption||(p.prop&&p.prop.caption)||'')+'". Note: "'+(p.note||'')+'".\n\nAdatta l\'idea ai canali richiesti, con la voce di Marta in prima persona, italiano naturale, niente trattini lunghi, niente elenchi puntati nel post LinkedIn, niente frasi fatte, niente virgola seguita da "e". Non inventare dati o esperienze: se servono lascia segnaposto tra parentesi quadre. Rispondi SOLO con JSON con chiavi: '+(c.li?'linkedin (post di 1200-1800 caratteri con angolo professionale \\"cosa significa per un\'azienda\\", apertura forte, chiusura con una domanda), ':'')+(c.ss?'substack (spunto per un numero: titolo, tesi in due frasi, 3-4 sezioni una per riga, domanda finale alla community)':'')+'.';
+  sampleApi.json(prompt,{modelTier:'default'}).then(function(o){if(!o)throw {};if(c.li&&o.linkedin)p.versioneLi=String(o.linkedin);if(c.ss&&o.substack)p.spuntoSs=typeof o.substack==='string'?o.substack:JSON.stringify(o.substack,null,1);ui.repBusy=null;markDirty();render();toast('Versioni pronte: ricordati di salvare')})
+  .catch(function(err){ui.repBusy=null;ui.repErr=err&&err.code==='rate_limited'?'Troppe richieste ravvicinate, riprova tra qualche minuto.':'Non sono riuscita a scriverle, riprova o scrivimi in chat.';if(err&&err.code==='not_granted')sampleApi=null;render()})}
+function genPostProp(id){var p=state.calendario.post.find(function(x){return x.id===id});if(!sampleApi||!p||ui.propBusy)return;ui.propBusy=id;ui.propErr='';render();
+  var r=rub(p.rubrica);
+  var ctx={posizionamento:state.strategia.posizionamento.testo,persone:state.strategia.persone.map(function(x){return {nome:x.nome,bisogni:x.bisogni,pain:x.pain,ascolto:x.ascolto}}),tono:state.strategia.tono.map(function(t){return t.tratto+': '+t.descrizione+' Esempio: '+t.esempio+' Evita: '+t.evita}),rubrica:{nome:r.nome,descrizione:r.descrizione},captionPassate:state.calendario.post.filter(function(x){return x.caption&&x.id!==p.id}).map(function(x){return x.caption}).slice(-3)};
+  var prompt='Sei una social media strategist senior italiana e scrivi per Marta Vannelli (Sbranding, @sbranding_ su Instagram). Contesto (JSON):\n'+JSON.stringify(ctx)+'\n\nContenuto: "'+(p.titolo||'')+'". Formato: '+p.formato+'. Hook attuale: "'+(p.hook||'')+'". Note: "'+(p.note||'')+'".\n\nScrivi con la voce di Marta, in prima persona: ironica, competente senza salire in cattedra, critica, umana. Italiano naturale, frasi anche brevi, niente trattini lunghi, niente elenchi puntati, niente frasi fatte, niente "non solo X ma anche Y", niente virgola seguita da "e". Non inventare dati, numeri o esperienze che non trovi nel contesto: se servono, lascia un segnaposto tra parentesi quadre. Rispondi SOLO con un oggetto JSON con chiavi: caption (4 o 5 paragrafi brevi separati da \\n\\n, chiusura che invita a commentare o a mandare il post a una persona precisa), hooks (array di 4 prime frasi diverse tra loro per tono: una domanda, una affermazione controintuitiva, una personale, una pratica).';
+  sampleApi.json(prompt,{modelTier:'default'}).then(function(o){if(!o||!o.caption)throw {message:'Risposta non valida'};
+    p.prop={caption:String(o.caption),hooks:(Array.isArray(o.hooks)?o.hooks:[]).map(String).slice(0,5),origine:'Claude nella pagina, '+new Date().toLocaleDateString('it-IT')};
+    ui.propBusy=null;markDirty();render();toast('Proposte pronte: ricordati di salvare')})
+  .catch(function(err){ui.propBusy=null;ui.propErr=err&&err.code==='rate_limited'?'Troppe richieste ravvicinate, riprova tra qualche minuto.':err&&err.code==='not_granted'?'Permesso non concesso. Scrivimi in chat e le preparo io.':'Non sono riuscita a scriverle, riprova o scrivimi in chat.';if(err&&err.code==='not_granted')sampleApi=null;render()})}
+
+/* ---------- DATI PER DASHBOARD E INSPO ---------- */
+function hashN(s){var h=0;for(var i=0;i<s.length;i++)h=(h*31+s.charCodeAt(i))|0;return Math.abs(h)}
+function exampleM(p){var h=hashN(p.id+p.rubrica),reach=900+h%2600,f=p.formato==='Reel'?1.25:1;var k=1+(h%7)/10;return {reach:Math.round(reach*f),views:Math.round(reach*f*1.6),like:Math.round(reach*0.045*k),commenti:Math.round(reach*0.006*k),salvataggi:Math.round(reach*(p.formato==='Carosello'?0.03:0.012)*k),condivisioni:Math.round(reach*0.012*k),follow:Math.round(reach*0.004*k)}}
+function postsWithData(){
+  if(live.media.length&&!ui.example){
+    return live.media.map(function(m){var cp=state.calendario.post.find(function(p){return p.data===m.data});
+      var p=cp?Object.assign({},cp,{hook:cp.hook||m.hook}):{id:'ig_'+m.id,data:m.data,titolo:m.hook||'Post Instagram',hook:m.hook||'',rubrica:igRub(m),formato:m.formato,status:'Pubblicato'};
+      var reach=+m.reach||0;if(!reach)return null;var inter=(+m.likes||0)+(+m.comments||0)+(+m.saved||0)+(+m.shares||0);
+      return {p:p,m:{reach:m.reach,views:m.views,like:m.likes,commenti:m.comments,salvataggi:m.saved,condivisioni:m.shares},reach:reach,inter:inter,er:inter/reach,val:((+m.saved||0)+(+m.shares||0))/reach,ai:!!m.ai}}).filter(Boolean)
+      .filter(function(x){return ui.dashMonth==='tutto'||x.p.data.slice(0,7)===ui.dashMonth});
+  }
+  return state.calendario.post.map(function(p){var m=ui.example?exampleM(p):(p.m||{});var reach=+m.reach;if(!reach)return null;
+    var inter=(+m.like||0)+(+m.commenti||0)+(+m.salvataggi||0)+(+m.condivisioni||0);
+    return {p:p,m:m,reach:reach,inter:inter,er:inter/reach,val:((+m.salvataggi||0)+(+m.condivisioni||0))/reach}}).filter(Boolean)
+    .filter(function(x){return ui.dashMonth==='tutto'||x.p.data.slice(0,7)===ui.dashMonth});
+}
+function groupBy(rows,key){var g={};rows.forEach(function(r){var k=key(r);(g[k]=g[k]||[]).push(r)});return Object.keys(g).map(function(k){var a=g[k];return {k:k,n:a.length,er:a.reduce(function(s,x){return s+x.er},0)/a.length,val:a.reduce(function(s,x){return s+x.val},0)/a.length,reach:a.reduce(function(s,x){return s+x.reach},0)/a.length}}).sort(function(a,b){return b.val-a.val})}
+function bars(rows,labelFn,colorFn,valKey){var max=Math.max.apply(null,rows.map(function(r){return r[valKey]}).concat([0.0001]));return '<div class="bars">'+rows.map(function(r){return '<div class="bar"><span class="lbl">'+labelFn(r)+' <span class="muted small">('+r.n+')</span></span><span class="track"><span class="fill" style="display:block;width:'+(r[valKey]/max*100)+'%;background:'+colorFn(r)+'"></span></span><span class="v">'+fmtP(r[valKey])+'</span></div>'}).join('')+'</div>'}
+
+/* ---------- DASHBOARD ---------- */
+function nota(key,fallback){var c=(ui.dashMonth==='tutto'&&!ui.example&&live.commenti&&live.commenti[key])?live.commenti[key]:null;var t=c||fallback;if(!t)return '';
+  return '<aside class="nota"><span class="eyebrow">Il mio commento</span><p>'+esc(t)+'</p><small class="muted">'+(c?'Scritto da Claude sui dati al '+esc(fmtAgg(live.commentiAt)):'Lettura automatica dei numeri in vista'+(ui.example?' (dati di esempio)':''))+'</small></aside>'}
+function median(a){if(!a.length)return 0;var b=a.slice().sort(function(x,y){return x-y}),m=Math.floor(b.length/2);return b.length%2?b[m]:(b[m-1]+b[m])/2}
+function fbPanoramica(rows){if(rows.length<3)return '';var r=rows.map(function(x){return x.reach}),avg=r.reduce(function(a,b){return a+b},0)/r.length,md=median(r),big=rows.filter(function(x){return x.reach>md*3}).length;
+  return big?'Il post tipico raggiunge circa '+fmtN(md)+' persone: la media di '+fmtN(avg)+' è tirata su da '+big+' contenuti esplosi. Più che alzare la media, conviene capire cosa hanno in comune quelli.':'I risultati sono abbastanza regolari, intorno a '+fmtN(md)+' persone per post. Per crescere serve un contenuto che rompa lo schema, non più contenuti uguali.'}
+function fbRubriche(byR){if(!byR||byR.length<2)return '';var best=byR[0],most=byR.slice().sort(function(a,b){return b.n-a.n})[0];
+  return best.k===most.k?rub(best.k).nome+' è sia la rubrica che pubblichi di più sia quella più salvata e condivisa. Tienila al centro e usa le altre per variare il ritmo.':rub(best.k).nome+' è la più salvata e condivisa ('+fmtP(best.val)+') ma la pubblichi poco ('+best.n+' post), mentre '+rub(most.k).nome+' è la più frequente ('+most.n+'). Lì c\'è spazio per spostare qualche uscita.'}
+function fbFormati(byF){if(!byF||byF.length<2)return '';var s=byF.slice().sort(function(a,b){return b.er-a.er}),a=s[0],b=s[1];
+  return a.k+' coinvolge più di '+b.k+' ('+fmtP(a.er)+' contro '+fmtP(b.er)+')'+(a.n<b.n?' anche se ne pubblichi meno':'')+'. Prova a spostare lì un contenuto che di solito faresti nell\'altro formato e guarda se tiene.'}
+function fbClassifica(rows){if(rows.length<3)return '';var v=rows.slice().sort(function(a,b){return b.val-a.val})[0],r=rows.slice().sort(function(a,b){return b.reach-a.reach})[0];
+  return v===r?'“'+(v.p.titolo||'')+'” è insieme il più visto e il più salvato: è il tuo modello da studiare.':'Il più salvato e condiviso è “'+(v.p.titolo||'').slice(0,70)+'”, il più visto è “'+(r.p.titolo||'').slice(0,70)+'”. Il primo fidelizza, il secondo allarga il pubblico: ti servono tutti e due, con ruoli diversi.'}
+function fbPiano(pm,ps){var own=ps.filter(function(p){return !p.ig});if(!own.length)return '';var idee=own.filter(function(p){return p.status==='Idea'}).length,pub=own.filter(function(p){return p.status==='Pubblicato'}).length;
+  return 'A '+monthLabel(pm)+' hai '+own.length+' contenuti in calendario: '+pub+' pubblicati e '+idee+' ancora allo stato di idea. '+(idee>own.length/2?'Il rischio non è la strategia ma la produzione: blocca subito il tempo per le prime due uscite.':'Il mese è avviato, controlla che il ritmo regga fino alla fine.')}
+function fbMesi(LM){if(LM.length<2)return '';var a=live.months[LM[0]],z=live.months[LM[LM.length-1]],taps=LM.map(function(k){return +live.months[k].profile_links_taps||0}),mx=Math.max.apply(null,taps);
+  return 'La reach è passata da '+fmtN(a.reach)+' a '+fmtN(z.reach)+' tra '+monthLabel(LM[0])+' e '+monthLabel(LM[LM.length-1])+'. '+(mx<10?'Ma i tocchi al link in bio non superano mai '+mx+' al mese: le persone ti scoprono e poi non hanno un motivo per seguirti fuori da Instagram.':'I tocchi al link in bio arrivano fino a '+mx+' al mese: guarda quali contenuti li hanno generati.')}
+function vDashboard(){
+  var rows=postsWithData();
+  var months=Array.from(new Set(allPosts().map(function(p){return p.data.slice(0,7)}))).sort();
+  var h='<section class="sec"><div class="sec-head"><div><p class="eyebrow">Dashboard di analisi</p><h1>Cosa ci dicono i <em>numeri</em></h1></div><label class="f" style="min-width:180px"><span>Periodo</span><select class="sel" id="dash-month" style="border-color:var(--line);margin:0;width:100%"><option value="tutto"'+(ui.dashMonth==='tutto'?' selected':'')+'>Tutto</option>'+months.map(function(m){return '<option value="'+m+'"'+(ui.dashMonth===m?' selected':'')+'>'+monthLabel(m)+'</option>'}).join('')+'</select></label></div>';
+  var hasLive=live.media.length>0;
+  if(hasLive&&!ui.example)h+='<div class="banner" style="border-style:solid"><span><strong>Dati live da Instagram.</strong> '+live.media.length+' post e '+Object.keys(live.months).length+' mesi di Insights di @'+esc((live.prof&&live.prof.username)||'sbranding_')+', letti tramite Composio. Ultimo aggiornamento: '+esc(fmtAgg(live.prof&&live.prof.aggiornato))+'.</span></div>';
+  if(ui.example)h+='<div class="banner example"><span><strong>Stai guardando dati di esempio.</strong> Sono numeri inventati per farti vedere come funziona la dashboard: non sono i tuoi e non vengono salvati.</span><button class="btn" data-act="example-off">Torna ai miei dati</button></div>';
+  else if(!rows.length)h+='<div class="banner"><span><strong>Ancora nessun dato.</strong> Apri un contenuto pubblicato nel Calendario e inserisci reach, salvataggi e condivisioni dagli Insights. La dashboard e la tab Inspo si aggiornano da sole.</span><button class="btn" data-act="example-on">Anteprima con dati di esempio</button></div>';
+  h+='</section>';
+
+  var pub=allPosts().filter(function(p){return p.status==='Pubblicato'&&(ui.dashMonth==='tutto'||p.data.slice(0,7)===ui.dashMonth)}).length;
+  var avg=function(k){return rows.length?rows.reduce(function(s,x){return s+x[k]},0)/rows.length:null};
+  h+='<section class="tiles">'+(live.prof?'<div class="tile"><small>Follower</small><b>'+fmtN(live.prof.followers)+'</b><small>@'+esc(live.prof.username||'')+' · oggi</small></div>':'')+'<div class="tile"><small>Contenuti pubblicati</small><b>'+pub+'</b><small>'+(hasLive?'calendario + Instagram':'da status del calendario')+'</small></div><div class="tile"><small>Reach media per post</small><b>'+fmtN(avg('reach'))+'</b><small>'+rows.length+' post con dati</small></div><div class="tile"><small>Tasso di interazione</small><b>'+fmtP(avg('er'))+'</b><small>like, commenti, salvataggi, condivisioni su reach</small></div><div class="tile"><small>Salvataggi + condivisioni</small><b>'+fmtP(avg('val'))+'</b><small>su reach · KPI di autorevolezza</small></div></section>';
+  h+=nota('panoramica',fbPanoramica(rows));
+
+  if(rows.length){
+    var byR=groupBy(rows,function(x){return x.p.rubrica}),byF=groupBy(rows,function(x){return x.p.formato});
+    h+='<section class="grid" style="grid-template-columns:repeat(auto-fit,minmax(min(100%,420px),1fr))"><div class="card"><h3>Rubriche per <em>salvataggi + condivisioni</em></h3>'+bars(byR,function(r){return esc(rub(r.k).nome)},function(r){return esc(rub(r.k).colore)},'val')+'</div><div class="card"><h3>Formati per <em>tasso di interazione</em></h3>'+bars(byF,function(r){return esc(r.k)},function(){return 'var(--accent)'},'er')+'</div></section>';
+    h+='<div class="grid" style="grid-template-columns:repeat(auto-fit,minmax(min(100%,420px),1fr))">'+nota('rubriche',fbRubriche(byR))+nota('formati',fbFormati(byF))+'</div>';
+    var top=rows.slice().sort(function(a,b){return b.val-a.val});
+    h+='<section class="sec"><h3>Classifica contenuti</h3><div class="tbl-wrap"><table style="min-width:760px"><thead><tr><th>Data</th><th>Contenuto e hook</th><th>Rubrica</th><th>Formato</th><th class="num">Reach</th><th class="num">Interazione</th><th class="num">Salv.+cond.</th></tr></thead><tbody>'+top.map(function(x){var r=rub(x.p.rubrica);return '<tr><td class="num" style="text-align:left;white-space:nowrap">'+x.p.data.split('-').reverse().join('/')+'</td><td><button class="btn ghost" style="padding:0;text-align:left;font-weight:600" data-act="open" data-id="'+x.p.id+'">'+esc(x.p.titolo)+'</button>'+(x.p.hook?'<div class="muted small">“'+esc(x.p.hook)+'”</div>':'')+'</td><td><span class="tag"><i class="dot" style="background:'+esc(r.colore)+'"></i>'+esc(r.nome)+'</span></td><td>'+esc(x.p.formato)+'</td><td class="num">'+fmtN(x.reach)+'</td><td class="num">'+fmtP(x.er)+'</td><td class="num">'+fmtP(x.val)+'</td></tr>'}).join('')+'</tbody></table></div></section>';
+    h+=nota('classifica',fbClassifica(rows));
+  }
+
+  // piano vs fatto
+  var pm=ui.dashMonth==='tutto'?(ui.month||defaultMonth()):ui.dashMonth;var ps=postsOf(pm);
+  h+='<section class="sec"><div><h3>Piano contro realtà · <em>'+monthLabel(pm)+'</em></h3><p class="muted small">Contenuti in calendario per rubrica rispetto alle uscite al mese previste nel piano. Il pieno sono i pubblicati.</p></div><div class="card"><div class="bars">'+state.ped.rubriche.filter(function(r){return r.stato==='attiva'}).map(function(r){var all=ps.filter(function(p){return p.rubrica===r.id}),done=all.filter(function(p){return p.status==='Pubblicato'}).length,tgt=+r.alMese||0,mx=Math.max(tgt,all.length,1);return '<div class="pv"><span class="lbl">'+esc(r.nome)+'</span><span class="track"><span class="fill" style="width:'+(all.length/mx*100)+'%;background:'+esc(r.colore)+';opacity:.3"></span><span class="fill" style="width:'+(done/mx*100)+'%;background:'+esc(r.colore)+'"></span></span><span class="v num">'+all.length+' / '+tgt+'</span></div>'}).join('')+'</div></div></section>';
+  h+=nota('piano',fbPiano(pm,ps));
+
+  // dati account mensili
+  var LM=Object.keys(live.months).sort();
+  if(LM.length){
+    var MC=[['reach','Reach'],['views','Visualizzazioni'],['accounts_engaged','Account coinvolti'],['total_interactions','Interazioni'],['saves','Salvataggi'],['shares','Condivisioni'],['profile_views','Visite profilo'],['profile_links_taps','Click link in bio'],['nuoviFollower','Nuovi follower']];
+    var mx=Math.max.apply(null,LM.map(function(k){return +live.months[k].reach||0}).concat([1]));
+    h+='<section class="sec"><div><h3>Il profilo <em>mese per mese</em></h3><p class="muted small">Insights dell\'account da Instagram, aggiornati in automatico. “Nuovi follower” è disponibile solo per gli ultimi 30 giorni.</p></div><div class="card"><span class="eyebrow">Reach mensile</span><div class="bars">'+LM.map(function(k){var v=+live.months[k].reach||0;return '<div class="bar"><span class="lbl">'+monthLabel(k)+'</span><span class="track"><span class="fill" style="display:block;width:'+(v/mx*100)+'%;background:var(--accent)"></span></span><span class="v">'+fmtN(v)+'</span></div>'}).join('')+'</div></div><div class="tbl-wrap"><table style="min-width:900px"><thead><tr><th>Mese</th>'+MC.map(function(c){return '<th class="num">'+c[1]+'</th>'}).join('')+'</tr></thead><tbody>'+LM.map(function(k){var x=live.months[k];return '<tr><td style="white-space:nowrap">'+monthLabel(k)+(x.nota?' <span class="muted small">('+esc(x.nota)+')</span>':'')+'</td>'+MC.map(function(c){return '<td class="num">'+fmtN(x[c[0]])+'</td>'}).join('')+'</tr>'}).join('')+'</tbody></table></div></section>';
+    h+=nota('mesi',fbMesi(LM));
+  }
+  if(!LM.length){
+  h+='<section class="sec"><div class="sec-head"><div><h3>Dati del profilo <em>mese per mese</em></h3><p class="muted small">Dagli Insights dell\'account. Servono per riempire le partenze dei KPI.</p></div>'+addBtn('add-mese','Mese')+'</div>';
+  var ms=state.dashboard.mesi;
+  if(ms.length){
+    var fol=ms.filter(function(x){return +x.follower}).slice().sort(function(a,b){return String(a.mese).localeCompare(String(b.mese))});
+    if(fol.length>1)h+='<div class="card">'+spark(fol)+'</div>';
+    h+='<div class="tbl-wrap"><table style="min-width:900px"><thead><tr>'+MESI_COL.map(function(c){return '<th>'+c[1]+'</th>'}).join('')+'<th></th></tr></thead><tbody>'+ms.map(function(x,i){return '<tr>'+MESI_COL.map(function(c){return '<td>'+inp('dashboard.mesi.'+i+'.'+c[0],c[0]==='mese'?'2026-11':'–',c[0]==='mese'?'':'num')+'</td>'}).join('')+'<td>'+(readOnly?'':'<button class="btn ghost small danger" data-act="del-mese" data-i="'+i+'">Elimina</button>')+'</td></tr>'}).join('')+'</tbody></table></div>';
+  }else h+='<div class="empty"><strong>Nessun mese inserito</strong><span>Aggiungi ottobre 2026 come punto di partenza: follower, reach, visite, click al link, DM con domande.</span></div>';
+  h+='</section>';
+  }
+
+  // KPI richiamo
+  h+='<section class="sec"><h3>I KPI della <em>strategia</em></h3><div class="tbl-wrap"><table style="min-width:640px"><thead><tr><th>KPI</th><th>Partenza</th><th>Target</th><th>Entro</th></tr></thead><tbody>'+state.strategia.kpi.map(function(k){return '<tr><td>'+esc(k.nome)+'</td><td>'+esc(k.partenza)+'</td><td>'+esc(k.target)+'</td><td>'+esc(k.scadenza)+'</td></tr>'}).join('')+'</tbody></table></div><p class="muted small">Si modificano nella tab Strategia.</p></section>';
+  return h;
+}
+function spark(rows){var W=640,H=140,pl=46,pr=16,pt=14,pb=26;var v=rows.map(function(r){return +r.follower});var mn=Math.min.apply(null,v),mx=Math.max.apply(null,v);if(mx===mn){mx+=1;mn-=1}
+  var x=function(i){return pl+(W-pl-pr)*i/(rows.length-1)},y=function(n){return pt+(H-pt-pb)*(1-(n-mn)/(mx-mn))};
+  var d=v.map(function(n,i){return (i?'L':'M')+x(i).toFixed(1)+' '+y(n).toFixed(1)}).join(' ');
+  var area=d+' L'+x(v.length-1).toFixed(1)+' '+(H-pb)+' L'+pl+' '+(H-pb)+' Z';
+  return '<h3 style="margin-bottom:6px">Follower</h3><svg viewBox="0 0 '+W+' '+H+'" width="100%" role="img" aria-label="Andamento follower"><line x1="'+pl+'" x2="'+(W-pr)+'" y1="'+(H-pb)+'" y2="'+(H-pb)+'" stroke="var(--line)"/><text x="'+(pl-6)+'" y="'+(y(mx)+4)+'" text-anchor="end">'+fmtN(mx)+'</text><text x="'+(pl-6)+'" y="'+(y(mn)+4)+'" text-anchor="end">'+fmtN(mn)+'</text><path d="'+area+'" fill="var(--surface-2)" opacity=".6"/><path d="'+d+'" fill="none" stroke="var(--accent)" stroke-width="2"/>'+v.map(function(n,i){return '<circle cx="'+x(i)+'" cy="'+y(n)+'" r="'+(i===v.length-1?4:2.5)+'" fill="var(--accent)"/><text x="'+x(i)+'" y="'+(H-8)+'" text-anchor="middle">'+esc(String(rows[i].mese))+'</text>'}).join('')+'</svg>'}
+
+/* ---------- INSPO ---------- */
+function ruleProposals(rows){
+  var byR=groupBy(rows,function(x){return x.p.rubrica}),byF=groupBy(rows,function(x){return x.p.formato});
+  var top=rows.slice().sort(function(a,b){return b.val-a.val}).slice(0,3);
+  var bestR=byR[0],bestF=byF.slice().sort(function(a,b){return b.er-a.er})[0];
+  var ideas=state.ped.idee.filter(function(d){return !ideaInCal(d.testo)});
+  var out=[];
+  if(bestR&&top[0])out.push({titolo:(ideas.find(function(d){return d.rubrica===bestR.k})||{testo:'Nuovo contenuto '+rub(bestR.k).nome}).testo,rubrica:bestR.k,formato:top[0].p.formato,hook:'Riprendi la struttura di “'+(top[0].p.hook||top[0].p.titolo)+'”',perche:rub(bestR.k).nome+' è la rubrica con più salvataggi e condivisioni ('+fmtP(bestR.val)+'): resta dentro la stessa rubrica con un\'idea nuova.'});
+  if(bestF)out.push({titolo:'Porta una riflessione in formato '+bestF.k,rubrica:'r2',formato:bestF.k,hook:'Parti da un\'affermazione controintuitiva, come nei post che hanno funzionato',perche:bestF.k+' ha il tasso di interazione più alto ('+fmtP(bestF.er)+'): prova a usarlo anche dove di solito non lo usi.'});
+  if(top[1])out.push({titolo:'Seconda puntata di “'+top[1].p.titolo+'”',rubrica:top[1].p.rubrica,formato:top[1].p.formato,hook:'Vi ho chiesto cosa ne pensavate. Ecco cosa è venuto fuori.',perche:'Un contenuto che funziona merita un seguito: rispondi alle domande arrivate nei commenti e nei DM, è ascolto che diventa contenuto.'});
+  return out;
+}
+function vInspo(){
+  var rows=postsWithData();
+  var h='<section class="sec"><div><p class="eyebrow">Inspo per i contenuti futuri</p><h1>Le tue idee, cosa ha <em>funzionato</em>, cosa sta <em>succedendo</em></h1></div></section>';
+  h+=vMieIdee();
+  h+=vSmista();
+  h+='<section class="sec"><div class="sec-head"><div><h2>a) Dalle <em>performance</em></h2><p class="muted">Legge i dati della Dashboard.</p></div></div>';
+  if(ui.example)h+='<div class="banner example"><span><strong>Dati di esempio attivi.</strong> Le indicazioni qui sotto servono solo a vedere come funziona.</span><button class="btn" data-act="example-off">Torna ai miei dati</button></div>';
+  if(!rows.length){h+='<div class="empty"><strong>Servono almeno due o tre post con i dati</strong><span>Inserisci reach, salvataggi e condivisioni nella scheda dei contenuti pubblicati. Qui compariranno rubriche, formati e hook migliori con nuove proposte.</span><button class="btn" data-act="example-on">Anteprima con dati di esempio</button></div>'}
+  else{
+    var byR=groupBy(rows,function(x){return x.p.rubrica}),byF=groupBy(rows,function(x){return x.p.formato}).sort(function(a,b){return b.er-a.er});
+    var top=rows.slice().sort(function(a,b){return b.val-a.val}).slice(0,3);
+    h+='<div class="grid"><div class="card soft insight"><span class="eyebrow">Rubrica più utile</span><b><i class="dot" style="background:'+esc(rub(byR[0].k).colore)+'"></i> '+esc(rub(byR[0].k).nome)+'</b><span class="muted small">'+fmtP(byR[0].val)+' di salvataggi + condivisioni su reach, media su '+byR[0].n+' post</span></div><div class="card soft insight"><span class="eyebrow">Formato più coinvolgente</span><b>'+esc(byF[0].k)+'</b><span class="muted small">'+fmtP(byF[0].er)+' di interazione media su '+byF[0].n+' post</span></div><div class="card soft insight"><span class="eyebrow">Hook migliori</span>'+top.map(function(x){return '<span class="hookq">“'+esc(x.p.hook||x.p.titolo)+'”</span>'}).join('')+'</div></div>';
+    h+='<h3 style="margin-top:8px">Proposte che ne riprendono <em>la logica</em></h3><div class="grid">'+ruleProposals(rows).map(function(p,i){return propCard(p,'rule',i)}).join('')+'</div>';
+  }
+  if(state.inspo.proposte.length){h+='<h3 style="margin-top:8px">Proposte salvate</h3><div class="grid">'+state.inspo.proposte.map(function(p,i){return propCard(p,'saved',i)}).join('')+'</div>'}
+  if(sampleApi&&!readOnly&&rows.length)h+='<div class="row-actions"><span class="muted small">'+(ui.sampleErr?esc(ui.sampleErr):'Vuoi altre idee? Claude legge gli stessi dati e propone quattro contenuti.')+'</span><button class="btn primary" data-act="ask-claude"'+(ui.sampleBusy?' disabled':'')+'>'+(ui.sampleBusy?'Claude sta pensando…':'Chiedi proposte a Claude')+'</button></div>';
+  h+='</section>';
+
+  h+='<section class="sec"><div class="sec-head"><div><h2>b) Dai <em>trend</em></h2><p class="muted">Rilevati il 30 ottobre 2026. Quelli senza conferma diretta sono segnati come ipotesi: verificali prima di costruirci un contenuto.</p></div>'+addBtn('add-trend','Trend')+'</div><div class="grid">';
+  var rubOpts=state.ped.rubriche.map(function(r){return [r.id,r.nome]});
+  state.inspo.trend.forEach(function(t,i){var b='inspo.trend.'+i+'.',r=rub(t.rubrica);
+    h+='<article class="card rub" style="--c:'+esc(r.colore)+'"><div class="trend-top"><span class="tag '+(t.verificato?'ver':'hyp')+'">'+(t.verificato?'Verificato':'Ipotesi')+'</span>'+(readOnly?'':'<button class="btn ghost small" data-act="toggle-ver" data-i="'+i+'">'+(t.verificato?'Segna come ipotesi':'Segna verificato')+'</button>')+'</div>'+ta(b+'titolo','Trend','in big')+field('Cosa succede',ta(b+'descrizione'))+'<div class="two">'+field('Fonte',ta(b+'fonte'))+field('Rilevato il','<input type="date" class="in" data-b="'+b+'rilevato" value="'+esc(t.rilevato)+'"'+(readOnly?' readonly':'')+'>')+'</div>'+field('Link fonte',inp(b+'url','https://'))+(t.url?'<a class="small" href="'+esc(t.url)+'" target="_blank" rel="noopener">Apri la fonte ↗</a>':'')+field('Rubrica',sel(b+'rubrica',rubOpts))+field('Proposta di adattamento',ta(b+'proposta'))+'<div class="row-actions">'+(readOnly?'<span></span>':'<button class="btn small" data-act="trend-cal" data-i="'+i+'">Porta in calendario</button>')+(readOnly?'':'<button class="btn ghost small danger" data-act="del-trend" data-i="'+i+'">Elimina</button>')+'</div></article>'});
+  h+='</div></section>';
+  return h;
+}
+function smistaRows(){var R=[];
+  state.inspo.mieIdee.forEach(function(x,i){R.push({p:'inspo.mieIdee.'+i,o:x,t:(x.ott&&x.ott.titolo)||x.testo,da:'Le tue idee',rub:x.rubrica})});
+  state.calendario.post.forEach(function(x,i){if(x.status!=='Pubblicato')R.push({p:'calendario.post.'+i,o:x,t:x.titolo,da:'Calendario · '+parseD(x.data).getDate()+' '+MONTHS[parseD(x.data).getMonth()].slice(0,3),rub:x.rubrica})});
+  state.ped.idee.forEach(function(x,i){if(!ideaInCal(x.testo))R.push({p:'ped.idee.'+i,o:x,t:x.testo,da:'Idee in cantiere',rub:x.rubrica})});
+  state.inspo.trend.forEach(function(x,i){R.push({p:'inspo.trend.'+i,o:x,t:x.titolo,da:'Trend'+(x.verificato?'':' (ipotesi)'),rub:x.rubrica})});
+  return R}
+var SFILTRI=[['tutte','Tutte'],['dasmistare','Da smistare'],['soloig','Solo Instagram'],['li','Anche LinkedIn'],['ss','Anche Substack'],['tre','Tutti e tre']];
+function inSF(r,f){var c=chOf(r.o),s=chSet(r.o);if(f==='dasmistare')return !s;if(f==='soloig')return c.ig&&!c.li&&!c.ss;if(f==='li')return !!c.li;if(f==='ss')return !!c.ss;if(f==='tre')return c.ig&&c.li&&c.ss;return true}
+function vSmista(){var R=smistaRows(),f=ui.smFilter||'tutte',vis=R.filter(function(r){return inSF(r,f)});
+  var h='<section class="sec"><div class="sec-head"><div><h2>Smistamento <em>per canale</em></h2><p class="muted">Tutte le idee dell\'hub, con dove possono andare: solo Instagram, anche LinkedIn, anche la newsletter. Clicca i canali per cambiarli, il perché è modificabile. I criteri sono nella tab Strategia.</p></div></div>';
+  h+='<div class="filters" role="group" aria-label="Filtra per canale">'+SFILTRI.map(function(x){return '<button data-act="smf" data-v="'+x[0]+'" aria-pressed="'+(f===x[0])+'">'+x[1]+' · '+R.filter(function(r){return inSF(r,x[0])}).length+'</button>'}).join('')+'</div>';
+  if(!vis.length)return h+'<div class="empty"><strong>Nessuna idea con questo filtro</strong></div></section>';
+  h+='<div class="tbl-wrap"><table style="min-width:860px"><thead><tr><th style="width:30%">Idea</th><th style="width:14%">Da dove</th><th style="width:24%">Canali</th><th>Perché</th></tr></thead><tbody>';
+  vis.forEach(function(r){var rb=rub(r.rub);
+    h+='<tr><td><strong style="font-weight:600">'+esc(r.t||'Senza titolo')+'</strong>'+(r.rub?'<div class="muted small"><i class="dot" style="background:'+esc(rb.colore)+';width:8px;height:8px"></i> '+esc(rb.nome)+'</div>':'')+'</td><td class="small muted">'+esc(r.da)+'</td><td>'+chToggles(r.p)+(chSet(r.o)||readOnly?'':'<div style="margin-top:6px"><button class="btn ghost small" data-act="ch-sugg" data-p="'+r.p+'"'+(ui.chBusy?' disabled':'')+'>'+(ui.chBusy===r.p?'Ci penso…':'Suggerisci')+'</button></div>')+'</td><td>'+ta(r.p+'.canaliPerche','Perché questi canali')+'</td></tr>'});
+  return h+'</tbody></table></div></section>'}
+function suggerisciCanali(path){var o=getPath(state,path);if(!o||ui.chBusy)return;var txt=[o.testo,o.titolo,o.descrizione,o.note,o.proposta].filter(Boolean).join('. ');
+  function fallback(){o.canali=chGuess(txt,o.rubrica);if(!o.canaliPerche)o.canaliPerche='Proposta automatica dai criteri della tab Strategia: rivedila.';ui.chBusy=null;markDirty();render()}
+  if(!sampleApi)return fallback();
+  ui.chBusy=path;render();
+  var crit=(state.strategia.repurposing||{}).criteri||[];
+  var prompt='Sei una social media strategist senior italiana e lavori con Marta Vannelli (Sbranding). Canali e criteri:\n'+JSON.stringify({canali:(state.strategia.canali||[]).map(function(c){return {id:c.id,nome:c.nome,ruolo:c.ruolo,pubblico:c.pubblico}}),criteri:crit})+'\n\nIdea: "'+txt+'" (rubrica: '+rub(o.rubrica).nome+').\nDecidi su quali canali ha senso, secondo i criteri. Rispondi SOLO con JSON {"ig":true|false,"li":true|false,"ss":true|false,"perche":"una o due frasi in italiano naturale, senza trattini lunghi, che spiegano la scelta e l\'angolo per ogni canale scelto"}.';
+  sampleApi.json(prompt,{modelTier:'quick'}).then(function(r){if(!r||typeof r!=='object')throw {};o.canali={ig:!!r.ig,li:!!r.li,ss:!!r.ss};o.canaliPerche=String(r.perche||'');ui.chBusy=null;markDirty();render()}).catch(function(err){if(err&&err.code==='not_granted')sampleApi=null;fallback()})}
+function vMieIdee(){
+  var L=state.inspo.mieIdee,f=ui.ideaFilter;
+  var rubOpts=[['','Da decidere']].concat(state.ped.rubriche.map(function(r){return [r.id,r.nome]}));
+  var h='<section class="sec"><div class="sec-head"><div><h2>Le tue <em>idee</em></h2><p class="muted">Scrivile come ti vengono, anche a metà. Poi le ottimizziamo insieme: con il tasto qui sotto oppure in chat con me, che leggo questa pagina dopo che hai salvato.</p></div></div>';
+  if(!readOnly)h+='<div class="capture"><label class="f"><span>Nuova idea</span><textarea id="new-idea" rows="2" placeholder="Es. parlare di quanto è stancante sentirsi dire “fai un reel”"></textarea></label><div class="row-actions"><span class="muted small">Entra come “Da registrare”. Puoi cambiare lo status quando vuoi.</span><button class="btn primary" data-act="add-mia-idea">Aggiungi idea</button></div></div>';
+  var counts={};ISTATUS.forEach(function(s){counts[s]=L.filter(function(x){return x.status===s}).length});
+  h+='<div class="filters" role="group" aria-label="Filtra per status"><button data-act="ifilter" data-v="tutte" aria-pressed="'+(f==='tutte')+'">Tutte · '+L.length+'</button>'+ISTATUS.map(function(s){return '<button data-act="ifilter" data-v="'+s+'" aria-pressed="'+(f===s)+'">'+s+' · '+counts[s]+'</button>'}).join('')+'</div>';
+  var vis=L.map(function(x,i){return {x:x,i:i}}).filter(function(o){return f==='tutte'||o.x.status===f}).reverse();
+  if(!vis.length){h+='<div class="empty"><strong>'+(L.length?'Nessuna idea con questo status':'Ancora nessuna idea')+'</strong><span>'+(L.length?'Cambia filtro per vedere le altre.':'La prima che scrivi qui sopra compare in questa lista.')+'</span></div>';return h+'</section>'}
+  h+='<div class="grid">';
+  vis.forEach(function(o){var x=o.x,i=o.i,b='inspo.mieIdee.'+i+'.',r=x.rubrica?rub(x.rubrica):null,ot=x.ott;
+    h+='<article class="card idea" style="--c:'+(r?esc(r.colore):'var(--line)')+'"><div class="row-actions"><span class="ist ist-'+x.status.replace(/ /g,'-')+'">'+esc(x.status)+'</span><span class="muted small">'+esc((x.creata||'').split('-').reverse().join('/'))+'</span></div>';
+    h+=ta(b+'testo','La tua idea','in big');
+    h+='<div class="two">'+field('Status',sel(b+'status',ISTATUS))+field('Rubrica',sel(b+'rubrica',rubOpts))+'</div>';
+    h+='<div class="two">'+field('Formato',sel(b+'formato',['','Reel','Carosello','Post singolo','Stories']))+field('Data prevista','<input type="date" class="in" data-b="'+b+'data" value="'+esc(x.data||'')+'"'+(readOnly?' readonly':'')+'>')+'</div>';
+    h+=field('Appunti',ta(b+'note','Da dove nasce, a chi parla, esempi'));
+    h+='<div class="f"><span>Canali</span>'+chToggles('inspo.mieIdee.'+i)+'</div>'+(chSet(x)?field('Perché questi canali',ta(b+'canaliPerche')):'');
+    if(ot){h+='<div class="ott"><span class="eyebrow">Versione ottimizzata</span>'+field('Titolo',ta(b+'ott.titolo','','in big'))+field('Hook scelto',ta(b+'hook','','hookq'));
+      if(ot.hooks&&ot.hooks.length)h+='<div class="f"><span>Altri hook possibili</span><div class="alts">'+ot.hooks.map(function(k,j){return '<button data-act="use-hook" data-i="'+i+'" data-j="'+j+'">“'+esc(k)+'”</button>'}).join('')+'</div></div>';
+      h+=field('Angolo',ta(b+'ott.angolo'))+field('Scaletta',ta(b+'ott.struttura'))+field('Chiusura / CTA',ta(b+'ott.cta'));
+      if(ot.domande&&ot.domande.length)h+='<div class="f"><span>Domande per te prima di registrare</span><ul class="qs">'+ot.domande.map(function(q){return '<li>'+esc(q)+'</li>'}).join('')+'</ul></div>';
+      h+='</div>'}
+    if(ui.ottErr[x.id])h+='<p class="small" style="margin:0;color:var(--warn)">'+esc(ui.ottErr[x.id])+'</p>';
+    if(!readOnly){h+='<div class="row-actions" style="flex-wrap:wrap">';
+      h+=sampleApi?'<button class="btn'+(ot?'':' primary')+'" data-act="ott-idea" data-i="'+i+'"'+(ui.ottBusy?' disabled':'')+'>'+(ui.ottBusy===x.id?'Sto ottimizzando…':(ot?'Rifai ottimizzazione':'Ottimizza con Claude'))+'</button>':'<span class="muted small">L’ottimizzazione con Claude è disponibile nella versione su Claude.</span>';
+      h+=x.postId&&state.calendario.post.some(function(p){return p.id===x.postId})?'<button class="btn ghost small" data-act="open-linked" data-i="'+i+'">Apri in calendario</button>':'<button class="btn small" data-act="idea-to-cal" data-i="'+i+'">Porta in calendario</button>';
+      h+='<button class="btn ghost small danger" data-act="del-mia-idea" data-i="'+i+'">Elimina</button></div>'}
+    h+='</article>'});
+  return h+'</div></section>';
+}
+function ottimizza(i){var x=state.inspo.mieIdee[i];if(!sampleApi||!x||ui.ottBusy)return;ui.ottBusy=x.id;delete ui.ottErr[x.id];render();
+  var ctx={posizionamento:state.strategia.posizionamento.testo,persone:state.strategia.persone.map(function(p){return {nome:p.nome,bisogni:p.bisogni,pain:p.pain,ascolto:p.ascolto}}),tono:state.strategia.tono.map(function(t){return t.tratto+': '+t.descrizione+' Evita: '+t.evita}),rubriche:state.ped.rubriche.map(function(r){return {id:r.id,nome:r.nome,descrizione:r.descrizione,formato:r.formato}}),hookPassati:state.calendario.post.filter(function(p){return p.hook}).map(function(p){return p.hook}).slice(-8)};
+  var prompt='Sei una social media strategist senior italiana e lavori con Marta Vannelli (Sbranding, @sbranding_ su Instagram). Il suo principio: ogni contenuto parte dalle persone e dall\'ascolto. Contesto della strategia (JSON):\n'+JSON.stringify(ctx)+'\n\nIdea grezza di Marta: "'+x.testo+'"\nAppunti: "'+(x.note||'')+'"\nRubrica scelta: '+(x.rubrica||'da decidere')+'. Formato scelto: '+(x.formato||'da decidere')+'.\n\nOttimizza l\'idea senza snaturarla, con la sua voce (ironica, competente senza cattedra, critica, umana). Italiano naturale, niente trattini lunghi, niente frasi fatte, niente "non solo X ma anche Y". Rispondi SOLO con un oggetto JSON con chiavi: titolo (key message breve), rubrica (id tra quelli forniti), formato (Reel, Carosello, Post singolo o Stories), hooks (array di 3 prime frasi diverse tra loro), angolo (1 o 2 frasi: il punto di vista che la rende sua), struttura (scaletta di 3-6 passaggi, uno per riga), cta (chiusura che invita a commentare o a mandare il post a qualcuno), domande (array di 2 domande per far riflettere Marta prima di registrare).';
+  sampleApi.json(prompt,{modelTier:'default'}).then(function(o){if(!o||typeof o!=='object'||!o.titolo)throw {message:'Risposta non valida'};
+    var hooks=Array.isArray(o.hooks)?o.hooks.map(String).slice(0,3):[];
+    x.ott={titolo:String(o.titolo),angolo:String(o.angolo||''),struttura:Array.isArray(o.struttura)?o.struttura.join('\n'):String(o.struttura||''),cta:String(o.cta||''),hooks:hooks,domande:Array.isArray(o.domande)?o.domande.map(String).slice(0,3):[]};
+    if(!x.hook&&hooks[0])x.hook=hooks[0];
+    if(!x.rubrica&&state.ped.rubriche.some(function(r){return r.id===o.rubrica}))x.rubrica=o.rubrica;
+    if(!x.formato&&['Reel','Carosello','Post singolo','Stories'].indexOf(o.formato)>-1)x.formato=o.formato;
+    ui.ottBusy=null;markDirty();render();toast('Idea ottimizzata: ricordati di salvare')})
+  .catch(function(err){ui.ottBusy=null;ui.ottErr[x.id]=err&&err.code==='rate_limited'?'Troppe richieste ravvicinate, riprova tra qualche minuto.':err&&err.code==='not_granted'?'Permesso non concesso. Possiamo ottimizzarla in chat.':'Non sono riuscita a ottimizzarla, riprova o scrivimi in chat.';if(err&&err.code==='not_granted')sampleApi=null;render()})}
+function propCard(p,kind,i){var r=rub(p.rubrica);return '<article class="card rub" style="--c:'+esc(r.colore)+'"><span class="tag"><i class="dot" style="background:'+esc(r.colore)+'"></i>'+esc(r.nome)+' · '+esc(p.formato||'')+'</span><h3>'+esc(p.titolo)+'</h3>'+(p.hook?'<span class="hookq">'+esc(p.hook)+'</span>':'')+'<p class="muted small" style="margin:0">'+esc(p.perche||'')+'</p>'+(readOnly?'':'<div class="row-actions"><button class="btn small" data-act="prop-cal" data-k="'+kind+'" data-i="'+i+'">Porta in calendario</button>'+(kind==='saved'?'<button class="btn ghost small danger" data-act="del-prop" data-i="'+i+'">Elimina</button>':'<button class="btn ghost small" data-act="save-prop" data-i="'+i+'">Salva</button>')+'</div>')+'</article>'}
+
+/* ---------- RENDER ---------- */
+function renderSaveBox(){var el=$('#savebox');if(!el)return;var x='';
+  if(ui.remote){x+='<span class="pill dirty">'+esc(ui.remote.savedBy||'Qualcuno')+' ha salvato una versione nuova</span>'+(dirty?'<button class="btn ghost small" data-act="x-json" title="Scarica le tue modifiche per non perderle">Scarica le mie modifiche</button>':'')+'<button class="btn small" data-act="x-reload">Carica la versione nuova</button>'}
+  else{x+=dirty?'<span class="pill dirty">Modifiche non salvate</span><button class="btn ghost small" data-act="discard">Annulla modifiche</button>':'<span class="pill ok">Tutto salvato</span>';
+    x+='<button class="btn ghost small" data-act="x-json" title="Scarica una copia di sicurezza dei dati">Backup</button><button class="btn ghost small" data-act="x-import" title="Carica un file di backup">Importa</button>'}
+  x+='<button class="btn primary" data-act="save"'+(!dirty||saving||ui.remote?' disabled':'')+'>'+(saving?'Salvo…':'Salva')+'</button>';
+  el.innerHTML=x}
+function render(){
+  var app=$('#app');var sy=window.scrollY;
+  var views={strategia:vStrategia,piano:vPiano,calendario:vCalendario,dashboard:vDashboard,inspo:vInspo};
+  app.innerHTML='<header class="top"><div class="top-in"><div class="mark">SBRANDING<small>Marta Vannelli · hub editoriale</small></div><div class="savebox" id="savebox"></div><nav class="tabs" aria-label="Sezioni">'+TABS.map(function(t,i){return '<a href="#'+t[0]+'"'+(ui.tab===t[0]?' aria-current="page"':'')+'><span>'+(i+1)+'</span>'+t[1]+'</a>'}).join('')+'</nav></div></header><main class="wrap"><div class="view">'+views[ui.tab]()+'</div><p class="muted small" style="margin-top:40px">Fonti dei dati: '+esc(state.meta.fonti)+'. Ultimo salvataggio: '+new Date(state.meta.savedAt).toLocaleString('it-IT',{dateStyle:'medium',timeStyle:'short'})+(state.meta.savedBy?' da '+esc(state.meta.savedBy):'')+'. Sei collegat* come '+esc(HUB.name)+' · <a href="#" data-act="x-logout">esci</a>.</p></main>'+(ui.open?vDrawer():'');
+  renderSaveBox();window.scrollTo(0,sy);
+  document.querySelectorAll('textarea.ta').forEach(autosize);
+}
+function autosize(t){if(CSS.supports&&CSS.supports('field-sizing','content'))return;t.style.height='auto';t.style.height=(t.scrollHeight+2)+'px'}
+
+/* ---------- EVENTI ---------- */
+var structural=/^calendario\.post\.\d+\.(rubrica|status|data|formato)$|\.colore$|^ped\.rubriche\.\d+\.macro$|^(ped\.idee|inspo\.trend)\.\d+\.rubrica$|^strategia\.kpi\.\d+\.obiettivo$|^inspo\.mieIdee\.\d+\.(status|rubrica)$|^rubOverride\./;
+document.addEventListener('focusout',function(){if(!ui.pendingRender)return;setTimeout(function(){var a=document.activeElement;if(a&&/^(INPUT|TEXTAREA|SELECT)$/.test(a.tagName)&&$('#app').contains(a))return;ui.pendingRender=false;render()},0)});
+document.addEventListener('input',function(e){var t=e.target;if(t.id==='dash-month'){ui.dashMonth=t.value;render();return}
+  var path=t.getAttribute&&t.getAttribute('data-b');if(!path||readOnly)return;
+  var v=t.value;if(t.getAttribute('data-num')){v=v===''?null:Number(String(v).replace(/\./g,'').replace(',','.'));if(v!==null&&isNaN(v))return}
+  if(/\.alMese$/.test(path))v=Number(v)||0;
+  setPath(state,path,v);markDirty();if(t.tagName==='TEXTAREA')autosize(t);
+  if(t.type==='color'){var card=t.closest('.rub');if(card)card.style.setProperty('--c',v)}
+});
+document.addEventListener('change',function(e){var path=e.target.getAttribute&&e.target.getAttribute('data-b');if(path&&structural.test(path))render()});
+
+function newPost(date,extra){var p=Object.assign({id:uid('c'),data:date,ora:'09:30',rubrica:(state.ped.rubriche[0]||{}).id,titolo:'',hook:'',formato:'Carosello',ripresa:'',status:'Idea',caption:'',link:'',note:'',m:{}},extra||{});state.calendario.post.push(p);ui.month=date.slice(0,7);ui.open=p.id;ui.confirmDel=false;markDirty();render()}
+function nextSlot(){var d=new Date();for(var i=1;i<60;i++){var x=new Date(d);x.setDate(d.getDate()+i);var s=iso(x);if((x.getDay()===2||x.getDay()===4)&&!state.calendario.post.some(function(p){return p.data===s}))return s}return todayISO()}
+function toast(msg){var t=document.createElement('div');t.className='toast';t.textContent=msg;document.body.appendChild(t);setTimeout(function(){t.remove()},2600)}
+
+document.addEventListener('keydown',function(e){if(e.key==='Escape'&&ui.open){ui.open=null;render()}
+  if(e.key==='Enter'&&(e.metaKey||e.ctrlKey)&&e.target.id==='new-idea'){e.preventDefault();var b=$('[data-act="add-mia-idea"]');if(b)b.click()}
+  if((e.key==='Enter'||e.key===' ')&&e.target.classList&&e.target.classList.contains('day')){e.preventDefault();e.target.click()}});
+document.addEventListener('click',function(e){
+  var el=e.target.closest('[data-act]');if(!el)return;var a=el.getAttribute('data-act'),id=el.getAttribute('data-id'),i=+el.getAttribute('data-i');
+  if(a==='close-scrim'){if(e.target===el){ui.open=null;render()}return}
+  if(a==='dayadd'){if(e.target.closest('.chip'))return;if(readOnly)return;newPost(el.getAttribute('data-d'));return}
+  e.preventDefault();
+  var S=state.strategia,P=state.ped,rm=function(arr){var k=arr.findIndex(function(x){return x.id===id});if(k>-1)arr.splice(k,1)};
+  switch(a){
+    case 'save':save();return;
+    case 'x-json':dl('hub-sbranding-backup-'+todayISO()+'.json',JSON.stringify(state,null,1),'application/json');return;
+    case 'x-import':var fi=document.createElement('input');fi.type='file';fi.accept='application/json,.json';fi.onchange=function(){var f=fi.files[0];if(!f)return;f.text().then(function(t){var o=JSON.parse(t);if(o&&o.state)o=o.state;if(!o||!o.strategia||!o.ped||!o.calendario)throw 0;o.meta=state.meta;state=o;markDirty();render();toast('Dati importati: premi Salva per condividerli')}).catch(function(){toast('File non valido')})};fi.click();return;
+    case 'x-reload':if(dirty&&!confirm('Le tue modifiche non salvate si perdono. Se vuoi tenerle, prima premi \u201cScarica le mie modifiche\u201d. Continuo?'))return;pullRemote('Hai la versione più recente');return;
+    case 'x-logout':try{localStorage.removeItem('sbranding-hub-conn')}catch(x){}location.reload();return;
+    case 'discard':state=JSON.parse(JSON.stringify(baseState));dirty=false;try{localStorage.removeItem(DRAFT_KEY)}catch(x){}ui.open=null;render();toast('Modifiche annullate');return;
+    case 'open':ui.open=id;ui.confirmDel=false;render();return;
+    case 'close':ui.open=null;render();return;
+    case 'mprev':ui.month=shiftMonth(ui.month,-1);render();return;
+    case 'mnext':ui.month=shiftMonth(ui.month,1);render();return;
+    case 'view':ui.calView=el.getAttribute('data-v');render();return;
+    case 'example-on':ui.example=true;render();return;
+    case 'example-off':ui.example=false;render();return;
+    case 'ask-claude':askClaude();return;
+    case 'ifilter':ui.ideaFilter=el.getAttribute('data-v');render();return;
+    case 'cfilter':ui.calFilter=el.getAttribute('data-v');render();return;
+    case 'chfilter':ui.chFilter=el.getAttribute('data-v');render();return;
+    case 'smf':ui.smFilter=el.getAttribute('data-v');render();return;
+    case 'ch-sugg':if(!readOnly)suggerisciCanali(el.getAttribute('data-p'));return;
+    case 'rep-gen':if(!readOnly)genRepurpose(id);return;
+    case 'post-gen':genPostProp(id);return;
+    case 'ott-idea':ottimizza(i);return;
+    case 'open-linked':var lp=state.calendario.post.find(function(p){return p.id===state.inspo.mieIdee[i].postId});if(lp){ui.month=lp.data.slice(0,7);ui.open=lp.id;ui.confirmDel=false;location.hash='calendario'}return;
+  }
+  if(readOnly)return;
+  switch(a){
+    case 'add-persona':S.persone.push({id:uid('p'),nome:'',chi:'',bisogni:'',pain:'',perche:'',ascolto:''});break;
+    case 'del-persona':rm(S.persone);break;
+    case 'add-obiettivo':S.obiettivi.push({id:'o'+(S.obiettivi.length+1)+uid(''),testo:'',tempo:'',stato:'proposta',motivazione:''});break;
+    case 'del-obiettivo':rm(S.obiettivi);break;
+    case 'toggle-ob':var o=S.obiettivi.find(function(x){return x.id===id});o.stato=o.stato==='proposta'?'confermato':'proposta';break;
+    case 'add-kpi':S.kpi.push({id:uid('k'),nome:'',partenza:'',target:'',scadenza:'',obiettivo:(S.obiettivi[0]||{}).id,motivazione:''});break;
+    case 'del-kpi':rm(S.kpi);break;
+    case 'add-tono':S.tono.push({id:uid('t'),tratto:'',descrizione:'',esempio:'',evita:'',motivazione:''});break;
+    case 'del-tono':rm(S.tono);break;
+    case 'add-macro':P.macro.push({id:uid('m'),nome:'',obiettivo:'',motivazione:''});break;
+    case 'del-macro':rm(P.macro);break;
+    case 'add-rubrica':P.rubriche.push({id:uid('r'),nome:'Nuova rubrica',colore:'#A50F5E',macro:(P.macro[0]||{}).id,stato:'proposta',descrizione:'',formato:'',alMese:0,obiettivo:'',motivazione:''});break;
+    case 'del-rubrica':if(state.calendario.post.some(function(p){return p.rubrica===id})){toast('Ci sono contenuti in calendario con questa rubrica: spostali prima');return}rm(P.rubriche);break;
+    case 'toggle-rub':var r=P.rubriche.find(function(x){return x.id===id});r.stato=r.stato==='proposta'?'attiva':'proposta';break;
+    case 'add-idea':P.idee.push({testo:'',rubrica:(P.rubriche[0]||{}).id});break;
+    case 'del-idea':P.idee.splice(i,1);break;
+    case 'idea-cal':var d=P.idee[i];newPost(nextSlot(),{titolo:d.testo,rubrica:d.rubrica,canali:Object.assign({},d.canali||{}),canaliPerche:d.canaliPerche||''});ui.tab='calendario';location.hash='calendario';return;
+    case 'add-post':newPost(ui.month&&ui.month>todayISO().slice(0,7)?ui.month+'-01':nextSlot());return;
+    case 'del-post':ui.confirmDel=true;render();return;
+    case 'del-post-no':ui.confirmDel=false;render();return;
+    case 'del-post-yes':rm(state.calendario.post);ui.open=null;ui.confirmDel=false;break;
+    case 'add-mese':state.dashboard.mesi.push({mese:'',follower:null,reach:null,visite:null,click:null,dm:null,call:null,iscritti:null});break;
+    case 'del-mese':state.dashboard.mesi.splice(i,1);break;
+    case 'add-trend':state.inspo.trend.unshift({id:uid('tr'),titolo:'',descrizione:'',fonte:'',url:'',rilevato:todayISO(),verificato:false,rubrica:(P.rubriche[0]||{}).id,proposta:''});break;
+    case 'del-trend':state.inspo.trend.splice(i,1);break;
+    case 'toggle-ver':state.inspo.trend[i].verificato=!state.inspo.trend[i].verificato;break;
+    case 'trend-cal':var t=state.inspo.trend[i];newPost(nextSlot(),{titolo:t.titolo,rubrica:t.rubrica,canali:Object.assign({},t.canali||{}),canaliPerche:t.canaliPerche||'',note:'Dal trend: '+t.titolo+'. '+t.proposta+(t.verificato?'':' (ipotesi da verificare)')});ui.tab='calendario';location.hash='calendario';return;
+    case 'save-prop':var rp=ruleProposals(postsWithData())[i];if(rp){state.inspo.proposte.push(Object.assign({origine:'performance'},rp));}break;
+    case 'del-prop':state.inspo.proposte.splice(i,1);break;
+    case 'add-mia-idea':var ni=$('#new-idea');var tx=ni?ni.value.trim():'';if(!tx){if(ni)ni.focus();toast('Scrivi prima l\'idea');return}
+      state.inspo.mieIdee.push({id:uid('mi'),testo:tx,status:'Da registrare',rubrica:'',formato:'',data:'',note:'',hook:'',creata:todayISO(),ott:null,postId:''});
+      if(ui.ideaFilter!=='tutte'&&ui.ideaFilter!=='Da registrare')ui.ideaFilter='tutte';break;
+    case 'del-mia-idea':state.inspo.mieIdee.splice(i,1);break;
+    case 'ch':var co=getPath(state,el.getAttribute('data-p'));if(co){co.canali=Object.assign({},co.canali||{});var ck=el.getAttribute('data-c');co.canali[ck]=!co.canali[ck]}break;
+    case 'post-hook':var ph=state.calendario.post.find(function(x){return x.id===id});if(ph&&ph.prop){var jh=+el.getAttribute('data-j'),oh=ph.hook;ph.hook=ph.prop.hooks[jh];if(oh)ph.prop.hooks[jh]=oh;else ph.prop.hooks.splice(jh,1)}break;
+    case 'post-cap':var pc=state.calendario.post.find(function(x){return x.id===id});if(pc&&pc.prop){var oc=pc.caption;pc.caption=pc.prop.caption;pc.prop.caption=oc||''}break;
+    case 'use-hook':var xi=state.inspo.mieIdee[i];if(xi&&xi.ott){var j=+el.getAttribute('data-j'),old=xi.hook;xi.hook=xi.ott.hooks[j];if(old)xi.ott.hooks[j]=old;else xi.ott.hooks.splice(j,1)}break;
+    case 'idea-to-cal':var xc=state.inspo.mieIdee[i];var smap={'Da registrare':'Da preparare','Da editare':'In lavorazione','Editato':'Pronto','Programmato':'Pronto'};var pid=uid('c');
+      var nt=[xc.note,xc.ott&&xc.ott.angolo?'Angolo: '+xc.ott.angolo:'',xc.ott&&xc.ott.struttura?'Scaletta:\n'+xc.ott.struttura:'',xc.ott&&xc.ott.cta?'CTA: '+xc.ott.cta:''].filter(Boolean).join('\n\n');
+      xc.postId=pid;newPost(xc.data||nextSlot(),{id:pid,titolo:xc.ott&&xc.ott.titolo?xc.ott.titolo:xc.testo,rubrica:xc.rubrica||(state.ped.rubriche[0]||{}).id,formato:xc.formato||'Carosello',hook:xc.hook||'',status:smap[xc.status]||'Idea',note:nt,canali:Object.assign({},xc.canali||{}),canaliPerche:xc.canaliPerche||''});location.hash='calendario';return;
+    case 'prop-cal':var pr=el.getAttribute('data-k')==='saved'?state.inspo.proposte[i]:ruleProposals(postsWithData())[i];if(pr){newPost(nextSlot(),{titolo:pr.titolo,rubrica:pr.rubrica,formato:FORMATI.indexOf(pr.formato)>-1?pr.formato:'Carosello',hook:pr.hook&&pr.hook.indexOf('Riprendi')!==0?pr.hook:'',note:pr.perche||''});ui.tab='calendario';location.hash='calendario'}return;
+    default:return;
+  }
+  markDirty();render();
+});
+
+/* ---------- CLAUDE (sample) ---------- */
+function askClaude(){if(!sampleApi||ui.sampleBusy)return;var rows=postsWithData();ui.sampleBusy=true;ui.sampleErr='';render();
+  var data={rubriche:state.ped.rubriche.map(function(r){return {id:r.id,nome:r.nome,descrizione:r.descrizione,stato:r.stato}}),
+    perRubrica:groupBy(rows,function(x){return x.p.rubrica}).map(function(g){return {rubrica:rub(g.k).nome,id:g.k,post:g.n,salvCond:+g.val.toFixed(4),interazione:+g.er.toFixed(4)}}),
+    perFormato:groupBy(rows,function(x){return x.p.formato}).map(function(g){return {formato:g.k,post:g.n,interazione:+g.er.toFixed(4)}}),
+    hookMigliori:rows.slice().sort(function(a,b){return b.val-a.val}).slice(0,5).map(function(x){return {hook:x.p.hook||x.p.titolo,rubrica:rub(x.p.rubrica).nome,formato:x.p.formato}}),
+    ideeInCantiere:state.ped.idee.map(function(d){return d.testo}),posizionamento:state.strategia.posizionamento.testo,datiDiEsempio:ui.example};
+  var prompt='Sei una social media strategist senior italiana. Profilo Instagram @sbranding_ di Marta Vannelli: brand strategy, social, AI come acceleratore creativo con direzione autoriale. Pubblico: imprenditori con un business avviato e persone che lavorano con i social. Dati delle performance (JSON):\n'+JSON.stringify(data)+'\n\nProponi 4 nuovi contenuti Instagram che riprendono la logica di rubriche, formati e hook che hanno funzionato meglio. Scrivi in italiano naturale, senza trattini lunghi, senza frasi fatte. Rispondi SOLO con un array JSON di 4 oggetti con chiavi: titolo, rubrica (usa l\'id della rubrica, es. r1), formato (Reel o Carosello o Post singolo o Stories), hook (la prima frase), perche (una frase che collega la proposta ai dati).';
+  sampleApi.json(prompt,{modelTier:'default'}).then(function(arr){if(!Array.isArray(arr))throw {message:'Risposta non valida'};
+    arr.slice(0,4).forEach(function(p){if(p&&p.titolo)state.inspo.proposte.push({titolo:String(p.titolo),rubrica:state.ped.rubriche.some(function(r){return r.id===p.rubrica})?p.rubrica:'r2',formato:String(p.formato||''),hook:String(p.hook||''),perche:String(p.perche||''),origine:'claude'})});
+    ui.sampleBusy=false;markDirty();render();toast('Nuove proposte aggiunte: ricordati di salvare')})
+  .catch(function(err){ui.sampleBusy=false;ui.sampleErr=err&&err.code==='rate_limited'?'Troppe richieste ravvicinate, riprova tra qualche minuto.':err&&err.code==='not_granted'?'Permesso non concesso: le proposte automatiche restano disponibili qui sopra.':'Non sono riuscita a generare le proposte, riprova più tardi.';if(err&&err.code==='not_granted')sampleApi=null;render()})}
+
+/* ---------- SALVATAGGIO ---------- */
+function buildDoc(s){var css=document.getElementById('hub-style').textContent,js=document.getElementById('hub-app').textContent;
+  var json=JSON.stringify(s,null,1).replace(/</g,'\\u003c');
+  return '<!doctype html><html><head><meta charset=utf8><meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover"><style>'+RESET+'</style></head><body>'+
+  '<title>Hub Sbranding</title>\n<meta name="claude:viewport-fit-sides" content="cover">\n'+FONTS+'\n<style id="hub-style">'+css+'</style>\n\n<div id="app"><div class="wrap"><p class="muted">Carico il piano editoriale…</p></div></div>\n\n<script type="application/json" id="hub-state">\n'+json+'\n<\/script>\n\n<script id="hub-app">'+js+'<\/script></body></html>'}
+function save(){if(!artifactApi||saving||!dirty)return;saving=true;renderSaveBox();
+  var s=JSON.parse(JSON.stringify(state));s.meta.savedAt=new Date().toISOString();s.meta.savedBy=HUB.name;
+  HUB.save(s).then(function(){try{localStorage.removeItem(DRAFT_KEY)}catch(e){}baseState=s;state=JSON.parse(JSON.stringify(s));dirty=false;saving=false;ui.remote=null;render();toast('Salvato: ora lo vede anche chi lavora con te')})
+  .catch(function(err){saving=false;
+    if(err&&err.code==='conflict'){ui.remote=err.info;renderSaveBox();toast('Nel frattempo '+(err.info.savedBy||'qualcuno')+' ha salvato una versione nuova')}
+    else if(err&&err.code==='chiave'){toast('Chiave non più valida: ricarica la pagina')}
+    else{renderSaveBox();toast('Salvataggio non riuscito, le modifiche restano in questa pagina. Riprova tra poco')}})}
+
+function pullRemote(msg){return HUB.load().then(function(d){HUB.v=d.version;baseState=d.state;state=JSON.parse(JSON.stringify(d.state));dirty=false;ui.remote=null;try{localStorage.removeItem(DRAFT_KEY)}catch(e){}safeRender();renderSaveBox();if(msg)toast(msg)})}
+function dl(name,content,type){var b=new Blob([content],{type:type});var u=URL.createObjectURL(b);var a=document.createElement('a');a.href=u;a.download=name;document.body.appendChild(a);a.click();a.remove();setTimeout(function(){URL.revokeObjectURL(u)},1000)}
+
+/* ---------- AVVIO ---------- */
+function route(){var h=location.hash.replace('#','');ui.tab=TABS.some(function(t){return t[0]===h})?h:'strategia';if(ui.tab!=='calendario')ui.open=null;render();window.scrollTo(0,0)}
+window.addEventListener('hashchange',route);
+window.addEventListener('beforeunload',function(e){if(dirty){e.preventDefault();e.returnValue=''}});
+route();
+artifactApi={};
+(function(){var raw=window.__hubIG||{media:[],months:{},prof:null,stats:null};var st=raw.stats||{},sm=st.media||{};
+  live.media=(raw.media||[]).map(function(x){return Object.assign({},x,sm[x.id]||{})}).sort(function(a,b){return String(b.timestamp||b.data).localeCompare(String(a.timestamp||a.data))});
+  live.months=Object.assign({},raw.months||{},st.months||{});
+  live.prof=st.profilo||raw.prof;live.commenti=st.commenti||null;live.commentiAt=st.commentiAt||st.aggiornato||null;})();
+render();
+setInterval(function(){if(document.hidden||saving)return;HUB.version().then(function(v){if(!v||v.version===HUB.v)return;
+  if(!dirty&&!ui.open){pullRemote((v.savedBy||'Qualcuno')+' ha aggiornato il piano')}else{ui.remote=v;renderSaveBox()}}).catch(function(){})},40000);
+};
+</script>
+<script id="hub-loader">(function(){
+"use strict";
+var LS='sbranding-hub-conn';
+var DEFAULT_URL='';
+var conn={};try{conn=JSON.parse(localStorage.getItem(LS)||'{}')}catch(e){}
+if(!conn.url&&DEFAULT_URL)conn.url=DEFAULT_URL;
+function q(o){return Object.keys(o).map(function(k){return k+'='+encodeURIComponent(o[k])}).join('&')}
+function get(p){return fetch(conn.url+(conn.url.indexOf('?')>-1?'&':'?')+q(p)).then(function(r){return r.json()})}
+function post(b){return fetch(conn.url,{method:'POST',headers:{'Content-Type':'text/plain;charset=utf-8'},body:JSON.stringify(b)}).then(function(r){return r.json()})}
+window.HUB={v:0,name:'',
+  load:function(){return get({action:'load',key:conn.key}).then(function(d){if(!d.ok)throw {code:d.error};if(d.empty)throw {code:'vuoto'};return d})},
+  version:function(){return get({action:'version',key:conn.key}).then(function(d){return d.ok&&!d.empty?d:null})},
+  save:function(s){return post({action:'save',key:conn.key,by:conn.name,baseVersion:HUB.v,state:s}).then(function(d){if(!d.ok)throw (d.conflict?{code:'conflict',info:d}:{code:d.error||'errore'});HUB.v=d.version;return d})}};
+var app=document.getElementById('app');
+function esc(s){return String(s==null?'':s).replace(/[&<>"']/g,function(c){return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]})}
+var box='max-width:440px;margin:12vh auto 0;display:grid;gap:14px;padding:24px;border:1px solid var(--line);border-radius:var(--r);background:var(--bg)';
+var fld='font:inherit;color:var(--fg);background:var(--bg);border:1px solid var(--line);border-radius:8px;padding:9px 11px;width:100%';
+function form(msg){
+  app.innerHTML='<form id="hub-login" style="'+box+'"><div class="mark">SBRANDING<small>hub editoriale condiviso</small></div>'+
+  '<p class="muted small" style="margin:0">Inserisci il collegamento e la chiave che ti ha mandato Marta. Li ricordo su questo browser.</p>'+
+  (msg?'<p class="small" style="margin:0;color:var(--accent)">'+esc(msg)+'</p>':'')+
+  '<label class="f"><span>Il tuo nome</span><input style="'+fld+'" name="name" required value="'+esc(conn.name||'')+'" placeholder="Come ti firmi quando salvi"></label>'+
+  (DEFAULT_URL?'':'<label class="f"><span>Collegamento</span><input style="'+fld+'" name="url" required value="'+esc(conn.url||'')+'" placeholder="https://script.google.com/macros/s/…/exec"></label>')+
+  '<label class="f"><span>Chiave</span><input style="'+fld+'" name="key" type="password" required value="'+esc(conn.key||'')+'"></label>'+
+  '<button class="btn primary" style="justify-self:start">Entra</button></form>';
+  document.getElementById('hub-login').onsubmit=function(e){e.preventDefault();var f=e.target;
+    conn={name:f.name.value.trim(),url:(f.url?f.url.value.trim():DEFAULT_URL),key:f.key.value.trim()};
+    try{localStorage.setItem(LS,JSON.stringify(conn))}catch(x){}start()}}
+function initForm(){
+  app.innerHTML='<div style="'+box+'"><div class="mark">SBRANDING<small>primo avvio</small></div>'+
+  '<p style="margin:0">Il collegamento funziona ma l’archivio è vuoto. Carica il file <b>hub-sbranding-dati.json</b> per partire con il piano attuale.</p>'+
+  '<input type="file" id="hub-init" accept=".json,application/json"><p class="small muted" id="hub-init-msg" style="margin:0"></p></div>';
+  document.getElementById('hub-init').onchange=function(e){var file=e.target.files[0];if(!file)return;var m=document.getElementById('hub-init-msg');m.textContent='Carico…';
+    file.text().then(function(t){var o=JSON.parse(t);var st=o.state||o;if(!st.strategia)throw 0;return post({action:'init',key:conn.key,by:conn.name,state:st,ig:o.ig||null})})
+    .then(function(d){if(!d.ok)throw d;start()}).catch(function(){m.textContent='File non valido o archivio già inizializzato.'})}}
+function boot(d){HUB.v=d.version;HUB.name=conn.name;window.__hubIG=d.ig||null;
+  document.getElementById('hub-state').textContent=JSON.stringify(d.state);window.__bootHub()}
+function start(){
+  if(!conn.url||!conn.key||!conn.name)return form('');
+  app.innerHTML='<div class="wrap"><p class="muted">Apro l’hub…</p></div>';
+  HUB.load().then(boot).catch(function(err){var c=err&&err.code;
+    if(c==='vuoto')return initForm();
+    form(c==='chiave'?'La chiave non è corretta.':'Non riesco a raggiungere il collegamento. Controlla che sia giusto e riprova.')})}
+start();
+})();
+</script>
+
+</body></html>
