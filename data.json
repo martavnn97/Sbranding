@@ -1,0 +1,1477 @@
+{
+ "meta": {
+  "savedAt": "2026-10-30T12:20:00Z",
+  "fonti": "Progetto Sbranding (documento Chi sono), Google Sheet Calendario Sbranding, PED & Calendario Template Sbranding, ricerca trend del 30/10/2026, Insights Instagram via Composio"
+ },
+ "strategia": {
+  "principio": "Ogni scelta di questo piano parte dalle persone e dall'ascolto attivo: prima capiamo chi ci legge, cosa dice e cosa vive, poi decidiamo cosa pubblicare.",
+  "persone": [
+   {
+    "id": "p1",
+    "nome": "L'imprenditrice con un business avviato",
+    "chi": "Ha già clienti e un'attività che funziona. Gestisce i social da sola o con un collaboratore, conosce le piattaforme e non ha bisogno di spiegazioni base.",
+    "bisogni": "Capire cosa funziona e perché, con chiavi di lettura da applicare subito al proprio brand.",
+    "pain": "Pubblica senza una direzione chiara e sente che l'AI corre più veloce di lei.",
+    "perche": "Trova un punto di vista riconoscibile che le fa vedere il proprio brand da fuori.",
+    "ascolto": ""
+   },
+   {
+    "id": "p2",
+    "nome": "Chi lavora con i social",
+    "chi": "Social media manager, content creator, freelance e team di agenzia. Segue i trend di piattaforma e usa già qualche strumento AI.",
+    "bisogni": "Leggere casi e trend prima degli altri, avere workflow AI provati sul campo.",
+    "pain": "Appiattimento creativo, clienti che chiedono volumi invece di obiettivi, tempo che non basta.",
+    "perche": "Strumenti concreti e una visione critica sull'AI, da collega a collega.",
+    "ascolto": ""
+   },
+   {
+    "id": "p3",
+    "nome": "Il professionista che vuole distinguersi",
+    "chi": "Consulente, libero professionista o personal brand in costruzione.",
+    "bisogni": "Raccontarsi in modo distintivo senza sembrare tutti uguali.",
+    "pain": "Non sa da dove partire e copia i format che vede.",
+    "perche": "Il metodo Sbranding: ognuno ha la sua ricetta, vanno scelti gli ingredienti giusti.",
+    "ascolto": ""
+   }
+  ],
+  "obiettivi": [
+   {
+    "id": "o1",
+    "testo": "Essere riconosciuta come punto di riferimento su branding, strategia social e AI",
+    "tempo": "Dicembre 2027",
+    "stato": "confermato",
+    "motivazione": "È la direzione di fondo del tuo PED: consulenze, coaching, corsi Learnn e newsletter arrivano come conseguenza dell'autorevolezza, non come messaggio diretto."
+   },
+   {
+    "id": "o2",
+    "testo": "Spostare la percezione da esperta di social a esperta del digitale a 360 gradi e dell'AI",
+    "tempo": "Giugno 2027",
+    "stato": "proposta",
+    "motivazione": "Lo hai detto tu: vuoi essere vista così. Oggi i corsi Learnn ti posizionano già sull'AI, il feed deve confermarlo con continuità."
+   },
+   {
+    "id": "o3",
+    "testo": "Costruire un ritmo di pubblicazione sostenibile e leggibile nei dati",
+    "tempo": "Da novembre 2026, prima verifica a gennaio 2027",
+    "stato": "proposta",
+    "motivazione": "Da maggio a ottobre 2026 hai pubblicato in media 4 post al mese. Il ritmo c'è già: ora serve renderlo prevedibile e leggibile nei dati."
+   },
+   {
+    "id": "o4",
+    "testo": "Portare le persone giuste fuori da Instagram: newsletter e call conoscitiva",
+    "tempo": "Giugno 2027",
+    "stato": "proposta",
+    "motivazione": "Il valore vero è la relazione: Da Zero a (S)brand e la call gratuita sono gli spazi dove l'ascolto diventa conversazione."
+   }
+  ],
+  "kpi": [
+   {
+    "id": "k1",
+    "nome": "Post pubblicati al mese",
+    "partenza": "4,2 al mese (25 post da maggio a ottobre 2026, dato Instagram)",
+    "target": "Proposta: 6 al mese, poi 8 se il ritmo regge",
+    "scadenza": "Gennaio 2027",
+    "obiettivo": "o3",
+    "motivazione": "Dato reale dagli Insights. Passare da 4 a 8 vuol dire raddoppiare il lavoro: meglio salire a 6 e verificare a gennaio se la qualità tiene."
+   },
+   {
+    "id": "k2",
+    "nome": "Quota di contenuti su AI e digitale a 360 gradi",
+    "partenza": "2 su 25 post (8%, maggio-ottobre 2026)",
+    "target": "Almeno 3 su 8 al mese",
+    "scadenza": "Marzo 2027",
+    "obiettivo": "o2",
+    "motivazione": "Negli ultimi sei mesi l'AI è il tema principale solo di 2 post su 25. Se vuoi essere riconosciuta lì, deve vedersi di più nel feed, con il registro che al tuo pubblico piace (casi e trend, non teoria)."
+   },
+   {
+    "id": "k3",
+    "nome": "Salvataggi + condivisioni su reach (media per post)",
+    "partenza": "1,45% (media degli ultimi 10 post)",
+    "target": "1,9% entro giugno 2027 (+30%)",
+    "scadenza": "Giugno 2027",
+    "obiettivo": "o1",
+    "motivazione": "Chi salva o manda un contenuto lo trova utile o lo usa per parlarne con altri: è il segnale più vicino all'autorevolezza. Le condivisioni pesano anche nella distribuzione."
+   },
+   {
+    "id": "k4",
+    "nome": "Commenti e DM con domande di approfondimento",
+    "partenza": "Da rilevare (conteggio mensile)",
+    "target": "Da definire dopo il primo mese",
+    "scadenza": "Gennaio 2027",
+    "obiettivo": "o1",
+    "motivazione": "È la misura dell'ascolto: ci dice cosa le persone vogliono capire meglio e diventa materia prima per i prossimi contenuti."
+   },
+   {
+    "id": "k5",
+    "nome": "Click al link in bio verso newsletter e Calendly",
+    "partenza": "Da 0 a 4 tocchi al mese (maggio-ottobre 2026)",
+    "target": "Proposta: almeno 30 al mese",
+    "scadenza": "Giugno 2027",
+    "obiettivo": "o4",
+    "motivazione": "Oggi il link in bio quasi non viene toccato: chi ti legge non ha un motivo chiaro per uscire da Instagram. È il punto più debole per l'obiettivo newsletter e call."
+   },
+   {
+    "id": "k6",
+    "nome": "Call conoscitive arrivate da Instagram",
+    "partenza": "Da rilevare (chiedi in call come ti hanno trovata)",
+    "target": "Da definire",
+    "scadenza": "Giugno 2027",
+    "obiettivo": "o4",
+    "motivazione": "Conseguenza indiretta, da guardare senza farla diventare il messaggio dei contenuti."
+   },
+   {
+    "id": "k7",
+    "nome": "Iscritti alla newsletter e tasso di apertura",
+    "partenza": "Da rilevare da Substack",
+    "target": "Da definire dopo il primo mese",
+    "scadenza": "Giugno 2027",
+    "obiettivo": "o4",
+    "motivazione": "Misura la relazione più profonda. Il tasso di apertura dice se la newsletter è attesa o solo ricevuta."
+   },
+   {
+    "id": "k8",
+    "nome": "LinkedIn: impression medie e messaggi da aziende",
+    "partenza": "Da rilevare da LinkedIn",
+    "target": "Da definire dopo il primo mese",
+    "scadenza": "Giugno 2027",
+    "obiettivo": "o2",
+    "motivazione": "Le impression dicono se il punto di vista arriva, i messaggi da aziende dicono se arriva alle persone giuste per il ruolo fractional."
+   }
+  ],
+  "posizionamento": {
+   "testo": "Digital Brand Strategist che legge brand, social e AI partendo dalle persone. Unisce sociologia, psicologia, marketing e neuromarketing per dare chiavi di lettura applicabili, con l'AI come acceleratore creativo guidato da una direzione autoriale.",
+   "motivazione": "Tiene insieme quello che ti distingue (approccio olistico e centrato sulle persone) e dove vuoi andare (digitale a 360 gradi e AI), senza chiuderti nella sola etichetta social."
+  },
+  "tono": [
+   {
+    "id": "t1",
+    "tratto": "Ironico e leggero",
+    "descrizione": "La S di Sbranding nasce dalla tua sbadataggine: un sorriso apre la porta ai temi seri.",
+    "esempio": "Ognuno ha la sua ricetta, la torta perfetta non esiste.",
+    "evita": "Battute che sminuiscono il tema o chi legge.",
+    "motivazione": "È coerente con la metafora della torta del nuovo sito e rende memorabile un tema complesso."
+   },
+   {
+    "id": "t2",
+    "tratto": "Competente senza salire in cattedra",
+    "descrizione": "Spieghi da collega che ha provato le cose, non da guru.",
+    "esempio": "Ve lo dico perché ci sono passata con un cliente.",
+    "evita": "Gergo per pochi, elenchi di regole assolute.",
+    "motivazione": "Il pubblico è già digitalmente consapevole: cerca un punto di vista, non una lezione base."
+   },
+   {
+    "id": "t3",
+    "tratto": "Critico e riflessivo",
+    "descrizione": "Parti da un'osservazione controintuitiva e la smonti con calma.",
+    "esempio": "I social non servono per vendere. Servono per farsi comprare.",
+    "evita": "Hot take gratuite e polemiche per l'engagement.",
+    "motivazione": "Sono i contenuti che ti rappresentano di più e costruiscono autorevolezza nel tempo."
+   },
+   {
+    "id": "t4",
+    "tratto": "Umano e vicino",
+    "descrizione": "Fai sentire viste le persone, racconti anche i tuoi dubbi.",
+    "esempio": "Dire di no non è pigrizia, è fare spazio.",
+    "evita": "Frasi motivazionali generiche e tono da AI.",
+    "motivazione": "Il tuo principio guida è l'ascolto: il tono deve invitare alla risposta."
+   }
+  ],
+  "canali": [
+   {
+    "id": "ig",
+    "nome": "Instagram @sbranding_",
+    "ruolo": "Scoperta e riconoscibilità",
+    "pubblico": "Chi ti scopre: imprenditrici, professionisti e persone che lavorano con i social. Oggi 10.897 follower.",
+    "formato": "Reel e caroselli, il gancio veloce di un'idea",
+    "frequenza": "6 al mese (proposta, oggi 4)",
+    "obiettivo": "o1, o2",
+    "motivazione": "È dove ti trovano oggi. I dati degli ultimi sei mesi dicono che qui funzionano le letture di brand e cultura pop (Tinder, strass) e i contenuti umani (\"Ci sono periodi…\")."
+   },
+   {
+    "id": "li",
+    "nome": "LinkedIn",
+    "ruolo": "Autorevolezza professionale e ruolo fractional",
+    "pubblico": "Imprenditori, manager marketing, HR e direzioni che possono ingaggiarti come manager fractional o formatrice.",
+    "formato": "Post testuale con il tuo punto di vista (1.200/1.800 caratteri), carosello PDF riadattato da Instagram, qualche dietro le quinte di lavoro",
+    "frequenza": "Proposta: 2 a settimana, quasi tutti riuso",
+    "obiettivo": "o1, o2, o4",
+    "motivazione": "Chi compra un manager fractional decide qui, non su Instagram. Lo stesso contenuto va riscritto con l'angolo \"cosa significa per un'azienda\"."
+   },
+   {
+    "id": "ss",
+    "nome": "Substack · Da Zero a (S)brand",
+    "ruolo": "Profondità e relazione",
+    "pubblico": "Chi ti segue già e vuole capire di più: la parte più vicina della community.",
+    "formato": "Un tema sviluppato per numero (framework, caso letto con più lenti, storia personale) più una sezione breve con cosa hai letto o visto",
+    "frequenza": "Proposta: 2 numeri al mese, da confermare con te",
+    "obiettivo": "o4, o1",
+    "motivazione": "È lo spazio dove l'ascolto diventa conversazione e dove le persone arrivano quando vogliono di più. È anche il ponte naturale verso la call conoscitiva."
+   }
+  ],
+  "repurposing": {
+   "flusso": "Un'idea, tre profondità. Instagram la fa scoprire con un gancio, LinkedIn la porta nel mondo del lavoro con la domanda \"cosa significa per un'azienda\", Substack la sviluppa fino in fondo con fonti, esempi e domande. Quando un'idea ha profondità, il pezzo madre è la newsletter e gli altri canali ne prendono un pezzo. Quando è veloce o visiva, il pezzo madre è Instagram.",
+   "motivazione": "Scrivere una volta e adattare tre volte ti fa risparmiare tempo senza duplicare: ogni canale riceve l'angolo che gli serve, non lo stesso testo incollato.",
+   "criteri": [
+    {
+     "canale": "ig",
+     "si": "Temi visivi, trend pop e di costume, reazioni veloci, demo di strumenti, pensieri brevi che si leggono in una slide.",
+     "no": "Ragionamenti che hanno bisogno di più di 10 slide o di molte fonti."
+    },
+    {
+     "canale": "li",
+     "si": "Strategia, AI applicata al lavoro, casi di brand con una lezione per le aziende, metodo, dietro le quinte da consulente e fractional.",
+     "no": "Trend estetici puri, contenuti molto personali senza un aggancio professionale, tattiche solo di Instagram."
+    },
+    {
+     "canale": "ss",
+     "si": "Idee che reggono 800 parole o più: framework, letture sociologiche, storie personali, riflessioni che aprono una domanda vera alla community.",
+     "no": "Notizie di piattaforma, tutorial brevi, contenuti che invecchiano in una settimana."
+    }
+   ]
+  }
+ },
+ "ped": {
+  "macro": [
+   {
+    "id": "m1",
+    "nome": "Informativo",
+    "obiettivo": "Dare chiavi di lettura e strumenti applicabili",
+    "motivazione": "Costruisce competenza percepita: è la base dell'autorevolezza."
+   },
+   {
+    "id": "m2",
+    "nome": "Identitario",
+    "obiettivo": "Far riconoscere il tuo punto di vista",
+    "motivazione": "Distingue Sbranding da chi spiega le stesse cose senza una tesi."
+   },
+   {
+    "id": "m3",
+    "nome": "Ispirazionale",
+    "obiettivo": "Creare vicinanza e fiducia",
+    "motivazione": "Le persone scelgono una consulente anche per come si sentono leggendola."
+   },
+   {
+    "id": "m4",
+    "nome": "Commerciale indiretto",
+    "obiettivo": "Mostrare come lavori senza vendere",
+    "motivazione": "I servizi restano una conseguenza: si raccontano attraverso il metodo e i casi, mai con un'offerta diretta."
+   }
+  ],
+  "rubriche": [
+   {
+    "id": "r1",
+    "nome": "Case study",
+    "colore": "#A50F5E",
+    "macro": "m1",
+    "stato": "attiva",
+    "descrizione": "Analisi di campagne, brand, prodotti o progetti reali per capire cosa ha funzionato, perché e cosa possiamo imparare. Il focus è tradurre scelte di comunicazione, branding e posizionamento in insight applicabili.",
+    "formato": "Reel greenscreen o carosello 8/10 slide",
+    "alMese": 2,
+    "obiettivo": "Autorevolezza: leggere il mercato prima degli altri",
+    "motivazione": "Il caso Cotonella mostra che sai stare dentro i progetti: è la prova più concreta della tua competenza."
+   },
+   {
+    "id": "r2",
+    "nome": "Riflessioni strategiche",
+    "colore": "#6A4C93",
+    "macro": "m2",
+    "stato": "attiva",
+    "descrizione": "Punti di vista su marketing, comunicazione, creatività e costruzione di un brand. Partono da un'osservazione spesso controintuitiva e offrono una lente più lucida per leggere il proprio lavoro.",
+    "formato": "Carosello testuale",
+    "alMese": 2,
+    "obiettivo": "Riconoscibilità del punto di vista",
+    "motivazione": "È la rubrica dove si sente di più la tua voce e dove può entrare il tema dell'AI con direzione autoriale."
+   },
+   {
+    "id": "r3",
+    "nome": "Consigli pratici",
+    "colore": "#C9622E",
+    "macro": "m1",
+    "stato": "attiva",
+    "descrizione": "Contenuti operativi che aiutano a prendere una decisione, migliorare un contenuto o risolvere un problema specifico. Chiari, applicabili subito, senza sovraccarico di teoria.",
+    "formato": "Carosello o Reel con registrazione schermo",
+    "alMese": 2,
+    "obiettivo": "Utilità: salvataggi e condivisioni",
+    "motivazione": "Qui passano gli strumenti AI che usi davvero (Apify, Composio): è il modo più concreto per mostrarti esperta del digitale a 360 gradi."
+   },
+   {
+    "id": "r4",
+    "nome": "Analisi trend",
+    "colore": "#2E7D6B",
+    "macro": "m1",
+    "stato": "attiva",
+    "descrizione": "Segnali culturali, estetici, digitali o di consumo letti oltre la superficie: da dove arrivano, che bisogno esprimono, se contano per brand e creator.",
+    "formato": "Reel greenscreen o carosello",
+    "alMese": 1,
+    "obiettivo": "Leggere la cultura prima degli altri",
+    "motivazione": "È dove porti sociologia e psicologia nel marketing: il tuo approccio olistico diventa visibile."
+   },
+   {
+    "id": "r5",
+    "nome": "Inspirational",
+    "colore": "#D4789F",
+    "macro": "m3",
+    "stato": "attiva",
+    "descrizione": "Pensieri personali e valoriali su lavoro creativo e crescita professionale. L'ispirazione resta concreta: far sentire viste le persone e offrire una prospettiva utile.",
+    "formato": "Carosello, post singolo o Reel parlato",
+    "alMese": 1,
+    "obiettivo": "Vicinanza e fiducia",
+    "motivazione": "Le persone scelgono chi sentono vicino: la tua storia è parte del metodo."
+   },
+   {
+    "id": "r6",
+    "nome": "AI con la testa",
+    "colore": "#33507A",
+    "macro": "m2",
+    "stato": "proposta",
+    "descrizione": "Proposta: una rubrica fissa sull'AI come acceleratore creativo con direzione autoriale. Cosa delegare, cosa no, dove l'AI appiattisce e come evitarlo.",
+    "formato": "Reel parlato o carosello",
+    "alMese": 0,
+    "obiettivo": "Posizionamento come esperta di AI",
+    "motivazione": "Oggi l'AI è sparsa tra le rubriche. Dargli un nome la rende riconoscibile e sostiene l'obiettivo di essere vista oltre i social. Da decidere se attivarla."
+   },
+   {
+    "id": "r7",
+    "nome": "Dietro le quinte fractional",
+    "colore": "#8A7A1F",
+    "macro": "m4",
+    "stato": "proposta",
+    "descrizione": "Proposta: cosa vuol dire entrare in un'azienda come manager fractional, raccontato attraverso decisioni, metodo e momenti di lavoro (sempre con il consenso dei clienti).",
+    "formato": "Stories in serie o carosello",
+    "alMese": 0,
+    "obiettivo": "Far capire il servizio senza venderlo",
+    "motivazione": "Vuoi essere riconosciuta come fractional manager ma il feed non lo racconta mai. Da valutare cosa puoi mostrare dei clienti."
+   }
+  ],
+  "idee": [
+   {
+    "testo": "Apify per fare analisi dei competitor",
+    "rubrica": "r3",
+    "canali": {
+     "ig": 1,
+     "li": 1,
+     "ss": 0
+    },
+    "canaliPerche": "Tutorial di uno strumento: su Instagram come demo, su LinkedIn con l'angolo \"come lo uso con i clienti\". Per la newsletter è troppo operativo."
+   },
+   {
+    "testo": "Il connettore migliore per Claude se lavori con i social: Composio",
+    "rubrica": "r3",
+    "canali": {
+     "ig": 1,
+     "li": 1,
+     "ss": 0
+    },
+    "canaliPerche": "Stesso discorso di Apify: utile e concreto, regge su Instagram e LinkedIn. In newsletter solo dentro un numero sugli strumenti."
+   },
+   {
+    "testo": "La cosa che mi dispiace di più da quando usiamo l'AI: l'appiattimento",
+    "rubrica": "r2",
+    "canali": {
+     "ig": 1,
+     "li": 1,
+     "ss": 1
+    },
+    "canaliPerche": "È il cuore del tuo posizionamento sull'AI. Instagram per il gancio, LinkedIn per i manager che si chiedono come usarla, Substack per il ragionamento completo."
+   },
+   {
+    "testo": "Perché l'orto è una tendenza",
+    "rubrica": "r4",
+    "canali": {
+     "ig": 1,
+     "li": 0,
+     "ss": 1
+    },
+    "canaliPerche": "Lettura culturale e sociologica: perfetta per un numero della newsletter e per un Reel. Su LinkedIn l'aggancio professionale è debole."
+   },
+   {
+    "testo": "La differenza la fa chi parte dalla prospettiva del consumatore",
+    "rubrica": "r2",
+    "canali": {
+     "ig": 1,
+     "li": 1,
+     "ss": 1
+    },
+    "canaliPerche": "Tema da strategia pura: funziona ovunque. In newsletter può diventare un framework con le domande che usi."
+   },
+   {
+    "testo": "L'importanza delle micro-serie per i brand",
+    "rubrica": "r1",
+    "canali": {
+     "ig": 1,
+     "li": 1,
+     "ss": 0
+    },
+    "canaliPerche": "Caso di brand con una lezione per le aziende: Instagram e LinkedIn. In newsletter solo se raccogli più casi in un numero."
+   }
+  ]
+ },
+ "calendario": {
+  "commenti": {
+   "2026-06": "Mese di ripartenza: tre uscite, una per rubrica tra case study, riflessioni e consigli pratici. Una prima base per capire quale formato risponde meglio.",
+   "2026-11": "Novembre apre il nuovo ritmo, due uscite a settimana. Al centro c'è l'AI letta con spirito critico, dall'appiattimento creativo agli strumenti che uso davvero. Poi il ritorno alle persone con la prospettiva del consumatore e l'orto come segnale culturale. Chiudiamo con una storia personale, per ricordare chi c'è dietro Sbranding.",
+   "2026-12": ""
+  },
+  "post": [
+   {
+    "id": "c1",
+    "data": "2026-06-04",
+    "ora": "09:30",
+    "rubrica": "r1",
+    "titolo": "Caso studio Cotonella e strategia TikTok",
+    "hook": "Cosa pubblicare su TikTok se hai un brand",
+    "formato": "Reel",
+    "ripresa": "Greenscreen",
+    "status": "Pubblicato",
+    "caption": "TikTok è una piattaforma “complicata” e di cui vanno comprese le dinamiche e il linguaggio, ma alla fine non è così impossibile come molti credono!\n\nVi porto nel dietro le quinte della strategia social per Cotonella. Spero sia stata utile e per qualsiasi domanda scrivete tra i commenti✨♥️",
+    "link": "",
+    "note": "Dal Calendario Sbranding. Inserisci i dati dagli Insights.",
+    "m": {},
+    "canali": {
+     "ig": 1,
+     "li": 0,
+     "ss": 0
+    },
+    "canaliPerche": ""
+   },
+   {
+    "id": "c2",
+    "data": "2026-06-17",
+    "ora": "09:30",
+    "rubrica": "r2",
+    "titolo": "Perché fare meno ci permette di fare di più?",
+    "hook": "Perché fare meno ci permette di fare di più?",
+    "formato": "Carosello",
+    "ripresa": "",
+    "status": "Pubblicato",
+    "caption": "Dire di “no” a qualcosa non significa essere pigri o fermarsi. Significa fare spazio. Spazio per pensare, per annoiarsi, per far nascere idee uniche che hanno bisogno di tempo per fiorire. 🌱\nIl vuoto non è tempo perso: è il terreno fertile della creatività.",
+    "link": "",
+    "note": "Dal Calendario Sbranding. Inserisci i dati dagli Insights.",
+    "m": {},
+    "canali": {
+     "ig": 1,
+     "li": 0,
+     "ss": 0
+    },
+    "canaliPerche": ""
+   },
+   {
+    "id": "c3",
+    "data": "2026-06-24",
+    "ora": "09:30",
+    "rubrica": "r3",
+    "titolo": "I social non servono per vendere. Servono per farsi comprare.",
+    "hook": "I social non servono per vendere. Servono per farsi comprare.",
+    "formato": "Carosello",
+    "ripresa": "",
+    "status": "Pubblicato",
+    "caption": "Vendere è una conseguenza. Farsi comprare è una strategia.",
+    "link": "",
+    "note": "Dal Calendario Sbranding. Inserisci i dati dagli Insights.",
+    "m": {},
+    "canali": {
+     "ig": 1,
+     "li": 0,
+     "ss": 0
+    },
+    "canaliPerche": ""
+   },
+   {
+    "id": "c4",
+    "data": "2026-11-03",
+    "ora": "09:30",
+    "rubrica": "r2",
+    "titolo": "La cosa che mi dispiace di più da quando usiamo l'AI: l'appiattimento creativo",
+    "hook": "Da quando usiamo l'AI i feed si somigliano tutti. Parliamone.",
+    "formato": "Carosello",
+    "ripresa": "",
+    "status": "Da preparare",
+    "caption": "",
+    "link": "",
+    "note": "Si collega al trend sulla fiducia in calo verso i contenuti automatizzati (tab Inspo).",
+    "m": {},
+    "prop": {
+     "caption": "Scorro il feed e ho una sensazione strana: ho già visto tutto. Stesse palette, stesse frasi a effetto, stessi caroselli costruiti con la stessa struttura.\n\nL'AI non è il problema. Io la uso ogni giorno e mi fa risparmiare ore. Il problema arriva quando le lasciamo anche la direzione: decidere cosa dire, a chi, con quale punto di vista.\n\nSe il punto di partenza è generico, il risultato sarà la media di tutto quello che esiste già. La media non se la ricorda nessuno.\n\nLa differenza la fa ancora una persona che sceglie. Che ascolta il proprio pubblico, che ha una tesi, che ogni tanto sbaglia.\n\nTu come usi l'AI nei tuoi contenuti? Scrivimelo nei commenti, sono curiosa.",
+     "hooks": [
+      "Da quando usiamo l'AI i feed si somigliano tutti. Parliamone.",
+      "La media non se la ricorda nessuno.",
+      "Uso l'AI ogni giorno. Proprio per questo vi dico cosa mi preoccupa.",
+      "Ho scrollato il feed per dieci minuti e mi è sembrato di leggere sempre lo stesso post."
+     ],
+     "origine": "Proposta di Claude, 30/10/2026"
+    },
+    "canali": {
+     "ig": 1,
+     "li": 1,
+     "ss": 1
+    },
+    "canaliPerche": "È il cuore del tuo posizionamento sull'AI. Instagram per il gancio, LinkedIn per i manager che si chiedono come usarla, Substack per il ragionamento completo."
+   },
+   {
+    "id": "c5",
+    "data": "2026-11-05",
+    "ora": "09:30",
+    "rubrica": "r3",
+    "titolo": "Come analizzo i competitor di un cliente con Apify",
+    "hook": "Come studio i competitor senza passare giorni a scrollare",
+    "formato": "Reel",
+    "ripresa": "Registrazione schermo + voce",
+    "status": "Idea",
+    "caption": "",
+    "link": "",
+    "note": "Chiudi con una slide o una frase da mandare a chi segue i social del proprio brand.",
+    "m": {},
+    "prop": {
+     "caption": "Studiare i competitor di un cliente era la parte del lavoro che rimandavo sempre: ore a scorrere profili, screenshot sparsi, appunti che poi non ritrovavo.\n\nOggi uso Apify per raccogliere i dati pubblici dei profili che mi interessano: post, formati, frequenza, interazioni. Poi li leggo io, con le domande giuste. Lo strumento raccoglie, la strategia resta a noi.\n\nNel reel ti mostro il flusso che uso con i clienti, passo per passo.\n\nMandalo a chi segue i social del tuo brand: vi risparmia un bel po' di scroll.",
+     "hooks": [
+      "Come studio i competitor senza passare giorni a scrollare",
+      "Questa era la parte del mio lavoro che rimandavo sempre. Ora la faccio così.",
+      "Smetti di fare screenshot ai profili dei competitor.",
+      "Il tuo competitor pubblica più di te? Prima di preoccuparti, guarda i dati."
+     ],
+     "origine": "Proposta di Claude, 30/10/2026"
+    },
+    "canali": {
+     "ig": 1,
+     "li": 1,
+     "ss": 0
+    },
+    "canaliPerche": "Tutorial di uno strumento: su Instagram come demo, su LinkedIn con l'angolo \"come lo uso con i clienti\". Per la newsletter è troppo operativo."
+   },
+   {
+    "id": "c6",
+    "data": "2026-11-10",
+    "ora": "09:30",
+    "rubrica": "r1",
+    "titolo": "Micro-serie: il formato che i brand sottovalutano",
+    "hook": "E se il tuo brand raccontasse a puntate?",
+    "formato": "Carosello",
+    "ripresa": "",
+    "status": "Idea",
+    "caption": "",
+    "link": "",
+    "note": "Scegli due o tre casi reali da analizzare con una tesi tua, niente repost dei contenuti dei brand.",
+    "m": {},
+    "prop": {
+     "caption": "Pensa all'ultima serie che hai finito in due giorni. Non l'hai guardata perché ogni episodio era perfetto: l'hai guardata perché volevi sapere come andava a finire.\n\nLe micro-serie portano questo meccanismo sui social. Un racconto a puntate, un appuntamento riconoscibile, un motivo per tornare sul profilo. Per un brand vuol dire smettere di inseguire il singolo contenuto virale per costruire un'abitudine.\n\nNel carosello trovi i casi che ho analizzato e cosa puoi prendere per il tuo brand, anche con un team piccolo.\n\nQuale storia racconteresti a puntate? Dimmelo nei commenti.",
+     "hooks": [
+      "E se il tuo brand raccontasse a puntate?",
+      "Non serve un contenuto virale. Serve un motivo per tornare.",
+      "Il format che i brand sottovalutano funziona come una serie TV.",
+      "Episodio 1: perché il tuo brand dovrebbe ragionare a puntate."
+     ],
+     "origine": "Proposta di Claude, 30/10/2026"
+    },
+    "canali": {
+     "ig": 1,
+     "li": 1,
+     "ss": 0
+    },
+    "canaliPerche": "Caso di brand con una lezione per le aziende: Instagram e LinkedIn. In newsletter solo se raccogli più casi in un numero."
+   },
+   {
+    "id": "c7",
+    "data": "2026-11-12",
+    "ora": "09:30",
+    "rubrica": "r4",
+    "titolo": "Perché l'orto è diventato una tendenza",
+    "hook": "L'orto non è un hobby. È un segnale.",
+    "formato": "Reel",
+    "ripresa": "Greenscreen",
+    "status": "Idea",
+    "caption": "",
+    "link": "",
+    "note": "Prima di scrivere verifica il trend con dati (Google Trends, ricerche di settore). Prova due hook con i Trial Reels.",
+    "m": {},
+    "prop": {
+     "caption": "Nei feed che seguo torna spesso un tema: l'orto. Coltivare, aspettare, raccogliere.\n\nMi sono chiesta perché proprio adesso. La mia lettura è che non stiamo parlando di verdure: stiamo parlando di lentezza, del bisogno di toccare qualcosa con le mani, di risultati che non dipendono da un algoritmo. In un tempo liquido, come direbbe Bauman, cerchiamo radici. Letteralmente.\n\nPer i brand è un segnale prezioso perché racconta cosa desiderano le persone quando spengono il telefono.\n\nTu ce l'hai un orto, anche solo sul balcone? Raccontamelo nei commenti.",
+     "hooks": [
+      "L'orto non è un hobby. È un segnale.",
+      "Perché all'improvviso vogliamo tutti coltivare qualcosa?",
+      "Questa tendenza non parla di verdure. Parla di noi.",
+      "Cosa c'entra l'orto con il tuo brand? Più di quanto pensi."
+     ],
+     "origine": "Proposta di Claude, 30/10/2026"
+    },
+    "canali": {
+     "ig": 1,
+     "li": 0,
+     "ss": 1
+    },
+    "canaliPerche": "Lettura culturale e sociologica: perfetta per un numero della newsletter e per un Reel. Su LinkedIn l'aggancio professionale è debole."
+   },
+   {
+    "id": "c8",
+    "data": "2026-11-17",
+    "ora": "09:30",
+    "rubrica": "r3",
+    "titolo": "Composio: il connettore che uso con Claude se lavori con i social",
+    "hook": "Il connettore che ha cambiato il mio modo di usare Claude per i social",
+    "formato": "Carosello",
+    "ripresa": "",
+    "status": "Idea",
+    "caption": "",
+    "link": "",
+    "note": "",
+    "m": {},
+    "prop": {
+     "caption": "Se usi Claude per lavorare sui social, prima o poi ti scontri con lo stesso limite: copi, incolli, riformatti, passi da una piattaforma all'altra.\n\nComposio è il connettore che uso per collegare Claude agli strumenti di tutti i giorni, così lavoro sui dati senza fare da ponte a mano. Nel carosello ti racconto cosa ci faccio, cosa non gli delego mai e da dove partire se vuoi provarlo.\n\nIl promemoria che ripeto sempre: lo strumento accelera, la direzione la tieni tu.\n\nSalvalo per quando avrai un momento per configurarlo.",
+     "hooks": [
+      "Il connettore che ha cambiato il mio modo di usare Claude per i social",
+      "Smetti di fare copia e incolla tra Claude e i tuoi strumenti.",
+      "Se lavori con i social e usi Claude, questo ti serve.",
+      "Cosa delego a Claude e cosa no: il mio setup."
+     ],
+     "origine": "Proposta di Claude, 30/10/2026"
+    },
+    "canali": {
+     "ig": 1,
+     "li": 1,
+     "ss": 0
+    },
+    "canaliPerche": "Stesso discorso di Apify: utile e concreto, regge su Instagram e LinkedIn. In newsletter solo dentro un numero sugli strumenti."
+   },
+   {
+    "id": "c9",
+    "data": "2026-11-19",
+    "ora": "09:30",
+    "rubrica": "r2",
+    "titolo": "La differenza la fa chi parte dalla prospettiva del consumatore",
+    "hook": "Il tuo pubblico non pensa al tuo prodotto. Pensa alla sua giornata.",
+    "formato": "Carosello",
+    "ripresa": "",
+    "status": "Idea",
+    "caption": "",
+    "link": "",
+    "note": "",
+    "m": {},
+    "prop": {
+     "caption": "Quando un cliente mi racconta il suo prodotto, parte quasi sempre dalle caratteristiche. Giusto, le conosce meglio di chiunque.\n\nChi ti legge però non pensa al tuo prodotto. Pensa alla sua giornata, ai suoi problemi, a cosa vuole sentirsi dire. Il tuo prodotto entra nella sua testa solo se si aggancia lì.\n\nPartire dalla prospettiva del consumatore vuol dire fare una cosa semplice e difficile insieme: ascoltare prima di parlare. Leggere commenti, recensioni, domande nei DM. Usare le loro parole al posto delle nostre.\n\nNel carosello ti lascio le domande che uso per cambiare punto di vista. Mandalo a chi scrive i contenuti del tuo brand.",
+     "hooks": [
+      "Il tuo pubblico non pensa al tuo prodotto. Pensa alla sua giornata.",
+      "Stai parlando del tuo prodotto. Le persone stanno pensando ad altro.",
+      "La frase migliore per il tuo prossimo post l'ha già scritta un tuo cliente.",
+      "Prima di scrivere il prossimo post, leggi i commenti."
+     ],
+     "origine": "Proposta di Claude, 30/10/2026"
+    },
+    "canali": {
+     "ig": 1,
+     "li": 1,
+     "ss": 1
+    },
+    "canaliPerche": "Tema da strategia pura: funziona ovunque. In newsletter può diventare un framework con le domande che usi."
+   },
+   {
+    "id": "c10",
+    "data": "2026-11-24",
+    "ora": "09:30",
+    "rubrica": "r1",
+    "titolo": "Case study del mese (da scegliere)",
+    "hook": "",
+    "formato": "Reel",
+    "ripresa": "Greenscreen",
+    "status": "Idea",
+    "caption": "",
+    "link": "",
+    "note": "Scegli un caso uscito a novembre. Con l'aggiornamento di Instagram sull'originalità serve un materiale tuo: schema, screenshot annotati, tesi.",
+    "m": {},
+    "prop": {
+     "caption": "[Nome del brand] ha fatto una scelta che a prima vista sembra strana: [la scelta, in una frase].\n\nHo provato a smontarla per capire perché funziona: chi voleva raggiungere, cosa ha ascoltato prima di comunicare, quale bisogno ha intercettato.\n\nNel reel trovi la mia lettura e cosa puoi portare nel tuo brand, anche senza il loro budget.\n\nTu che idea ti sei fatta? Sono curiosa di sapere se la vedi come me.\n\n(Struttura da completare quando scegli il caso del mese.)",
+     "hooks": [
+      "Tutti ne parlano. Io ci vedo un'altra cosa.",
+      "Questa campagna sembra una scelta strana. Non lo è.",
+      "Cosa può imparare il tuo brand da [nome brand], anche senza il loro budget."
+     ],
+     "origine": "Proposta di Claude, 30/10/2026"
+    },
+    "canali": {
+     "ig": 1,
+     "li": 1,
+     "ss": 0
+    },
+    "canaliPerche": "Case study di brand: Instagram e LinkedIn. Diventa newsletter se il caso è ricco e vuoi leggerlo con più lenti."
+   },
+   {
+    "id": "c11",
+    "data": "2026-11-26",
+    "ora": "09:30",
+    "rubrica": "r5",
+    "titolo": "Ho aperto Sbranding da sola: la scelta migliore della mia vita",
+    "hook": "La scelta migliore che ho fatto? Buttarmi da sola.",
+    "formato": "Carosello",
+    "ripresa": "",
+    "status": "Idea",
+    "caption": "",
+    "link": "",
+    "note": "Controlla la data: nel CV Sbranding parte a settembre 2019, nel racconto parli della pandemia.",
+    "m": {},
+    "prop": {
+     "caption": "Ho aperto Sbranding da sola. Volevo avere qualcosa di mio, uno spazio dove parlare dei temi che mi interessavano, oltre a quello che facevo e gestivo per i clienti.\n\nMi sono buttata, sono uscita dalla comfort zone e ho fatto ciò che mi piaceva fare. Oggi posso dirlo: è stata la scelta migliore della mia vita.\n\nIl nome? All'inizio il profilo parlava solo di branding. Io sono super sbadata, mi scordo tutto, così ho messo una S davanti. Un po' sbirulina, un po' scordarella.\n\nC'è una scelta che stai rimandando da troppo tempo? Scrivimela, anche in DM.",
+     "hooks": [
+      "La scelta migliore che ho fatto? Buttarmi da sola.",
+      "Ti racconto perché il mio brand si chiama così. Spoiler: sono sbadata.",
+      "Volevo una cosa mia. Così è nato Sbranding."
+     ],
+     "origine": "Proposta di Claude, 30/10/2026"
+    },
+    "canali": {
+     "ig": 1,
+     "li": 1,
+     "ss": 1
+    },
+    "canaliPerche": "La tua storia: su Instagram vicinanza, su LinkedIn racconto da founder e fractional, in newsletter la versione lunga con quello che ti sei portata dietro."
+   }
+  ]
+ },
+ "dashboard": {
+  "mesi": []
+ },
+ "inspo": {
+  "proposte": [],
+  "trend": [
+   {
+    "id": "tr1",
+    "titolo": "Instagram premia l'originalità anche su foto e caroselli",
+    "descrizione": "Dal 30 aprile 2026 gli account che ripubblicano in modo sistematico contenuti altrui non vengono più raccomandati. La regola, già attiva sui Reel, ora vale anche per foto e caroselli. Conta ciò che è creato da zero o modificato in modo sostanziale.",
+    "fonte": "MWM, articolo sull'aggiornamento di aprile 2026 (riprende l'annuncio di Instagram)",
+    "url": "https://mwm.ai/articles/instagram-algorithm-update-in-april-2026-prioritizes-original-content",
+    "rilevato": "2026-10-30",
+    "verificato": true,
+    "rubrica": "r1",
+    "proposta": "Ogni case study nasce da materiale tuo: schema proprietario, screenshot annotati, una tesi chiara in prima slide. Mai il contenuto del brand ripubblicato così com'è. Primo test sul case study del 24 novembre.",
+    "canali": {
+     "ig": 1,
+     "li": 1,
+     "ss": 0
+    },
+    "canaliPerche": "Notizia di piattaforma utile a chi lavora con i social: Instagram e LinkedIn. In newsletter invecchia presto."
+   },
+   {
+    "id": "tr2",
+    "titolo": "Le condivisioni in DM pesano nella distribuzione",
+    "descrizione": "Tra i segnali di ranking dei Reel indicati da Adam Mosseri ci sono tempo di visione, like su reach e invii su reach. Il peso preciso dei DM rispetto ai like non è confermato da Meta.",
+    "fonte": "SocialPilot, Instagram Reels Algorithm (settembre 2026), che rimanda a un post di Adam Mosseri del gennaio 2025",
+    "url": "https://www.socialpilot.co/?p=563048",
+    "rilevato": "2026-10-30",
+    "verificato": true,
+    "rubrica": "r3",
+    "proposta": "Nei consigli pratici chiudi con un invito concreto a mandare il contenuto a una persona precisa: “mandalo a chi gestisce i social del tuo brand”. Misura le condivisioni nella scheda del post.",
+    "canali": {
+     "ig": 1,
+     "li": 1,
+     "ss": 0
+    },
+    "canaliPerche": "Tattica di distribuzione: va bene per chi gestisce i social su entrambe le piattaforme."
+   },
+   {
+    "id": "tr3",
+    "titolo": "Trial Reels per testare gli hook con chi non ti segue",
+    "descrizione": "I Trial Reels mostrano un Reel prima ai non follower: servono a capire se un contenuto funziona prima di farlo vedere alla tua community. Aperti ai profili pubblici da luglio 2025.",
+    "fonte": "SocialPilot, Instagram Reels Algorithm (settembre 2026), con citazione di Adam Mosseri",
+    "url": "https://www.socialpilot.co/?p=563048",
+    "rilevato": "2026-10-30",
+    "verificato": true,
+    "rubrica": "r4",
+    "proposta": "Sul Reel dell'orto (12 novembre) prova due hook diversi in Trial: uno culturale, uno provocatorio. Poi racconta il risultato in un consiglio pratico.",
+    "canali": {
+     "ig": 1,
+     "li": 0,
+     "ss": 0
+    },
+    "canaliPerche": "Funzione solo di Instagram: resta lì."
+   },
+   {
+    "id": "tr4",
+    "titolo": "Your Algorithm: le persone vedono e modificano i propri interessi",
+    "descrizione": "Instagram ha introdotto un pannello che mostra gli interessi usati per i suggerimenti e permette di modificarli, prima sui Reel e poi su Explore e feed. La disponibilità in Italia non è verificata.",
+    "fonte": "SocialPilot (settembre 2026), che cita Instagram e Social Media Today",
+    "url": "https://www.socialpilot.co/?p=563048",
+    "rilevato": "2026-10-30",
+    "verificato": false,
+    "rubrica": "r4",
+    "proposta": "Carosello di analisi: cosa cambia per un brand se l'algoritmo diventa trasparente e le persone scelgono cosa vedere. Collega al principio dell'ascolto: vince chi parla di temi che il pubblico sceglie davvero.",
+    "canali": {
+     "ig": 1,
+     "li": 0,
+     "ss": 1
+    },
+    "canaliPerche": "Su Instagram come analisi breve, in newsletter come riflessione su ascolto e algoritmi che diventano trasparenti."
+   },
+   {
+    "id": "tr5",
+    "titolo": "Fiducia in calo verso i contenuti automatizzati",
+    "descrizione": "Si parla di “AI slop” come problema di fiducia: secondo un dato citato da Search Engine Journal il 60% degli utenti si fida meno dei contenuti automatizzati. Il dato arriva di seconda mano e va recuperato alla fonte.",
+    "fonte": "WebProNews, 2026 Marketing Shifts: AI Slop, AR Triggers and Platform Power Plays (data non indicata)",
+    "url": "https://www.webpronews.com/2026-marketing-shifts-ai-slop-ar-triggers-and-platform-power-plays",
+    "rilevato": "2026-10-30",
+    "verificato": false,
+    "rubrica": "r2",
+    "proposta": "Rinforza il carosello sull'appiattimento creativo (3 novembre): la questione non è usare o no l'AI, è chi tiene la direzione. Può diventare il primo episodio della rubrica AI con la testa.",
+    "canali": {
+     "ig": 1,
+     "li": 1,
+     "ss": 1
+    },
+    "canaliPerche": "Tema forte sull'AI e sulla fiducia: tocca tutti e tre i pubblici, in newsletter puoi andare a fondo."
+   },
+   {
+    "id": "tr6",
+    "titolo": "Dal feed pubblico agli spazi privati",
+    "descrizione": "Le conversazioni si spostano verso DM, gruppi, Stories e newsletter: le persone curano il feed e condividono in privato.",
+    "fonte": "WebProNews (riprende un'analisi di Social Media Today), data non indicata",
+    "url": "https://www.webpronews.com/2026-marketing-shifts-ai-slop-ar-triggers-and-platform-power-plays",
+    "rilevato": "2026-10-30",
+    "verificato": false,
+    "rubrica": "r5",
+    "proposta": "Un contenuto inspirational al mese apre una domanda e invita a continuare la conversazione su Da Zero a (S)brand. È il ponte verso l'obiettivo newsletter.",
+    "canali": {
+     "ig": 0,
+     "li": 1,
+     "ss": 1
+    },
+    "canaliPerche": "Parla proprio del perché esiste una newsletter: perfetto per Substack e per un post LinkedIn sul futuro della comunicazione dei brand."
+   },
+   {
+    "id": "tr7",
+    "titolo": "Micro-serie ed episodi per i brand",
+    "descrizione": "Ipotesi dalla tua lista di idee: i brand raccontano a puntate per creare attesa e ritorno. Non ho trovato una fonte verificata in questa ricerca.",
+    "fonte": "Idee in cantiere del Calendario Sbranding",
+    "url": "",
+    "rilevato": "2026-10-30",
+    "verificato": false,
+    "rubrica": "r1",
+    "proposta": "Case study del 10 novembre con due o tre esempi reali. Potresti anche provarla tu: una micro-serie in tre episodi sulla rubrica AI con la testa.",
+    "canali": {
+     "ig": 1,
+     "li": 1,
+     "ss": 0
+    },
+    "canaliPerche": "Case study di brand: Instagram e LinkedIn."
+   },
+   {
+    "id": "tr8",
+    "titolo": "L'orto come tendenza culturale",
+    "descrizione": "Ipotesi dalla tua lista di idee: l'orto come risposta a lentezza, autoproduzione e bisogno di concretezza. Da verificare con dati di ricerca e casi di brand.",
+    "fonte": "Idee in cantiere del Calendario Sbranding",
+    "url": "",
+    "rilevato": "2026-10-30",
+    "verificato": false,
+    "rubrica": "r4",
+    "proposta": "Reel greenscreen del 12 novembre: da dove arriva, che bisogno esprime, quali brand lo stanno intercettando. Leggilo con la lente di Bauman sulla ricerca di solidità.",
+    "canali": {
+     "ig": 1,
+     "li": 0,
+     "ss": 1
+    },
+    "canaliPerche": "Lettura culturale: Reel e numero della newsletter."
+   }
+  ],
+  "mieIdee": [
+   {
+    "id": "mi1b6quq",
+    "testo": "Il lusso di fare le cose con le mani",
+    "status": "Da registrare",
+    "rubrica": "r2",
+    "formato": "Carosello",
+    "data": "",
+    "note": "",
+    "hook": "Il vero lusso, oggi, è qualcosa che non si può generare in dieci secondi.",
+    "creata": "2026-10-30",
+    "ott": {
+     "titolo": "Più l'AI fa tutto, più il fatto a mano diventa un lusso",
+     "angolo": "Quando produrre costa quasi zero, il valore si sposta su ciò che porta tracce di tempo, errore e presenza. Non è un elogio nostalgico del manuale contro il digitale: è una lente per capire cosa rende distintivo un brand quando tutti hanno gli stessi strumenti.",
+     "struttura": "Slide 1: hook, il lusso non è più avere, è aver fatto (o aver fatto fare con cura).\nSlide 2: l'osservazione controintuitiva: più l'AI rende tutto accessibile, più cresce il desiderio di ciò che è imperfetto, lento, firmato.\nSlide 3: due o tre esempi concreti di brand o creator che puntano sul fatto a mano (ceramica, cucina, stampa, artigianato) e cosa comunicano davvero.\nSlide 4: cosa cerca la persona dietro: non l'oggetto, ma la prova che qualcuno ci ha messo attenzione.\nSlide 5: la tua esperienza: un momento in cui hai fatto qualcosa con le mani (l'orto, un lavoro fisico, un errore) e cosa ti ha restituito rispetto allo schermo.\nSlide 6: cosa significa per chi lavora con brand e social: mostrare il processo, le scelte, le imperfezioni, tenendo l'AI per ciò che accelera e non per ciò che identifica.\nSlide 7: chiusura e CTA.",
+     "cta": "Qual è l'ultima cosa che hai fatto con le mani e che ti ha fatto sentire davvero tuo il risultato? Raccontamelo nei commenti, o mandalo a chi in questo periodo ha bisogno di sporcarsi un po' le dita.",
+     "hooks": [
+      "Il vero lusso, oggi, è qualcosa che non si può generare in dieci secondi.",
+      "Con l'AI tutto è veloce. Per questo il lento sta diventando costoso.",
+      "Ho provato a delegare tutto all'AI. Poi ho preso in mano un pezzo di argilla."
+     ],
+     "domande": [
+      "Quale episodio personale legato al fare con le mani vuoi raccontare davvero, e che cosa ti ha insegnato sul tuo modo di lavorare con brand e AI?",
+      "Dove metti il confine tra fatto a mano come valore e fatto a mano come posa estetica che si può comunque copiare? Vuoi dire chiaramente da che parte stai?"
+     ]
+    },
+    "postId": "",
+    "canali": {
+     "ig": true,
+     "li": true,
+     "ss": true
+    },
+    "canaliPerche": "Ha profondità da newsletter: è una tesi sul valore che si sposta quando produrre costa quasi zero, con la tua esperienza personale dentro. Su Instagram il carosello, su LinkedIn l'angolo per i brand: cosa diventa distintivo quando tutti hanno gli stessi strumenti."
+   }
+  ]
+ },
+ "rubOverride": {},
+ "igSnapshot": {
+  "fotografia": "2026-10-30",
+  "media": [
+   {
+    "aggiornato": "2026-10-30T12:00:00Z",
+    "ai": false,
+    "comments": 5,
+    "data": "2026-09-22",
+    "formato": "Carosello",
+    "hook": "Ci sono periodi in cui sembra che la vita corra più veloce di noi e che non riusciamo a starle dietro.",
+    "interactions": 2674,
+    "likes": 1960,
+    "ora": "07:29",
+    "permalink": "https://www.instagram.com/p/DdlM5qpDW7S/",
+    "reach": 22465,
+    "rubrica": "r5",
+    "saved": 378,
+    "shares": 139,
+    "timestamp": "2026-09-22T07:29:45+0000",
+    "views": 19160,
+    "id": "17885322462491661"
+   },
+   {
+    "aggiornato": "2026-10-30T12:00:00Z",
+    "ai": false,
+    "comments": 1,
+    "data": "2026-10-26",
+    "formato": "Carosello",
+    "hook": "È corretto che gli influencer prendano posizione su tutto?",
+    "interactions": 69,
+    "likes": 57,
+    "ora": "10:40",
+    "permalink": "https://www.instagram.com/p/De9FyL1jR_c/",
+    "reach": 1203,
+    "rubrica": "r2",
+    "saved": 6,
+    "shares": 1,
+    "timestamp": "2026-10-26T10:40:44+0000",
+    "views": 3807,
+    "id": "17912015421555459"
+   },
+   {
+    "aggiornato": "2026-10-30T12:00:00Z",
+    "ai": false,
+    "comments": 5,
+    "data": "2026-05-19",
+    "formato": "Reel",
+    "hook": "LEGGI LA CAPTION",
+    "interactions": 242,
+    "likes": 120,
+    "ora": "07:55",
+    "permalink": "https://www.instagram.com/reel/DYgy2S2t59s/",
+    "reach": 3140,
+    "rubrica": "r3",
+    "saved": 94,
+    "shares": 21,
+    "timestamp": "2026-05-19T07:55:19+0000",
+    "views": 4825,
+    "id": "17925021996340774"
+   },
+   {
+    "aggiornato": "2026-10-30T12:00:00Z",
+    "ai": false,
+    "comments": 11,
+    "data": "2026-10-13",
+    "formato": "Reel",
+    "hook": "L’online è diventato imprescindibile, ma perché nel tempo ci siamo dimenticati dell’offline?",
+    "interactions": 214,
+    "likes": 140,
+    "ora": "09:54",
+    "permalink": "https://www.instagram.com/reel/DebhpFxNtLT/",
+    "reach": 2696,
+    "rubrica": "r2",
+    "saved": 33,
+    "shares": 29,
+    "timestamp": "2026-10-13T09:54:54+0000",
+    "views": 4513,
+    "id": "17928421545181197"
+   },
+   {
+    "aggiornato": "2026-10-30T12:00:00Z",
+    "ai": false,
+    "comments": 0,
+    "data": "2026-05-26",
+    "formato": "Reel",
+    "hook": "Fatemi sapere cosa ne pensate",
+    "interactions": 92,
+    "likes": 59,
+    "ora": "09:43",
+    "permalink": "https://www.instagram.com/reel/DYzBhbTNY0a/",
+    "reach": 1912,
+    "rubrica": "r2",
+    "saved": 31,
+    "shares": 2,
+    "timestamp": "2026-05-26T09:43:03+0000",
+    "views": 3204,
+    "id": "17941460973035617"
+   },
+   {
+    "aggiornato": "2026-10-30T12:00:00Z",
+    "ai": false,
+    "comments": 2,
+    "data": "2026-09-01",
+    "formato": "Reel",
+    "hook": "Anche quest’anno sono stata da @bobalchimiaspicchi.",
+    "interactions": 188,
+    "likes": 129,
+    "ora": "07:52",
+    "permalink": "https://www.instagram.com/reel/DcvKI59tPCX/",
+    "reach": 2470,
+    "rubrica": "r1",
+    "saved": 39,
+    "shares": 18,
+    "timestamp": "2026-09-01T07:52:47+0000",
+    "views": 4286,
+    "id": "17946564885055526"
+   },
+   {
+    "aggiornato": "2026-10-30T12:00:00Z",
+    "ai": false,
+    "comments": 3,
+    "data": "2026-08-04",
+    "formato": "Reel",
+    "hook": "se come me amate il gelato, sicuramente vi sarete imbattuti nel Ninja Creami.",
+    "interactions": 117,
+    "likes": 80,
+    "ora": "12:42",
+    "permalink": "https://www.instagram.com/reel/DbnkjC2Ng7u/",
+    "reach": 2535,
+    "rubrica": "r1",
+    "saved": 17,
+    "shares": 17,
+    "timestamp": "2026-08-04T12:42:03+0000",
+    "views": 3681,
+    "id": "17954813091197910"
+   },
+   {
+    "aggiornato": "2026-10-30T12:00:00Z",
+    "ai": true,
+    "comments": 26,
+    "data": "2026-07-06",
+    "formato": "Reel",
+    "hook": "Dopo l’entusiasmo iniziale per la generazione di contenuti con l’IA, stiamo assistendo a un vero e proprio ritorno all’analogico.",
+    "interactions": 209,
+    "likes": 132,
+    "ora": "10:48",
+    "permalink": "https://www.instagram.com/reel/DactdfNNwB5/",
+    "reach": 3444,
+    "rubrica": "r4",
+    "saved": 26,
+    "shares": 21,
+    "timestamp": "2026-07-06T10:48:48+0000",
+    "views": 5569,
+    "id": "17962179720131226"
+   },
+   {
+    "aggiornato": "2026-10-30T12:00:00Z",
+    "ai": false,
+    "comments": 6,
+    "data": "2026-06-17",
+    "formato": "Carosello",
+    "hook": "Dire di “no” a qualcosa non significa essere pigri o fermarsi.",
+    "interactions": 466,
+    "likes": 335,
+    "ora": "07:36",
+    "permalink": "https://www.instagram.com/p/DZrcmwVDWWE/",
+    "reach": 5153,
+    "rubrica": "r5",
+    "saved": 64,
+    "shares": 28,
+    "timestamp": "2026-06-17T07:36:51+0000",
+    "views": 10806,
+    "id": "18001699253767802"
+   },
+   {
+    "aggiornato": "2026-10-30T12:00:00Z",
+    "ai": false,
+    "comments": 11,
+    "data": "2026-05-06",
+    "formato": "Reel",
+    "hook": "Bisogna per forza metterci la faccia per crescere sui social?",
+    "interactions": 288,
+    "likes": 183,
+    "ora": "10:08",
+    "permalink": "https://www.instagram.com/reel/DX_kaP1NDql/",
+    "reach": 3739,
+    "rubrica": "r3",
+    "saved": 64,
+    "shares": 28,
+    "timestamp": "2026-05-06T10:08:14+0000",
+    "views": 6726,
+    "id": "18047897189756771"
+   },
+   {
+    "aggiornato": "2026-10-30T12:00:00Z",
+    "ai": false,
+    "comments": 0,
+    "data": "2026-08-19",
+    "formato": "Reel",
+    "hook": "non sentirti in colpa",
+    "interactions": 76,
+    "likes": 68,
+    "ora": "08:55",
+    "permalink": "https://www.instagram.com/reel/DcNyr3etMA4/",
+    "reach": 1305,
+    "rubrica": "r5",
+    "saved": 6,
+    "shares": 1,
+    "timestamp": "2026-08-19T08:55:13+0000",
+    "views": 1979,
+    "id": "18069597158476917"
+   },
+   {
+    "aggiornato": "2026-10-30T12:00:00Z",
+    "ai": false,
+    "comments": 14,
+    "data": "2026-08-14",
+    "formato": "Carosello",
+    "hook": "Era così necessario il restyling del logo di Instagram?",
+    "interactions": 262,
+    "likes": 212,
+    "ora": "16:53",
+    "permalink": "https://www.instagram.com/p/DcBybaBDVUG/",
+    "reach": 5523,
+    "rubrica": "r1",
+    "saved": 27,
+    "shares": 7,
+    "timestamp": "2026-08-14T16:53:37+0000",
+    "views": 13719,
+    "id": "18084945689292561"
+   },
+   {
+    "aggiornato": "2026-10-30T12:00:00Z",
+    "ai": false,
+    "comments": 23,
+    "data": "2026-07-27",
+    "formato": "Carosello",
+    "hook": "Pochi giorni fa Tinder ha annunciato il suo primo e grande rebranding in dieci anni, curato da Studio Porto Rocha.",
+    "interactions": 1185,
+    "likes": 672,
+    "ora": "07:36",
+    "permalink": "https://www.instagram.com/p/DbScZjYjfiI/",
+    "reach": 26720,
+    "rubrica": "r1",
+    "saved": 277,
+    "shares": 185,
+    "timestamp": "2026-07-27T07:36:49+0000",
+    "views": 29452,
+    "id": "18087019733647537"
+   },
+   {
+    "aggiornato": "2026-10-30T12:00:00Z",
+    "ai": false,
+    "comments": 2,
+    "data": "2026-09-17",
+    "formato": "Reel",
+    "hook": "ho avuto questa idea ed ho deciso di condividerla con voi potrebbe funzionare?",
+    "interactions": 72,
+    "likes": 50,
+    "ora": "13:54",
+    "permalink": "https://www.instagram.com/reel/DdZA3VaNZPV/",
+    "reach": 2055,
+    "rubrica": "r2",
+    "saved": 17,
+    "shares": 3,
+    "timestamp": "2026-09-17T13:54:39+0000",
+    "views": 3143,
+    "id": "18096175259639840"
+   },
+   {
+    "aggiornato": "2026-10-30T12:00:00Z",
+    "ai": true,
+    "comments": 6,
+    "data": "2026-09-30",
+    "formato": "Reel",
+    "hook": "L’Intelligenza Artificiale è fantastica per velocizzare le task più noiose quotidiane, ma non deve diventare una scusa per smettere di pensare.",
+    "interactions": 89,
+    "likes": 69,
+    "ora": "08:45",
+    "permalink": "https://www.instagram.com/reel/Dd57zyIthiK/",
+    "reach": 2792,
+    "rubrica": "r2",
+    "saved": 10,
+    "shares": 2,
+    "timestamp": "2026-09-30T08:45:43+0000",
+    "views": 3985,
+    "id": "18117918094984239"
+   },
+   {
+    "aggiornato": "2026-10-30T12:00:00Z",
+    "ai": false,
+    "comments": 0,
+    "data": "2026-07-22",
+    "formato": "Reel",
+    "hook": "Un errore che viene fatto spesso in una gestione social è considerare l’organico e l’ADV come due binari distinti che non si incrociano mai.",
+    "interactions": 231,
+    "likes": 161,
+    "ora": "08:51",
+    "permalink": "https://www.instagram.com/reel/DbFs7OItYd0/",
+    "reach": 3350,
+    "rubrica": "r2",
+    "saved": 57,
+    "shares": 11,
+    "timestamp": "2026-07-22T08:51:22+0000",
+    "views": 5669,
+    "id": "18119255348501090"
+   },
+   {
+    "aggiornato": "2026-10-30T12:00:00Z",
+    "ai": false,
+    "comments": 6,
+    "data": "2026-10-08",
+    "formato": "Carosello",
+    "hook": "qualche volta, staccare la spina, fa bene.",
+    "interactions": 168,
+    "likes": 131,
+    "ora": "10:08",
+    "permalink": "https://www.instagram.com/p/DeOr1qHDcxP/",
+    "reach": 2392,
+    "rubrica": "r5",
+    "saved": 14,
+    "shares": 13,
+    "timestamp": "2026-10-08T10:08:57+0000",
+    "views": 5808,
+    "id": "18121790674894591"
+   },
+   {
+    "aggiornato": "2026-10-30T12:00:00Z",
+    "ai": false,
+    "comments": 4,
+    "data": "2026-09-07",
+    "formato": "Reel",
+    "hook": "Dyson è entrata nel mercato dell’igiene orale con CameraJet: uno spazzolino da 479–499 € con telecamera intraorale, IA e getto di collutorio che si attiva automaticamente tra i denti.",
+    "interactions": 89,
+    "likes": 75,
+    "ora": "19:17",
+    "permalink": "https://www.instagram.com/reel/Dc_14dXxuEk/",
+    "reach": 3255,
+    "rubrica": "r1",
+    "saved": 5,
+    "shares": 5,
+    "timestamp": "2026-09-07T19:17:19+0000",
+    "views": 4406,
+    "id": "18149355499530730"
+   },
+   {
+    "aggiornato": "2026-10-30T12:00:00Z",
+    "ai": false,
+    "comments": 4,
+    "data": "2026-05-12",
+    "formato": "Carosello",
+    "hook": "Investire in advertising da solo non basta.",
+    "interactions": 371,
+    "likes": 239,
+    "ora": "08:51",
+    "permalink": "https://www.instagram.com/p/DYO4gRrjcWP/",
+    "reach": 3240,
+    "rubrica": "r2",
+    "saved": 78,
+    "shares": 41,
+    "timestamp": "2026-05-12T08:51:16+0000",
+    "views": 8476,
+    "id": "18162602722435734"
+   },
+   {
+    "aggiornato": "2026-10-30T12:00:00Z",
+    "ai": false,
+    "comments": 0,
+    "data": "2026-06-24",
+    "formato": "Carosello",
+    "hook": "Vendere è una conseguenza. Farsi comprare è una strategia.",
+    "interactions": 293,
+    "likes": 204,
+    "ora": "11:10",
+    "permalink": "https://www.instagram.com/p/DZ92qH8jTW5/",
+    "reach": 2917,
+    "rubrica": "r2",
+    "saved": 68,
+    "shares": 9,
+    "timestamp": "2026-06-24T11:10:50+0000",
+    "views": 7526,
+    "id": "18324924769262424"
+   },
+   {
+    "aggiornato": "2026-10-30T12:00:00Z",
+    "ai": false,
+    "comments": 2,
+    "data": "2026-06-04",
+    "formato": "Reel",
+    "hook": "TikTok è una piattaforma “complicata” e di cui vanno comprese le dinamiche e il linguaggio, ma alla fine non è così impossibile come molti credono!",
+    "interactions": 171,
+    "likes": 93,
+    "ora": "13:14",
+    "permalink": "https://www.instagram.com/reel/DZKjnZvNgD0/",
+    "reach": 2933,
+    "rubrica": "r1",
+    "saved": 47,
+    "shares": 29,
+    "timestamp": "2026-06-04T13:14:40+0000",
+    "views": 4194,
+    "id": "18325003156248532"
+   },
+   {
+    "aggiornato": "2026-10-30T12:00:00Z",
+    "ai": false,
+    "comments": 15,
+    "data": "2026-10-20",
+    "formato": "Reel",
+    "hook": "Il contenuto oggi è fondamentale per farsi conoscere da nuove persone o attirare l’attenzione ma dietro una strategia digitale c’è molto altro dietro.",
+    "interactions": 246,
+    "likes": 146,
+    "ora": "09:38",
+    "permalink": "https://www.instagram.com/reel/DethxMvt2dn/",
+    "reach": 3482,
+    "rubrica": "r2",
+    "saved": 41,
+    "shares": 36,
+    "timestamp": "2026-10-20T09:38:14+0000",
+    "views": 5689,
+    "id": "18397824832207064"
+   },
+   {
+    "aggiornato": "2026-10-30T12:00:00Z",
+    "ai": false,
+    "comments": 16,
+    "data": "2026-08-24",
+    "formato": "Reel",
+    "hook": "Un po’ come le Birkenstock e le Crocs, la flip flop da scarpa pratica da spiaggia è diventata negli ultimi due anni un simbolo di stile.",
+    "interactions": 199,
+    "likes": 154,
+    "ora": "08:08",
+    "permalink": "https://www.instagram.com/reel/DcamI5rtF2_/",
+    "reach": 11302,
+    "rubrica": "r4",
+    "saved": 14,
+    "shares": 10,
+    "timestamp": "2026-08-24T08:08:52+0000",
+    "views": 14488,
+    "id": "18407574931086133"
+   },
+   {
+    "aggiornato": "2026-10-30T12:00:00Z",
+    "ai": false,
+    "comments": 15,
+    "data": "2026-08-26",
+    "formato": "Reel",
+    "hook": "Avete notato anche voi strass e gemme adesive ovunque negli ultimi giorni?",
+    "interactions": 672,
+    "likes": 415,
+    "ora": "10:39",
+    "permalink": "https://www.instagram.com/reel/DcgBFTztwaw/",
+    "reach": 11785,
+    "rubrica": "r4",
+    "saved": 103,
+    "shares": 132,
+    "timestamp": "2026-08-26T10:39:53+0000",
+    "views": 14952,
+    "id": "18594488770064341"
+   },
+   {
+    "aggiornato": "2026-10-30T12:00:00Z",
+    "ai": false,
+    "comments": 1,
+    "data": "2026-07-02",
+    "formato": "Carosello",
+    "hook": "La triste verità (e lo dico prima di tutto a me stessa) è che stiamo diventando dei consumatori superficiali delle nostre stesse vite.",
+    "interactions": 202,
+    "likes": 160,
+    "ora": "10:26",
+    "permalink": "https://www.instagram.com/p/DaSX9pZjXTQ/",
+    "reach": 2843,
+    "rubrica": "r5",
+    "saved": 29,
+    "shares": 7,
+    "timestamp": "2026-07-02T10:26:40+0000",
+    "views": 6728,
+    "id": "18600093763034904"
+   }
+  ],
+  "months": {
+   "2026-05": {
+    "accounts_engaged": 1243,
+    "aggiornato": "2026-10-30T12:00:00Z",
+    "profile_links_taps": 2,
+    "profile_views": 1423,
+    "reach": 21947,
+    "saves": 656,
+    "shares": 267,
+    "total_interactions": 2061,
+    "views": 71061
+   },
+   "2026-06": {
+    "accounts_engaged": 714,
+    "aggiornato": "2026-10-30T12:00:00Z",
+    "profile_links_taps": 4,
+    "profile_views": 1023,
+    "reach": 9761,
+    "saves": 197,
+    "shares": 83,
+    "total_interactions": 1101,
+    "views": 39021
+   },
+   "2026-07": {
+    "accounts_engaged": 1366,
+    "aggiornato": "2026-10-30T12:00:00Z",
+    "profile_links_taps": 1,
+    "profile_views": 870,
+    "reach": 23725,
+    "saves": 374,
+    "shares": 198,
+    "total_interactions": 1965,
+    "views": 57237
+   },
+   "2026-08": {
+    "accounts_engaged": 1218,
+    "aggiornato": "2026-10-30T12:00:00Z",
+    "profile_links_taps": 1,
+    "profile_views": 899,
+    "reach": 31874,
+    "saves": 253,
+    "shares": 201,
+    "total_interactions": 1803,
+    "views": 66409
+   },
+   "2026-09": {
+    "accounts_engaged": 1890,
+    "aggiornato": "2026-10-30T12:00:00Z",
+    "profile_links_taps": 2,
+    "profile_views": 1190,
+    "reach": 47658,
+    "saves": 395,
+    "shares": 124,
+    "total_interactions": 2479,
+    "views": 171067
+   },
+   "2026-10": {
+    "accounts_engaged": 1384,
+    "aggiornato": "2026-10-30T12:00:00Z",
+    "nota": "Ottobre fino al 29",
+    "nuoviFollower": 240,
+    "profile_links_taps": 0,
+    "profile_views": 1516,
+    "reach": 48495,
+    "saves": 275,
+    "shares": 165,
+    "total_interactions": 2027,
+    "views": 162753
+   }
+  },
+  "prof": {
+   "aggiornato": "2026-10-30T12:00:00Z",
+   "followers": 10897,
+   "following": 222,
+   "fonte": "Instagram Graph API tramite Composio",
+   "mediaCount": 252,
+   "username": "sbranding_"
+  },
+  "stats": {
+   "aggiornato": "2026-10-30T12:40:00Z",
+   "commenti": {
+    "classifica": "In cima per salvataggi c'è «Investire in advertising da solo non basta», in cima per reach il caso Tinder. Il primo ti fa scegliere da chi ti conosce già, il secondo ti fa scoprire da chi non ti conosce: un buon mese ha bisogno di tutti e due.",
+    "formati": "I caroselli coinvolgono più dei reel anche se ne fai la metà: chi ti segue ti legge più di quanto ti guardi. È una buona notizia per il repurposing, perché un carosello diventa facilmente un post LinkedIn o un numero della newsletter.",
+    "mesi": "In sei mesi la reach è più che raddoppiata (da 21.947 a maggio a 48.495 a ottobre), ma i tocchi al link in bio restano tra 0 e 4 al mese. Le persone ti scoprono e poi non trovano un motivo per venire con te altrove: è il prossimo problema da risolvere, più della crescita.",
+    "panoramica": "Il tuo post tipico raggiunge circa 3.100 persone, la media di 5.400 la tirano su quattro contenuti esplosi. Quei quattro (Tinder, «Ci sono periodi», strass e flip flop) parlano di cultura e di persone, non di tecnica: è lì che il tuo sguardo da sociologa fa la differenza.",
+    "piano": "Novembre è tutto pianificato, ma 7 contenuti su 8 sono ancora idee e il primo esce martedì 3. Ti suggerisco di bloccare oggi in agenda due mezze giornate per produrre i primi due: il resto del mese diventa più leggero.",
+    "rubriche": "I consigli pratici sono i più salvati ma ne hai pubblicati solo 3 in sei mesi, contro 9 riflessioni. Non ti direi di riflettere meno: prova a chiudere ogni riflessione con un gesto pratico, così unisci le due cose che il tuo pubblico premia."
+   },
+   "commentiAt": "2026-10-30T12:40:00Z"
+  }
+ }
+}
